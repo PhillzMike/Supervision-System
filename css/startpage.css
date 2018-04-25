@@ -1,6 +1,3 @@
-*{
-    box-sizing: border-box;
-}
 
 body{
     margin: 0;
@@ -17,10 +14,15 @@ body{
 }
 
 .overlay{
+    position: absolute;
     width: inherit;
     height: inherit;
     background-color: black;
     opacity: 0.6;
+}
+.content{
+    position: absolute;
+    width: inherit;
 }
 
 .text {
@@ -62,9 +64,6 @@ button#register{
     margin-right: 2%;
 }
 
-.signIn{
-    
-}
 
 button:hover{
     transform: translateY(-4px);

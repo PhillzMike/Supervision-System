@@ -1,3 +1,12 @@
+<?php 
+    session_start();
+    require_once('../php/functions.php');
+    if(isStudent()){
+         //to student dash
+    }elseif(!isSuper()){
+       header('Location: ../index.html');
+    }
+?>
 <html>
 <head>
 	<title>Lecturer DashBoard</title>
@@ -14,7 +23,7 @@
         <div class="image-case">
             <img src="../img/logo/unilag.png" alt="institution-logo">
         </div>
-        <h2>Hi, Dr Odumuyiwa</h2>
+        <h2>Hi,<?php echo ' '.$_SESSION['title'].' '.$_SESSION['lstnm'] ?></h2>
         <div class="dashboard-list">
             <a href="#"><i class="fa fa-columns icon"></i>Dashboard<i class="fa fa-caret-left arrow" style="font-size:30px;"></i></a>
         </div>

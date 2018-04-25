@@ -11,10 +11,7 @@
 
 <body>
     <div class="background">
-
-        <div class="overlay">
-
-        </div>
+        <div class="overlay"></div>
         <div class="content">
             <div class="text">
                 <h1>STOT</h1>
@@ -24,7 +21,7 @@
             </div>
             
             <div class="logging">
-                <form id="modal">
+                <form id="modal" method = "POST" action = "php/login.php">
                     <span class="close">&times;</span>
                     <div class="textbox">
                         <div class="header">
@@ -43,7 +40,7 @@
                             <label for="psd" class="placejumper">Password</label>
                         </div>
                         <div class="enter">
-                            <button class="signIn">Sign In</button>
+                            <input class="signIn" value = "Sign In" name = "submit" type="submit">
                         </div>
                     </div>
                     </div>

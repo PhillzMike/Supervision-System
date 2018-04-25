@@ -14,7 +14,7 @@
   	<img src="../img/logo/unilag.png" alt="institution-logo">
   	<h2>Hi, Dr Odumuyiwa</h2>
       <div class="dashboard-list">
-          <a href="lectdashboard.html"><i class="fa fa-columns icon"></i>Dashboard</a>
+          <a href="lectdashboard.php"><i class="fa fa-columns icon"></i>Dashboard</a>
       </div>
       <div class="dashboard-list">
           <a href="#"><i class="fa fa-calendar icon"></i>Set Available Period <i class="fa fa-caret-left arrow" style="font-size:30px;"></i></a>
@@ -40,7 +40,7 @@
       <span class="close">&times;</span>
     <img src="unilag.png" alt="institution-logo">
     <h2>Hi, Dr Odumuyiwa</h2>
-     <a href="lectdashboard.html"> Dashboard</a>
+     <a href="lectdashboard.php"> Dashboard</a>
      <a href="#"  class="here">Set Available Period</a>
      <a href="#">Change Profile</a>
      <a href="#">Change Password</a>

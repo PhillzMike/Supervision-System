@@ -28,7 +28,7 @@
             <a href="#"><i class="fa fa-columns icon"></i>Dashboard<i class="fa fa-caret-left arrow" style="font-size:30px;"></i></a>
         </div>
         <div class="dashboard-list">
-            <a href="setime.html"><i class="fa fa-calendar icon"></i>Set Available Period</a>
+            <a href="setime.php"><i class="fa fa-calendar icon"></i>Set Available Period</a>
         </div>
         <div class="dashboard-list">
             <a href="#"><i class="fa fa-user icon"></i>Change Profile</a>
@@ -47,7 +47,7 @@
     <img src="unilag.png" alt="institution-logo">
     <h2>Hi, Dr Odumuyiwa</h2>
             <a href="#" class="here"> Dashboard</a>
-            <a href="setime.html">Set Available Period</a>
+            <a href="setime.php">Set Available Period</a>
             <a href="#">Change Profile</a>
             <a href="#">Change Password</a>
             <a href="#">Logout</a>

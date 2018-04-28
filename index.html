@@ -16,42 +16,131 @@
             <div class="text">
                 <h1>STOT</h1>
                 <h3>Supervision Management System</h3>
-                <button id="register">Sign Up</button>
-                <button id="log">Log In</button>
+
             </div>
-            
-            <div class="logging">
-                <form id="modal" method = "POST" action = "php/login.php">
-                    <span class="close">&times;</span>
+            <div class="buttons">
+                <button class="homebutton" id="register">Sign Up</button>
+                <button class="homebutton" id="log">Log In</button>
+            </div>
+
+
+            <div id="logging" class="logmodal">
+                <form id="modal" method="POST" action="php/login.php">
+                    <span class="close" id="logx">&times;</span>
                     <div class="textbox">
                         <div class="header">
                             <h2>Sign into your account</h2>
                         </div>
-                          <div class="texts">
-                        <div class="group">
-                            <input type="text" name="username"
-                            class = "float-input" id="usr" required>
-                            <span class="bar"></span>
-                            <label for="usr" class="placejumper">Username</label>
-                        </div>
-                        <div class="group">
-                            <input type="password" name="password" class="float-input" id="psd" required>
-                            <span class="bar"></span>
-                            <label for="psd" class="placejumper">Password</label>
-                        </div>
-                        <div class="enter">
-                            <input class="signIn" value = "Sign In" name = "submit" type="submit">
+                        <div class="texts">
+                            <div class="group">
+                                <input type="text" style="background-color:aliceblue" name="username" class="float-input" id="usr" required>
+                                <span class="bar"></span>
+                                <label for="usr" class="placejumper">Username</label>
+                            </div>
+                            <div class="group">
+                                <input type="password" style="background-color:aliceblue" name="password" class="float-input" id="psd" required>
+                                <span class="bar"></span>
+                                <label for="psd" class="placejumper">Password</label>
+                            </div>
+
+                            <div class="enter">
+                                <input class="signIn homebutton" value="Sign In" name="submit" type="submit">
+                            </div>
                         </div>
                     </div>
-                    </div>
-                   
-                    
+
+
                 </form>
 
             </div>
+
+
+
+
+            <div id="signup" class="logmodal">
+                <form id="modal" method="POST" action="php/login.php">
+                    <span class="close" id="regx">&times;</span>
+                    <div class="textbox">
+                        <div class="header">
+                            <h2>Register a new account</h2>
+                        </div>
+                        <div class="texts">
+                            <div class="group">
+                                <div class="dropdown" id= "drop">
+                                    <input type="text" style="background-color:aliceblue" name="username" class="float-input drop-lbl" id="stu-drop"  readonly required>
+                                    <span class="bar"></span>
+                                    <label for="usr" class="placejumper">Select what type of user</label>
+                                    <div class="dropdown-content" id="dropdown-content">
+                                        <a id="stu-a">Student</a>
+                                        <a id="sup-a">Supervisor</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div style = "display:none" id="student-form">
+                                <div class="group">
+                                    <input type="text" style="background-color:aliceblue" name="username" class="float-input" id="usr" required>
+                                    <span class="bar"></span>
+                                    <label for="usr" class="placejumper">Matric </label>
+                                </div>
+                                <div class="group">
+                                    <input type="text" style="background-color:aliceblue" name="username" class="float-input" id="usr" required>
+                                    <span class="bar"></span>
+                                    <label for="usr" class="placejumper">Email</label>
+                                </div>
+                                <div class="group">
+                                    <input type="password" style="background-color:aliceblue" name="pass1" class="float-input" id="usr" required>
+                                    <span class="bar"></span>
+                                    <label for="usr" class="placejumper">Password</label>
+                                </div>
+                                <div class="group">
+                                    <input type="password" style="background-color:aliceblue" name="password" class="float-input" id="psd" required>
+                                    <span class="bar"></span>
+                                    <label for="psd" class="placejumper">Confirm Password</label>
+                                </div>
+                            </div>
+                            <div style = "display:none" id="super-form">
+                                <div class="group">
+                                    <input type="text" style="background-color:aliceblue" name="username" class="float-input" id="usr" required>
+                                    <span class="bar"></span>
+                                    <label for="usr" class="placejumper">Staff id</label>
+                                </div>
+                                <div class="group">
+                                    <input type="text" style="background-color:aliceblue" name="username" class="float-input" id="usr" required>
+                                    <span class="bar"></span>
+                                    <label for="usr" class="placejumper">Email</label>
+                                </div>
+                                <div class="group">
+                                    <input type="password" style="background-color:aliceblue" name="pass1" class="float-input" id="usr" required>
+                                    <span class="bar"></span>
+                                    <label for="usr" class="placejumper">Password</label>
+                                </div>
+                                <div class="group">
+                                    <input type="password" style="background-color:aliceblue" name="password" class="float-input" id="psd" required>
+                                    <span class="bar"></span>
+                                    <label for="psd" class="placejumper">Confirm Password</label>
+                                </div>
+                            </div>
+
+                            <div class="enter">
+                                <input class="signIn homebutton" value="Register" name="submit" type="submit">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </form>
+
+            </div>
+
+
+
+
+
         </div>
     </div>
     <script src="js/home.js"></script>
+    <script src="js/materialtext.js"></script>
 </body>
 
 </html>

@@ -95,7 +95,7 @@
          addmodal.style.display = "none";
     }
   }
-    function myFunction() {
+function myFunction() {
     var itm = document.getElementById("timeslot").lastChild;
     var cln = itm.cloneNode(true);
     document.getElementById("timeslot").appendChild(cln);

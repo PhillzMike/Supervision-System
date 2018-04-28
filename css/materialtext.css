@@ -6,6 +6,7 @@
     margin-bottom:45px; 
   }
   .float-input               {
+    box-sizing: border-box;
     font-size:18px;
     padding:10px 10px 10px 5px;
     display:block;
@@ -29,7 +30,7 @@
   }
   
   /* active state */
-  .float-input:focus ~ .placejumper, .float-input:valid ~ .placejumper      {
+  .float-input:focus ~ .placejumper, .float-input:not([value=""]) ~ .placejumper      {
     top:-20px;
     font-size:14px;
     color:#5264AE;
@@ -59,7 +60,7 @@
     width:50%;
   }
   .texts{
-    padding-top:20px;
+    padding-top:40px;
   }
   
   

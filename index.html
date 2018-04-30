@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <title>Supervision Website</title>
     <link rel="stylesheet" href="css/startpage.css">
     <link rel="stylesheet" href="css/materialtext.css">
@@ -32,6 +33,9 @@
                             <h2>Sign into your account</h2>
                         </div>
                         <div class="texts">
+                                <div class = "errmsg" id = "loginerror">
+                                        The f*ck you tryna do huh?
+                                    </div>
                             <div class="group">
                                 <input type="text" style="background-color:aliceblue" name="username" class="float-input" id="usr" required>
                                 <span class="bar"></span>
@@ -44,7 +48,7 @@
                             </div>
 
                             <div class="enter">
-                                <input class="signIn homebutton" value="Sign In" name="submit" type="submit">
+                                <input class="signIn homebutton" id = "loginbutton" value="Sign In" name="submit" type="submit">
                             </div>
                         </div>
                     </div>
@@ -65,6 +69,9 @@
                             <h2>Register a new account</h2>
                         </div>
                         <div class="texts">
+                        <div class = "errmsg" id = "signuperror">
+                            The f*ck you tryna do huh?
+                        </div>
                             <div class="group">
                                 <div class="dropdown" id= "drop">
                                     <input type="text" style="background-color:aliceblue" name="username" class="float-input drop-lbl" id="stu-drop"  readonly required>
@@ -79,51 +86,52 @@
                             </div>
                             <div style = "display:none" id="student-form">
                                 <div class="group">
-                                    <input type="text" style="background-color:aliceblue" name="username" class="float-input" id="usr" required>
+                                    <input type="text" style="background-color:aliceblue" name="username" class="float-input"  required>
                                     <span class="bar"></span>
                                     <label for="usr" class="placejumper">Matric </label>
                                 </div>
                                 <div class="group">
-                                    <input type="text" style="background-color:aliceblue" name="username" class="float-input" id="usr" required>
+                                    <input type="text" style="background-color:aliceblue" name="username" class="float-input" required>
                                     <span class="bar"></span>
                                     <label for="usr" class="placejumper">Email</label>
                                 </div>
                                 <div class="group">
-                                    <input type="password" style="background-color:aliceblue" name="pass1" class="float-input" id="usr" required>
+                                    <input type="password" style="background-color:aliceblue" name="pass1" class="float-input"  required>
                                     <span class="bar"></span>
                                     <label for="usr" class="placejumper">Password</label>
                                 </div>
                                 <div class="group">
-                                    <input type="password" style="background-color:aliceblue" name="password" class="float-input" id="psd" required>
+                                    <input type="password" style="background-color:aliceblue" name="password" class="float-input" required>
                                     <span class="bar"></span>
                                     <label for="psd" class="placejumper">Confirm Password</label>
                                 </div>
                             </div>
                             <div style = "display:none" id="super-form">
                                 <div class="group">
-                                    <input type="text" style="background-color:aliceblue" name="username" class="float-input" id="usr" required>
+                                    <input type="text" style="background-color:aliceblue" name="username" class="float-input" required>
                                     <span class="bar"></span>
                                     <label for="usr" class="placejumper">Staff id</label>
                                 </div>
                                 <div class="group">
-                                    <input type="text" style="background-color:aliceblue" name="username" class="float-input" id="usr" required>
+                                    <input type="text" style="background-color:aliceblue" name="username" class="float-input"  required>
                                     <span class="bar"></span>
                                     <label for="usr" class="placejumper">Email</label>
                                 </div>
                                 <div class="group">
-                                    <input type="password" style="background-color:aliceblue" name="pass1" class="float-input" id="usr" required>
+                                    <input type="password" style="background-color:aliceblue" name="pass1" class="float-input" required>
                                     <span class="bar"></span>
                                     <label for="usr" class="placejumper">Password</label>
                                 </div>
                                 <div class="group">
-                                    <input type="password" style="background-color:aliceblue" name="password" class="float-input" id="psd" required>
+                                    <input type="password" style="background-color:aliceblue" name="password" class="float-input" required>
                                     <span class="bar"></span>
                                     <label for="psd" class="placejumper">Confirm Password</label>
                                 </div>
                             </div>
 
                             <div class="enter">
-                                <input class="signIn homebutton" value="Register" name="submit" type="submit">
+                                <input class="signIn homebutton"  value="Register" name="submit" type="submit">
+                                <button class = "homebutton" onclick="displayRegisterError('Test succed')">error</button>
                             </div>
                         </div>
                     </div>
@@ -139,6 +147,7 @@
 
         </div>
     </div>
+    <script src = "js/ajax.js"></script>
     <script src="js/home.js"></script>
     <script src="js/materialtext.js"></script>
 </body>

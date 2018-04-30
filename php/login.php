@@ -7,10 +7,14 @@
         $data = Array('username' => $_POST['username'],'password' => $_POST['password']);
         if($stmt->execute($data)){
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            if(!$result){
+                $error = "Invalid username and password";
+            }
             $id = $result['ID'];
             $role = $result['role'];
             $_SESSION['ID'] = $id;
             $_SESSION['role'] = $role;
+            
             if($role=="student"){
 
             }else if($role == "supervisor"){
@@ -19,9 +23,19 @@
                 $_SESSION['fstnm'] = $result['firstname'];
                 $_SESSION['lstnm'] = $result['lastname'];
                 $_SESSION['title'] = $result['title'];
-                header("Location: ../lecturer/lectdashboard.php");
-            }
+                $groupres = array('link'=>true, 'value'=>'./lecturer');
+                //header("Location: ../lecturer");
+            }else{
+            //var_dump($result);
+            $groupres = array('link'=>false, 'value'=>$error);
+            
+              }
+
+        }else{
+            $groupres = array('link'=>true, 'value'=>'./oops.html');
+            //header("Location: ../oops.html");
         }
-        var_dump($result);
+        echo json_encode($groupres);
+       
     }
 ?>

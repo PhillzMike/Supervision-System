@@ -204,3 +204,21 @@ h2{
 .dropdown:hover #dropdown-content {
     display: block;
 }
+
+#userActions{
+    width: 55%;
+   
+    margin-bottom: 5px;
+    margin-left:35%;
+	vertical-align: middle;
+	text-align: center;
+	color: #37474F;
+    margin-top: -30px;
+	
+}
+#dropImage{
+    padding-top:50%;    
+    background-color: #FFFFFF;
+    border: solid 2px #333333;
+	border-radius: 10px;
+}

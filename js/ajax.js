@@ -1,6 +1,6 @@
 
 //associative array and path to php
-function callajax(params,path){
+function callajax(params,path,handleOut){
     
     const jax = new XMLHttpRequest();
     jax.open('POST',path,true);
@@ -9,14 +9,9 @@ function callajax(params,path){
     jax.onreadystatechange = function() {//Call a function when the state changes.
         if(jax.readyState == XMLHttpRequest.DONE){
             if(jax.status == 200){
-                let loginResponse = JSON.parse(jax.responseText);
-                if(loginResponse['link']){
-                    location.href = loginResponse['value'];
-                }else{
-                displayLoginError(loginResponse['value']);
-                }
+                handleOut(JSON.parse(jax.responseText));
             }else{
-                displayLoginError("Something went wrong. Try again");
+                handleOut({'link':false,'value':'Something went wrong. Try again'});
             }
         }
     }

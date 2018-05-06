@@ -107,5 +107,23 @@ loginbutton.onclick = function(e){
         'password': document.querySelector('#psd').value,
         'submit' : document.querySelector('#loginbutton').value
     }
-    callajax(params,'./php/login.php');
+    callajax(params,'./php/login.php',handleLogin);
 }
+function handleLogin(phpResponse){
+    if(phpResponse['link']){
+        location.href = phpResponse['value'];
+    }else{
+        displayLoginError(phpResponse['value']);
+    }
+} 
+function handleRegister(phpResponse){
+    if(phpResponse['link']){
+        location.href = phpResponse['value'];
+    }else{
+        if(phpResponse['errors']){
+            
+            //TODO
+        }
+        displayLoginError(phpResponse['value']);
+    }
+} 

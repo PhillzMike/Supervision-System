@@ -45,12 +45,23 @@
     <div class="phonebar">
       <span class="close">&times;</span>
     <img src="unilag.png" alt="institution-logo">
-    <h2>Hi, Dr Odumuyiwa</h2>
-            <a href="#" class="here"> Dashboard</a>
-            <a href="setime.php">Set Available Period</a>
-            <a href="#">Change Profile</a>
-            <a href="#">Change Password</a>
-            <a href="#">Logout</a>
+    <h2>Hi, <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lstnm'] ?></h2>
+            <div class="dashboard-list">
+                 <a href="#" class="here"> Dashboard</a>
+            </div>
+            <div class="dashboard-list">
+                <a href="setime.php">Set Available Period</a>
+            </div>
+            <div class="dashboard-list">
+                 <a href="#">Change Profile</a>
+            </div>
+            <div class="dashboard-list" >
+                <a href="#">Change Password</a>
+            </div>
+            <div class="dashboard-list" >
+                <a href="#">Logout</a>
+            </div>
+        
         
         </div>
   </div> 
@@ -77,7 +88,7 @@
     <script>
       var side = document.getElementById("residebar");
       var span = document.getElementsByClassName("close")[0];
-     function editclick() {s
+     function editclick() {
         side.style.display = "block";
     }
     span.onclick = function() {

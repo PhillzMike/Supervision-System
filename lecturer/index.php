@@ -4,13 +4,14 @@
     if(isStudent()){
          //to student dash
     }elseif(!isSuper()){
-       header('Location: ../index.html');
+       header('Location: ../');
     }
 ?>
 <html>
 <head>
 	<title>Lecturer DashBoard</title>
-	<link rel="stylesheet" type="text/css" href="../css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
+    <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -37,7 +38,7 @@
             <a href="#"><i class="fa fa-key icon"></i>Change Password</a>
         </div>
         <div class="dashboard-list">
-            <a href="#"><i class="fa fa-sign-out-alt icon"></i>Logout</a>
+            <a href="../php/logout.php"><i class="fa fa-sign-out-alt icon"></i>Logout</a>
         </div>
 
         </div>

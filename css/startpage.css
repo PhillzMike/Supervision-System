@@ -165,7 +165,16 @@ h2{
 .textbox ::-webkit-input-placeholder:hover{
     transform: translateY(-4px); 
 }
-
+.errmsg{
+    border: 3px;
+    border-color: rgb(233, 29, 2);
+    background-color: #ec3737e0;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    margin-top: -30px;
+    padding: 5px;
+    display: none;
+}
 
 /*Dropdown for register*/
 .drop-lbl {
@@ -180,6 +189,7 @@ h2{
     margin-left: 5%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    cursor: pointer;
 }
 
 .dropdown-content a {
@@ -193,4 +203,22 @@ h2{
 
 .dropdown:hover #dropdown-content {
     display: block;
+}
+
+#userActions{
+    width: 55%;
+   
+    margin-bottom: 5px;
+    margin-left:35%;
+	vertical-align: middle;
+	text-align: center;
+	color: #37474F;
+    margin-top: -30px;
+	
+}
+#dropImage{
+    padding-top:50%;    
+    background-color: #FFFFFF;
+    border: solid 2px #333333;
+	border-radius: 10px;
 }

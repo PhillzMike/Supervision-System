@@ -95,6 +95,9 @@ body{
 .dashboard-list{
     height:10%;
 }
+.dashboard-list:hover {
+    background-color: #0003;
+}
     .dashboard-list:hover ~ a {
         font-size: 25px;
     }

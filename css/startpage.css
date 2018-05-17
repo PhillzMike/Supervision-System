@@ -7,7 +7,7 @@ body{
 .background{
     height: 100vh;
     width: 100%;
-    background-image: url("../img/books.jpg");
+    background-image: url("../img/howard.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,6 +24,8 @@ body{
     position: absolute;
     width: inherit;
 }
+
+
 
 .text {
     margin-top: 23vh;
@@ -122,18 +124,41 @@ body{
 }
 
 
-/* .group .tooltiptext{
+.group .tooltiptext{
     visibility: hidden;
     text-align: center;
     z-index: 1;
-    width: 50%;
-    height: 10%;
-    background-color: #f1f1f1;
+    width: 72%;
+    background-color: rgb(211, 211, 211);
+    text-align: center;
+    color: #313131ad;
+    opacity: 0;
+    transition: opacity 1s;
+    border-radius: 6px;
+    height: 30%;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 110%;
+    left: 20%;
+    margin-left: -30px;
+}
+
+.group .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgb(211, 211, 211) transparent ;
 }
 
 .group:hover .tooltiptext{
     visibility:visible;
-} */
+    opacity: 1;
+}
 
 .header{
     background-color: rgb(46, 46, 48);

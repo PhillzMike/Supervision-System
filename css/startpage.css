@@ -121,6 +121,20 @@ body{
     margin-top:-25%;
 }
 
+
+/* .group .tooltiptext{
+    visibility: hidden;
+    text-align: center;
+    z-index: 1;
+    width: 50%;
+    height: 10%;
+    background-color: #f1f1f1;
+}
+
+.group:hover .tooltiptext{
+    visibility:visible;
+} */
+
 .header{
     background-color: rgb(46, 46, 48);
     height: 7vh;

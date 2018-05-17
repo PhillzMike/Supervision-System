@@ -33,13 +33,16 @@
                             <h2>Sign into your account</h2>
                         </div>
                         <div class="texts">
-                                <div class = "errmsg" id = "loginerror">
-                                        The f*ck you tryna do huh?
-                                    </div>
+                            <div class="errmsg" id="loginerror">
+                                The f*ck you tryna do huh?
+                            </div>
+                            
                             <div class="group">
-                                <input type="text" style="background-color:aliceblue" name="username" class="float-input" id="usr" required>
+                                <input type="text" style="background-color:aliceblue" name="username" class="float-input" id="usr" tooltip = "Your username is your Matric No or Staff ID" tooltip-position>
                                 <span class="bar"></span>
                                 <label for="usr" class="placejumper">Username</label>
+                                <!-- <span class="tooltiptext">Your username is your Matric No or Staff ID</span> -->
+                                
                             </div>
                             <div class="group">
                                 <input type="password" style="background-color:aliceblue" name="password" class="float-input" id="psd" required>
@@ -48,7 +51,7 @@
                             </div>
 
                             <div class="enter">
-                                <input class="signIn homebutton" id = "loginbutton" value="Sign In" name="submit" type="submit">
+                                <input class="signIn homebutton" id="loginbutton" value="Sign In" name="submit" type="submit">
                             </div>
                         </div>
                     </div>
@@ -69,12 +72,13 @@
                             <h2>Register a new account</h2>
                         </div>
                         <div class="texts">
-                        <div class = "errmsg" id = "signuperror">
-                            The f*ck you tryna do huh?
-                        </div>
+                            <div class="errmsg" id="signuperror">
+                                The f*ck you tryna do huh?
+                            </div>
                             <div class="group">
-                                <div class="dropdown" id= "drop">
-                                    <input type="text" style="background-color:aliceblue" name="username" class="float-input drop-lbl" id="stu-drop"  readonly required>
+                                <div class="dropdown" id="drop">
+                                    <input type="text" style="background-color:aliceblue" name="username" class="float-input drop-lbl" id="stu-drop" readonly
+                                        required>
                                     <span class="bar"></span>
                                     <label for="usr" class="placejumper">Select what type of user</label>
                                     <div class="dropdown-content" id="dropdown-content">
@@ -84,25 +88,25 @@
                                 </div>
 
                             </div>
-                            <div style = "display:none" id="student-form">
+                            <div style="display:none" id="student-form">
                                 <div class="group">
-                                    <input type="text" style="background-color:aliceblue" name="username" class="float-input"  required>
+                                    <input type="text" style="background-color:aliceblue" name="username" class="float-input" required>
                                     <span class="bar"></span>
                                     <label for="usr" class="placejumper">Matric </label>
                                 </div>
                                 <div id="userActions">
                                     <div id="dropImage">
-                                <p>Drag &amp; Drop Image</p>
+                                        <p>Drag &amp; Drop Image</p>
+                                    </div>
+                                    <input type="file" id="fileUpload" value="me" />
                                 </div>
-                                <input type="file" id="fileUpload" value = "me"/>
-                            </div>
                                 <div class="group">
                                     <input type="text" style="background-color:aliceblue" name="username" class="float-input" required>
                                     <span class="bar"></span>
                                     <label for="usr" class="placejumper">Email</label>
                                 </div>
                                 <div class="group">
-                                    <input type="password" style="background-color:aliceblue" name="pass1" class="float-input"  required>
+                                    <input type="password" style="background-color:aliceblue" name="pass1" class="float-input" required>
                                     <span class="bar"></span>
                                     <label for="usr" class="placejumper">Password</label>
                                 </div>
@@ -112,15 +116,15 @@
                                     <label for="psd" class="placejumper">Confirm Password</label>
                                 </div>
                             </div>
-                            <div style = "display:none" id="super-form">
-                                        
+                            <div style="display:none" id="super-form">
+
                                 <div class="group">
                                     <input type="text" style="background-color:aliceblue" name="username" class="float-input" required>
                                     <span class="bar"></span>
                                     <label for="usr" class="placejumper">Staff id</label>
                                 </div>
                                 <div class="group">
-                                    <input type="text" style="background-color:aliceblue" name="username" class="float-input"  required>
+                                    <input type="text" style="background-color:aliceblue" name="username" class="float-input" required>
                                     <span class="bar"></span>
                                     <label for="usr" class="placejumper">Email</label>
                                 </div>
@@ -137,7 +141,7 @@
                             </div>
 
                             <div class="enter">
-                                <input class="signIn homebutton"  value="Register" name="submit" type="submit">
+                                <input class="signIn homebutton" value="Register" name="submit" type="submit">
                             </div>
                         </div>
                     </div>
@@ -153,7 +157,7 @@
 
         </div>
     </div>
-    <script src = "js/ajax.js"></script>
+    <script src="js/ajax.js"></script>
     <script src="js/home.js"></script>
     <script src="js/materialtext.js"></script>
     <script src="js/dragNdrop.js"></script>

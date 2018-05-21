@@ -76,8 +76,11 @@
   <h3 class="app_tag">Appointment Dashboard</h3>
 	  <div class="appointmentcards">
         
-        <section class="card">
-           <img src="../img/logo/unilag.png">
+        <section class="card"> 
+        <div class="color_placinga">
+           <h3> 1 </h3>
+           </div>
+          
           <p><span class="textf">Name:Joda Opemipo</span>
             <br>
             <span class="textf">Day:18th April,2018</span>
@@ -86,7 +89,9 @@
         </section>
 
         <section class="card">
-            <img src="../img/logo/unilag.png">
+        <div class="color_placingb">
+           <h3> 2</h3>
+           </div>
             <p><span class="textf">Name:Joda Opemipo</b></span>
             <br>
             <span class="textf">Day:18th April,2018</span>

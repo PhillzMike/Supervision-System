@@ -15,10 +15,10 @@
   	<img src="../img/logo/unilag.png" alt="institution-logo">
   	<h2>Hi, Dr Odumuyiwa</h2>
       <div class="dashboard-list">
-          <a href="./"><i class="fa fa-columns icon"></i>Dashboard</a>
+          <a href="index.php"><i class="fa fa-columns icon"></i>Dashboard</a>
       </div>
       <div class="dashboard-list">
-          <a href="#"><i class="fa fa-calendar icon"></i>Set Available Period <i class="fa fa-caret-left arrow" style="font-size:30px;"></i></a>
+          <a href="#" class="here" ><i class="fa fa-calendar icon"></i>Set Available Period <i class="fa fa-caret-left arrow" style="font-size:30px;"></i></a>
       </div>
       <div class="dashboard-list">
           <a href="#"><i class="fa fa-user icon"></i>Change Profile</a>

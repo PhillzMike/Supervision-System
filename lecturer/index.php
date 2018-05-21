@@ -28,7 +28,7 @@
         <hr>
         <br>
         <div class="dashboard-list">
-            <a href="#" class="here"><i class="fa fa-columns icon "></i>Dashboard<i class="fa fa-caret-left arrow" style="font-size:30px;"></i></a>
+            <a href="#" class="here"><i class="fa fa-columns icon "></i>Dashboard</a>
         </div>
         <br>
         <div class="dashboard-list">
@@ -40,11 +40,11 @@
         </div>
         <br>
         <div class="dashboard-list">
-            <a href="#"><i class="fa fa-key icon"></i>Change Password</a>
+            <a href="#"><i class="fa fa-key icon"></i>Change Password</a> 
         </div>
         <br>
         <div class="dashboard-list">
-            <a href="../php/logout.php"><i class="fa fa-sign-out-alt icon"></i>Logout</a>
+            <a href="../php/logout.php"><i class="fa fa-home icon"></i>Logout</a>
         </div>
         
         </div>
@@ -75,7 +75,6 @@
   
   <h3 class="app_tag">Appointment Dashboard</h3>
 	  <div class="appointmentcards">
-        
         <section class="card"> 
         <div class="color_placinga">
            <h3> 1 </h3>

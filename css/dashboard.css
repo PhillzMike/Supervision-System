@@ -13,7 +13,9 @@ body{
     width: 18%;
     color: white;
     display: block;
-    background-color:#000000c2;
+	background-color:#000000c2;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px 0px;
+	
 }
 .sidebar img{
 	height:50px;
@@ -95,9 +97,8 @@ margin-right: 10%;
 	height:100%;
 	width: 100%;
 	display: grid;
-	box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 4px 0px;
-	border: 0.5px solid grey;
-    border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 4px 0px;
+    
 }
 .blurpart{
 	display: none;
@@ -211,6 +212,10 @@ p:before{
 	color:black; 
 }
 
+.timedisplay{
+	margin-left: 30%;
+	padding-top: 3.2%;
+}
 @media screen and (max-width: 600px) {
 .blurpart , .sidebar{
 	display: none;

@@ -28,7 +28,7 @@
         <hr>
         <br>
         <div class="dashboard-list">
-            <a href="#" class="here"><i class="fa fa-columns icon "></i>Dashboard<i class="fa fa-caret-left arrow" style="font-size:30px;"></i></a>
+            <a href="#" class="here"><i class="fa fa-columns icon "></i>Dashboard</a>
         </div>
         <br>
         <div class="dashboard-list">
@@ -40,11 +40,11 @@
         </div>
         <br>
         <div class="dashboard-list">
-            <a href="#"><i class="fa fa-key icon"></i>Change Password</a>
+            <a href="#"><i class="fa fa-key icon"></i>Change Password</a> 
         </div>
         <br>
         <div class="dashboard-list">
-            <a href="../php/logout.php"><i class="fa fa-sign-out-alt icon"></i>Logout</a>
+            <a href="../php/logout.php"><i class="fa fa-home icon"></i>Logout</a>
         </div>
         
         </div>
@@ -72,43 +72,32 @@
         
         </div>
   </div> 
-<<<<<<< HEAD
-
-	  <div class="appointmentcards" id = "appointmentCards">
-        <section class="card" id = "card">
-           <img class = "image"src="../img/logo/unilag.png">
-          <p><span class="name">Name:Joda Opemipo</span>
-            <br>
-            <span class="date">Day:18th April,2018</span>
-            <span class="time">Time:12pm - 1pm </span>
-=======
   
   <h3 class="app_tag">Appointment Dashboard</h3>
-	  <div class="appointmentcards">
-        
-        <section class="card"> 
+	  <div class="appointmentcards" id = "appointmentCards">
+        <section class="card" id = "card"> 
         <div class="color_placinga">
-           <h3> 1 </h3>
+           <img src = "../img/unilag.png" class = "image">
            </div>
           
           <p><span class="textf">Name:Joda Opemipo</span>
             <br>
             <span class="textf">Day:18th April,2018</span>
+            <br>
             <span class="textf">Time:12pm - 1pm </span>
           </p>
         </section>
 
-        <section class="card">
+        <!--<section class="card">
         <div class="color_placingb">
-           <h3> 2</h3>
+          <h3> 2</h3>
            </div>
             <p><span class="textf">Name:Joda Opemipo</b></span>
             <br>
             <span class="textf">Day:18th April,2018</span>
             <span class="textf">Time:12pm - 1pm </span>
->>>>>>> 75f64b5a7683d639e02ddda0f296ee96f3e8e695
           </p>
-        </section>
+        </section>-->
 	  </div>
     <script>
       var side = document.getElementById("residebar");
@@ -129,9 +118,7 @@
     <script type = "text/javascript" src = "../js/ajax.js"></script>
     <script type = "text/javascript" src = "../js/card.js"></script>
     <script>
-        window.onload = () => {
-        callajax([],"../php/cardGuy.php",fillCard);
-    };
+    callajax([],'../php/cardGuy.php',fillCard);
     </script>
 </body>
 </html>

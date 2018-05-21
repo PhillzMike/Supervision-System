@@ -72,17 +72,8 @@
            <img class = "image"src="../img/logo/unilag.png">
           <p><span class="name">Name:Joda Opemipo</span>
             <br>
-            <span class="textf">Day:18th April,2018</span>
-            <span class="textf">Time:12pm - 1pm </span>
-          </p>
-        </section>
-
-        <section class="card">
-            <img src="../img/logo/unilag.png">
-            <p><span class="textf">Name:Joda Opemipo</b></span>
-            <br>
-            <span class="textf">Day:18th April,2018</span>
-            <span class="textf">Time:12pm - 1pm </span>
+            <span class="date">Day:18th April,2018</span>
+            <span class="time">Time:12pm - 1pm </span>
           </p>
         </section>
 	  </div>
@@ -101,6 +92,13 @@
     } 
   }
 
+    </script>
+    <script type = "text/javascript" src = "../js/ajax.js"></script>
+    <script type = "text/javascript" src = "../js/card.js"></script>
+    <script>
+        window.onload = () => {
+        callajax([],"../php/cardGuy.php",fillCard);
+    };
     </script>
 </body>
 </html>

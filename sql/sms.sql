@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 25, 2018 at 02:50 PM
+-- Generation Time: May 17, 2018 at 03:04 PM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -21,8 +21,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `sms`
 --
-CREATE DATABASE IF NOT EXISTS `sms` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `sms`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `appointment`
+--
+
+DROP TABLE IF EXISTS `appointment`;
+CREATE TABLE IF NOT EXISTS `appointment` (
+  `AppointmentID` int(20) NOT NULL AUTO_INCREMENT,
+  `supervisorID` int(20) NOT NULL,
+  `studentID` int(20) NOT NULL,
+  `Date` date NOT NULL,
+  `Start Time` time NOT NULL,
+  `End Time` time NOT NULL,
+  PRIMARY KEY (`AppointmentID`),
+  KEY `supervisorID` (`supervisorID`),
+  KEY `studentID` (`studentID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -39,11 +56,6 @@ CREATE TABLE IF NOT EXISTS `login` (
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
---
--- Truncate table before insert `login`
---
-
-TRUNCATE TABLE `login`;
 --
 -- Dumping data for table `login`
 --
@@ -68,11 +80,21 @@ CREATE TABLE IF NOT EXISTS `students` (
   KEY `stu_id` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Truncate table before insert `students`
+-- Table structure for table `supervisor available time`
 --
 
-TRUNCATE TABLE `students`;
+DROP TABLE IF EXISTS `supervisor available time`;
+CREATE TABLE IF NOT EXISTS `supervisor available time` (
+  `supervisorID` int(20) NOT NULL,
+  `Day` varchar(10) NOT NULL,
+  `Start Time` time NOT NULL,
+  `End Time` time NOT NULL,
+  KEY `supervisorID` (`supervisorID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
 -- --------------------------------------------------------
 
 --
@@ -89,11 +111,6 @@ CREATE TABLE IF NOT EXISTS `supervisors` (
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Truncate table before insert `supervisors`
---
-
-TRUNCATE TABLE `supervisors`;
 --
 -- Dumping data for table `supervisors`
 --

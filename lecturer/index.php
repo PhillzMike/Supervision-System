@@ -67,10 +67,10 @@
         </div>
   </div> 
 
-	  <div class="appointmentcards">
-        <section class="card">
-           <img src="../img/logo/unilag.png">
-          <p><span class="textf">Name:Joda Opemipo</span>
+	  <div class="appointmentcards" id = "appointmentCards">
+        <section class="card" id = "card">
+           <img class = "image"src="../img/logo/unilag.png">
+          <p><span class="name">Name:Joda Opemipo</span>
             <br>
             <span class="textf">Day:18th April,2018</span>
             <span class="textf">Time:12pm - 1pm </span>

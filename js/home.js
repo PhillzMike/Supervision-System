@@ -30,7 +30,7 @@ regx.onclick = function () {
     signupmodal.style.display = "none";
 }
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
+window.onclick = function (event){
     if (event.target == loginmodal | event.target == signupmodal) {
         loginmodal.style.display = "none";
         signupmodal.style.display = "none";

@@ -23,7 +23,7 @@ var dragdrop = {
 document.getElementById('userActions').ondrop = dragdrop.drop(event);
 document.getElementById('userActions').ondrag = dragdrop.drag(event);
 
-function runUpload(file) {
+function runUpload(file){
     if (file.type === 'image/png' ||
         file.type === 'image/jpg' ||
         file.type === 'image/jpeg' ||

@@ -23,6 +23,7 @@
                 $_SESSION['fstnm'] = $result['firstname'];
                 $_SESSION['lstnm'] = $result['lastname'];
                 $_SESSION['title'] = $result['title'];
+                
                 $groupres = array('link'=>true, 'value'=>'./lecturer');
                 //header("Location: ../lecturer");
             }else{

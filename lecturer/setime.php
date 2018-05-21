@@ -12,13 +12,16 @@
      <p class="welcometxt"> Welcome to your dashboard</p>
    </div>
   <div class="sidebar">
-  	<img src="../img/logo/unilag.png" alt="institution-logo">
-  	<h2>Hi, Dr Odumuyiwa</h2>
+            <div class="image-case">
+            <h2><img src="../img/logo/unilag.png" alt="institution-logo"><span>Hi,
+               <!-- putname  --> </span></h2>
+            </div>
+      <hr>
       <div class="dashboard-list">
           <a href="index.php"><i class="fa fa-columns icon"></i>Dashboard</a>
       </div>
       <div class="dashboard-list">
-          <a href="#" class="here" ><i class="fa fa-calendar icon"></i>Set Available Period <i class="fa fa-caret-left arrow" style="font-size:30px;"></i></a>
+          <a href="#" class="here" ><i class="fa fa-calendar icon"></i>Set Available Period </i></a>
       </div>
       <div class="dashboard-list">
           <a href="#"><i class="fa fa-user icon"></i>Change Profile</a>
@@ -27,7 +30,7 @@
           <a href="#"><i class="fa fa-key icon"></i>Change Password</a>
       </div>
       <div class="dashboard-list">
-          <a href="#"><i class="fa fa-sign-out-alt icon"></i>Logout</a>     
+          <a href="#"><i class="fa fa-home icon"></i>Logout</a>     
       </div>
     
     
@@ -73,6 +76,17 @@
     </div>
   </div>
 
+
+         <div class="timedisplay">
+           <table border=1.0>
+               <tr>
+                   <th>Day </th>
+                   <th>Time </th>
+                   <th>Adjustment </th>
+             </tr>
+
+         </table>
+            </div>
    <script>
       var side = document.getElementById("residebar");
       var span = document.getElementsByClassName("close")[0];

@@ -22,25 +22,31 @@
    </div>
     <div class="sidebar">
         <div class="image-case">
-            <img src="../img/logo/unilag.png" alt="institution-logo">
+        <h2><img src="../img/logo/unilag.png" alt="institution-logo"><span>Hi,
+            <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lstnm'] ?></span></h2> 
         </div>
-        <h2>Hi,<?php echo ' '.$_SESSION['title'].' '.$_SESSION['lstnm'] ?></h2>
+        <hr>
+        <br>
         <div class="dashboard-list">
-            <a href="#"><i class="fa fa-columns icon"></i>Dashboard<i class="fa fa-caret-left arrow" style="font-size:30px;"></i></a>
+            <a href="#" class="here"><i class="fa fa-columns icon "></i>Dashboard<i class="fa fa-caret-left arrow" style="font-size:30px;"></i></a>
         </div>
+        <br>
         <div class="dashboard-list">
             <a href="setime.php"><i class="fa fa-calendar icon"></i>Set Available Period</a>
         </div>
+        <br>
         <div class="dashboard-list">
             <a href="#"><i class="fa fa-user icon"></i>Change Profile</a>
         </div>
+        <br>
         <div class="dashboard-list">
             <a href="#"><i class="fa fa-key icon"></i>Change Password</a>
         </div>
+        <br>
         <div class="dashboard-list">
             <a href="../php/logout.php"><i class="fa fa-sign-out-alt icon"></i>Logout</a>
         </div>
-
+        
         </div>
   <div class="blurpart"  id="residebar">
     <div class="phonebar">
@@ -66,6 +72,7 @@
         
         </div>
   </div> 
+<<<<<<< HEAD
 
 	  <div class="appointmentcards" id = "appointmentCards">
         <section class="card" id = "card">
@@ -74,6 +81,32 @@
             <br>
             <span class="date">Day:18th April,2018</span>
             <span class="time">Time:12pm - 1pm </span>
+=======
+  
+  <h3 class="app_tag">Appointment Dashboard</h3>
+	  <div class="appointmentcards">
+        
+        <section class="card"> 
+        <div class="color_placinga">
+           <h3> 1 </h3>
+           </div>
+          
+          <p><span class="textf">Name:Joda Opemipo</span>
+            <br>
+            <span class="textf">Day:18th April,2018</span>
+            <span class="textf">Time:12pm - 1pm </span>
+          </p>
+        </section>
+
+        <section class="card">
+        <div class="color_placingb">
+           <h3> 2</h3>
+           </div>
+            <p><span class="textf">Name:Joda Opemipo</b></span>
+            <br>
+            <span class="textf">Day:18th April,2018</span>
+            <span class="textf">Time:12pm - 1pm </span>
+>>>>>>> 75f64b5a7683d639e02ddda0f296ee96f3e8e695
           </p>
         </section>
 	  </div>

@@ -43,8 +43,8 @@ margin-right: 10%;
 	padding-right: 0;
 }
 .color_placing{
-	width:40%;
-	height:30%;
+	width:90%;
+	height:100%;
 	margin-left: 4%;
 	margin-bottom:10%;
 	margin-top: -30px;  
@@ -90,26 +90,32 @@ margin-right: 10%;
 	display: grid;
 	padding-left: 22%;
 	grid-template-columns:30% 30% 30%;
-	grid-column-gap:2.5%;
+  grid-column-gap:2.5%;
+  
+  grid-row-gap: 1.2em;
 	padding-top: 2%;
 }
 .card{
 	position:relative;
-	padding: 1%;
-	height:100%;
+  padding: 1%;
+  padding-top:5%;
+	height:95%;
 	width: 100%;
-	grid-template-columns:50% 50%;
+	grid-template-columns:35% 65%;
 	display: grid;
 	box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 4px 0px;
     
 }
-.blurpart{
+.cancelbutton{
+  padding-top:-30px;
+}
+.blurpart, .cancel_app{
 	display: none;
 }
 .card img{
 	border-radius: 50%;
-	height:120px;
-	width:120px;
+	height:100%;
+	width:100%;
 }
 .card p{
 	padding-top: 2%;
@@ -118,9 +124,11 @@ margin-right: 10%;
 }
 .textf{
  padding-bottom:  3%;
- font-size: 16px;
+ font-size: 85%;
 text-align: right;
 line-height:1.4;
+padding-left:2%;
+padding-right:2%;
 }
 .icon{
 	padding-right: 5%;
@@ -141,7 +149,7 @@ line-height:1.4;
 	height:8%;
 }
 
-.createapp{
+.createapp,.cancel_app{
 	top:0;
     position: absolute;
     z-index:1;
@@ -153,7 +161,7 @@ line-height:1.4;
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 
 }
-.infocreate{
+.infocreate,.cancel_info{
    margin-left: 40%;
    margin-top: 10%;
     width: 40%; /* Full width */
@@ -168,14 +176,15 @@ line-height:1.4;
 .close2 {
     color: black;
     float: right;
-    font-size: 20px;
+    font-size: 45px;
     font-weight: bold;
     padding-right: 1.5%;
 }
 
 .app{
 	display: grid;
-	grid-template-columns:50% 50%;
+  grid-template-columns:24% 24% 24% 24%;
+  grid-column-gap: 1%
 }
 
 
@@ -195,7 +204,7 @@ line-height:1.4;
 }
 
 input{
-	width:90%;
+	width:100%;
 	padding:10px;
 	box-sizing:border-box;
 	background:none;
@@ -221,7 +230,13 @@ p:before{
 	margin-left: 30%;
 	padding-top: 3.2%;
 }
-
+.pborder{
+  width:70%;
+}
+.lprofilechange{
+  padding-top:2%;
+  margin-left:35%;
+}
 .limiter {
 	width: 1366px;
 	margin-left:20%;
@@ -282,14 +297,17 @@ p:before{
   
   
   .table100-head th {
-	padding-top: 10px;
-	padding-bottom: 8px;
+	padding-top: 2%;
+	padding-bottom: 1%;
+  padding-left:2%;
+  padding-right:2%
   }
   
   .table100-body td {
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 20px;
+  padding-top:2%;
+  padding-bottom:1%;
+  padding-left: 5%;
+	
   }
   
   /*==================================================================
@@ -413,7 +431,7 @@ p:before{
   width: 1%;
   height: 1%;
   border-radius: 100%; /* TODO: prefix */
-  margin: -8% 0 0 90%;
+  margin: -14% 0 0 90%;
   position: relative;
   display: block;
   position: relative;
@@ -429,6 +447,7 @@ p:before{
   -o-transition: border 600ms ease-in-out;
   transition: border 600ms ease-in-out;
 }
+/* for cancel button */
 .button-block button {
   position: absolute;
   left: 50%;
@@ -477,6 +496,7 @@ p:before{
   left: 5px;
 }
   
+/* for responsiveness */
 @media screen and (max-width: 600px) {
 .blurpart , .sidebar{
 	display: none;

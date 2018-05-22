@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
-<<<<<<< HEAD:sql/sms(2).sql
--- Generation Time: May 21, 2018 at 02:22 PM
-=======
 -- Generation Time: May 17, 2018 at 03:04 PM
->>>>>>> 7e2b85c7fe52efc5e3ebcc927b8b95ff2f277c0a:sql/sms.sql
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 

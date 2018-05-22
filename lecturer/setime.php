@@ -105,7 +105,12 @@
 									<td class="cell100 column1">Like a butterfly</td>
 									<td class="cell100 column2">Boxing</td>
 									<td class="cell100 column3">9:00 AM - 11:00 AM</td>
-                                    <td class="cell100 column4"><button>Edit</button> <button>Cancel</button> </td>
+                                    <td class="cell100 column4">
+                                        <div class="adjust">
+                                            <button>Edit</button> 
+                                            <button>Cancel</button>
+                                        </div>
+                                    </td>
                                 
 								</tr>
 
@@ -113,7 +118,12 @@
 									<td class="cell100 column1">Mind & Body</td>
 									<td class="cell100 column2">Yoga</td>
 									<td class="cell100 column3">8:00 AM - 9:00 AM</td>
-                                    <td class="cell100 column4"><button>Edit</button> <button>Cancel</button> </td>
+                                    <td class="cell100 column4">
+                                        <div class="adjust">
+                                            <button>Edit</button> 
+                                            <button>Cancel</button>
+                                        </div>
+                                    </td>
 									
                                 </tr>
                                 </tbody>

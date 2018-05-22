@@ -144,7 +144,10 @@ signbutton.onclick = function(e){
         return;
     }
         let imageX = document.getElementById('fileUpload');
-        let xten = getFileExtension(imageX.files[0].name).toLowerCase();
+        let xten = "";
+        if(imageX.files.length>0){
+          xten = getFileExtension(imageX.files[0].name).toLowerCase();
+        }
         
          params = {
             'role': userrole.toLowerCase(),
@@ -190,7 +193,12 @@ function handleRegister(phpResponse){
     if(phpResponse['link']){
         if(userrole == 'Student'){
             let imgbtn = document.getElementById('picturebutton');
+            let checksize = document.getElementById('fileUpload');
+            if(checksize.files.length==0){
+                displayRegisterError('No Image selected');
+            }else{
             imgbtn.click();
+            }
         }else{
             location.href = phpResponse['value'];
         }

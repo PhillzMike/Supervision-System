@@ -1,3 +1,12 @@
+<?php 
+    session_start();
+    require_once('../php/functions.php');
+    if(isSuper()){
+         header('Location: ../lecturer');
+    }elseif(!isStudent()){
+        header('Location: ../');
+    }
+?>
 <!DOCTYPE HTML>
 <html>
 
@@ -14,7 +23,7 @@
         <div class="image-case">
                 <img src="img/b2.jpg">
             <h2>
-                <span class="">Hello, Joda Opemipo</span>
+                <span class="">Hello,<?php echo ' '.$_SESSION['firstname'].' '.$_SESSION['lastname'] ?></span>
             </h2>
         </div>
         <br>

@@ -2,7 +2,7 @@
     session_start();
     require_once('../php/functions.php');
     if(isStudent()){
-         //to student dash
+        header('Location: ../student');
     }elseif(!isSuper()){
        header('Location: ../');
     }
@@ -25,7 +25,7 @@
      <div class="sidebar">
             <div class="image-case">
             <h2><img src="../img/logo/unilag.png" alt="institution-logo"><span>Hi,
-            <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lstnm'] ?> </span></h2>
+            <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lastname'] ?> </span></h2>
             </div>
       <hr>
       <div class="dashboard-list">
@@ -93,7 +93,7 @@
                 <label class="placejumper">Email</label>
             </div>
             <div class="group "style="width:70%;">
-                <input readonly type="text" name="phonenumber" class="float-input remonly">
+                <input  type="text" id="readonlyfalse" name="phonenumber" class="float-input remonly" readonly>
                 <span class="bar"></span>
                 <label class="placejumper">Phone Number</label>
             </div>
@@ -107,7 +107,7 @@
     var item  = document.getElementById("edit");
     function reditclick() {
     item.style.display = "none";
-    document.getElementsByClassName("remonly") ="false";
+    document..getElementById("readonlyfalse").readonly ="false";
     }
     </script>
     

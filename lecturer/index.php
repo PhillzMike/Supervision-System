@@ -22,26 +22,33 @@
    </div>
     <div class="sidebar">
         <div class="image-case">
-            <img src="../img/logo/unilag.png" alt="institution-logo">
+        <h2><img src="../img/logo/unilag.png" alt="institution-logo"><span>Hi,
+            <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lstnm'] ?></span></h2> 
         </div>
-        <h2>Hi,<?php echo ' '.$_SESSION['title'].' '.$_SESSION['lstnm'] ?></h2>
+        <hr>
+        <br>
         <div class="dashboard-list">
-            <a href="#"><i class="fa fa-columns icon"></i>Dashboard<i class="fa fa-caret-left arrow" style="font-size:30px;"></i></a>
+            <a href="#" class="here"><i class="fa fa-columns icon "></i>Dashboard</a>
         </div>
+        <br>
         <div class="dashboard-list">
             <a href="setime.php"><i class="fa fa-calendar icon"></i>Set Available Period</a>
         </div>
+        <br>
         <div class="dashboard-list">
-            <a href="#"><i class="fa fa-user icon"></i>Change Profile</a>
+            <a href="profilelecturer.php"><i class="fa fa-user icon"></i>Change Profile</a>
         </div>
+        <br>
         <div class="dashboard-list">
-            <a href="#"><i class="fa fa-key icon"></i>Change Password</a>
+            <a href="passwordlect.php"><i class="fa fa-key icon"></i>Change Password</a> 
         </div>
+        <br>
         <div class="dashboard-list">
-            <a href="../php/logout.php"><i class="fa fa-sign-out-alt icon"></i>Logout</a>
+            <a href="../php/logout.php"><i class="fa fa-home icon"></i>Logout</a>
+        </div>
+        
         </div>
 
-        </div>
   <div class="blurpart"  id="residebar">
     <div class="phonebar">
       <span class="close">&times;</span>
@@ -66,25 +73,70 @@
         
         </div>
   </div> 
-
-	  <div class="appointmentcards">
-        <section class="card">
-           <img src="../img/logo/unilag.png">
-          <p><span class="textf">Name:Joda Opemipo</span>
+  
+  <h3 class="app_tag">Appointment Dashboard</h3>
+	  <div class="appointmentcards" id = "appointmentCards">
+        
+      <section class="card" id = "card"> 
+        <div class="color_placing">
+           <img src = "../img/unilag.png" class = "image">
+           </div>
+          
+        <div>
+          <div class="button-block">
+           <button type="button">
+            <i class="mark x"></i>
+            <i class="mark xx"></i>
+           </button>
+        </div>
+            <span class="textf">Name:Joda Opemipo</span>
             <br>
             <span class="textf">Day:18th April,2018</span>
+            <br>
             <span class="textf">Time:12pm - 1pm </span>
-          </p>
+         </div>
         </section>
 
         <section class="card">
-            <img src="../img/logo/unilag.png">
-            <p><span class="textf">Name:Joda Opemipo</b></span>
-            <br>
-            <span class="textf">Day:18th April,2018</span>
-            <span class="textf">Time:12pm - 1pm </span>
-          </p>
+          <div class="color_placing">
+                <img src = "../img/unilag.png" class = "image">
+        </div>
+       
+       <div>
+          <div class="button-block">
+           <button type="button">
+            <i class="mark x"></i>
+            <i class="mark xx"></i>
+           </button>
+         </div>
+         <span class="textf">Name:Joda Opemipo</span>
+         <br>
+         <span class="textf">Day:18th April,2018</span>
+         <br>
+         <span class="textf">Time:12pm - 1pm </span>
+      </div>
         </section>
+      
+        <section class="card">
+        <div class="color_placing">
+             <img src = "../img/unilag.png" class = "image">
+        </div>
+       
+       <div>
+           <div class="button-block">
+                <button type="button">
+                    <i class="mark x"></i>
+                    <i class="mark xx"></i>
+                </button>
+            </div>
+        <span class="textf">Name:Joda Opemipo</span>
+         <br>
+         <span class="textf">Day:18th April,2018</span>
+         <br>
+         <span class="textf">Time:12pm - 1pm </span>
+      </div>
+        </section>
+
 	  </div>
     <script>
       var side = document.getElementById("residebar");
@@ -101,6 +153,11 @@
     } 
   }
 
+    </script>
+    <script type = "text/javascript" src = "../js/ajax.js"></script>
+    <script type = "text/javascript" src = "../js/card.js"></script>
+    <script>
+    callajax([],'../php/cardGuy.php',fillCard);
     </script>
 </body>
 </html>

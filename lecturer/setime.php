@@ -1,3 +1,12 @@
+<?php 
+    session_start();
+    require_once('../php/functions.php');
+    if(isStudent()){
+         //to student dash
+    }elseif(!isSuper()){
+       header('Location: ../');
+    }
+?>
 <html>
 <head>
 	<title>Lecturer DashBoard</title>
@@ -14,7 +23,7 @@
   <div class="sidebar">
             <div class="image-case">
             <h2><img src="../img/logo/unilag.png" alt="institution-logo"><span>Hi,
-               <!-- putname  --> </span></h2>
+            <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lstnm'] ?> </span></h2>
             </div>
       <hr>
       <div class="dashboard-list">
@@ -26,7 +35,7 @@
       </div>
       <br>
       <div class="dashboard-list">
-          <a href="profilelecturer.php"><i class="fa fa-user icon"></i>Change Profile</a>
+          <a href="profilelecturer.php"><i class="fa fa-user icon"></i>View Profile</a>
       </div>
       <br>
       <div class="dashboard-list">
@@ -65,19 +74,41 @@
     <div class="infocreate">
        <span class="close2">&times;</span>
        <h3 STYLE="text-align:center;">SET FREE SCHEDULE</h3>
+       <form>
        <section class="app">
          <div class="time">
-           <p type="Available Day:"><input type="date"></input></p>
+           <p type="Available Day:">
+               <select type="date" id="day" style="border:none; padding-top:30px 10px 10px 0px;" required>
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+                <option>Sunday</option>
+             </select></p>
          </div>
           
          <div>
             <span id="addtime" onclick="myFunction()"><b>+ Add</b></span>
-            <p type="Available Time:" id="timeslot"><input type="time"></input></p>
+            <p type="Start Time:" id="startslot"><input type="time" class="startTime" required></input></p>
          </div>
+         <div>
+    
+            <p type="End Time:" id="endslot"><input type="time" class="endTime" required></input></p>
+         </div>
+          <div>
+            <span id="addtime"></span>
+            <p type="Students No:"><input  type="number" id="maxStudent" required></input></p>
+         </div>
+         
+         
        </section>
        <br>
-       <button class="cr1" >Create</button>
+       <input type="submit" value="Create" class="cr1" >
+     </form>
     </div>
+   
   </div>
 
 
@@ -86,12 +117,12 @@
       <div class="wrap-table100">
           <div class="table100 ver2 m-b-110">
               <div class="table100-head">
-                  <table>
+                  <table >
                       <thead>
-                          <tr class="row100 head">
+                          <tr class="row100 head" style="border:1px solid grey">
                               <th class="cell100 column1">Day</th>
                               <th class="cell100 column2">Available Time</th>
-                              <th class="cell100 column3">Number of Students</th>
+                              <th class="cell100 column3">No of Students</th>
                               <th class="cell100 column4">Adjustment</th>
                           </tr>
                       </thead>
@@ -99,13 +130,13 @@
               </div>
 
              <div class="table100-body js-pscroll">
-						<table>
+						<table id="timetable">
 							<tbody>
 								<tr class="row100 body">
-									<td class="cell100 column1">Like a butterfly</td>
-									<td class="cell100 column2">Boxing</td>
-									<td class="cell100 column3">9:00 AM - 11:00 AM</td>
-                                    <td class="cell100 column4"><button>Edit</button> <button>Cancel</button> </td>
+									<td class="cell100 column1">21-May-2018</td>
+									<td class="cell100 column2">9:00:00 AM</td>
+									<td class="cell100 column3">4</td>
+                                    <td class="cell100 column4"><div class="adjust"><button>Edit</button> <button>Cancel</button></div> </td>
                                 
 								</tr>
 
@@ -113,7 +144,7 @@
 									<td class="cell100 column1">Mind & Body</td>
 									<td class="cell100 column2">Yoga</td>
 									<td class="cell100 column3">8:00 AM - 9:00 AM</td>
-                                    <td class="cell100 column4"><button>Edit</button> <button>Cancel</button> </td>
+                                    <td class="cell100 column4"><div class="adjust"><button>Edit</button> <button>Cancel</button> </td>
 									
                                 </tr>
                                 </tbody>
@@ -139,7 +170,14 @@
        side.style.display = "none";
     }
      spann.onclick = function() {
+       var itm = document.getElementById("startslot");
+       var itm2 = document.getElementById("endslot");
+     while(itm.lastChild != itm.firstChild && itm2.lastChild != itm2.firstChild ){
+       itm.removeChild(itm.lastChild);
+       itm2.removeChild(itm2.lastChild);
+     }
        addmodal.style.display = "none";
+       
     }
      function addclick() {
         addmodal.style.display = "block";
@@ -152,12 +190,19 @@
     }
   }
 function myFunction() {
-    var itm = document.getElementById("timeslot").lastChild;
+    var itm = document.getElementById("startslot").lastChild;
+    var itm2 = document.getElementById("endslot").lastChild;
     var cln = itm.cloneNode(true);
-    document.getElementById("timeslot").appendChild(cln);
+    var cln2 = itm2.cloneNode(true);
+    document.getElementById("startslot").appendChild(cln);
+    document.getElementById("endslot").appendChild(cln2);
+    
+    
 }
 
 
     </script>
+    <script type="text/javascript" src="../js/ajax.js"></script>
+    <script type="text/javascript" src="../js/addtime.js"></script>
 </body>
 </html>

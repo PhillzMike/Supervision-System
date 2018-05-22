@@ -202,3 +202,10 @@ function handleRegister(phpResponse){
         displayRegisterError(phpResponse['value']);
     }
 } 
+//when the user starts typing on a tooltip
+var tool = document.getElementById("usr");
+usr.onclick = function(e){
+    var tooltip = document.getElementById("tooltip");
+    tooltip.style.display = "none";
+}
+

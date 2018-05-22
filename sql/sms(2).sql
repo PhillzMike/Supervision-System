@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
+<<<<<<< HEAD:sql/sms(2).sql
+-- Generation Time: May 21, 2018 at 02:22 PM
+=======
 -- Generation Time: May 17, 2018 at 03:04 PM
+>>>>>>> 7e2b85c7fe52efc5e3ebcc927b8b95ff2f277c0a:sql/sms.sql
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -54,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `login` (
   `password` varchar(255) NOT NULL,
   `role` enum('student','supervisor') NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=140805005 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `login`
@@ -62,7 +66,9 @@ CREATE TABLE IF NOT EXISTS `login` (
 
 INSERT INTO `login` (`ID`, `username`, `password`, `role`) VALUES
 (2, 'Opemipo', '1998', 'student'),
-(3, 'Joda', '1999', 'supervisor');
+(3, 'Joda', '1999', 'supervisor'),
+(4, 'Gordie', 'terminal', 'supervisor'),
+(140805004, 'Opemipo', '140805004', 'student');
 
 -- --------------------------------------------------------
 
@@ -77,6 +83,12 @@ CREATE TABLE IF NOT EXISTS `students` (
   `middlename` varchar(255) NOT NULL,
   `lastname` varchar(255) NOT NULL,
   `img_path` varchar(255) NOT NULL,
+  `department` varchar(255) NOT NULL,
+  `institution` varchar(255) NOT NULL,
+  `level` varchar(10) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `gender` varchar(10) NOT NULL,
+  `phone_number` varchar(15) NOT NULL,
   KEY `stu_id` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -108,6 +120,9 @@ CREATE TABLE IF NOT EXISTS `supervisors` (
   `firstname` varchar(255) NOT NULL,
   `middlename` varchar(255) NOT NULL,
   `lastname` varchar(255) NOT NULL,
+  `institution` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `phone_number` varchar(255) NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -115,8 +130,9 @@ CREATE TABLE IF NOT EXISTS `supervisors` (
 -- Dumping data for table `supervisors`
 --
 
-INSERT INTO `supervisors` (`ID`, `title`, `firstname`, `middlename`, `lastname`) VALUES
-(3, 'Mr', 'Opemipo', 'Oreoluwa', 'Joda');
+INSERT INTO `supervisors` (`ID`, `title`, `firstname`, `middlename`, `lastname`, `institution`, `email`, `phone_number`) VALUES
+(3, 'Mr', 'Opemipo', 'Oreoluwa', 'Joda', '', '', ''),
+(4, 'Master', 'Godwin', 'Udumo', 'Okoi', '', '', '');
 
 --
 -- Constraints for dumped tables

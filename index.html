@@ -34,14 +34,14 @@
                         </div>
                         <div class="texts">
                             <div class="errmsg" id="loginerror">
-                                The f*ck you tryna do huh?
+                                What are you trying to do?
                             </div>
 
                             <div class="group">
                                 <input type="text" style="background-color:rgb(255, 245, 245)" name="username" class="float-input" id="usr">
                                 <span class="bar"></span>
-                                <label for="usr" class="placejumper">Username</label>
-                                <span class="tooltiptext" id="tooltip">Your username is your Matric No or Staff ID</span>
+                                <label for="usr" class="placejumper">User ID</label>
+                                <span class="tooltiptext" id="tooltip">Your user ID is your Matric No or Staff ID</span>
 
                             </div>
                             <div class="group">
@@ -62,7 +62,7 @@
             </div>
 
             <div id="signup" class="logmodal">
-                <form id="modal" method="POST" action="php/login.php">
+                <form id="modal" method="POST" action="php/upload.php" enctype="multipart/form-data">
                     <span class="close" id="regx">&times;</span>
                     <div class="textbox">
                         <div class="header">
@@ -117,13 +117,16 @@
                                     <span class="bar"></span>
                                     <label class="placejumper">Level</label>
                                 </div>
-                                
+                                <form action="php/upload.php" method="post" enctype="multipart/form-data">
                                 <div id="userActions">
                                     <div id="dropImage">
                                         <p>Drag &amp; Drop Image</p>
                                     </div>
-                                    <input type="file" id="fileUpload" value="me" />
+                                    <input type="file" id="fileUpload"name="fileToUpload" value="me" />
+                                    <input type="submit" id="picturebutton" style="display:none" value="Upload Image" name="submit">
                                 </div>
+                               
+                            </form>
                                 <div class="group">
                                     <input type="text" id="stu_dept" class="float-input">
                                     <span class="bar"></span>
@@ -194,7 +197,7 @@
                                     <label class="placejumper">Password</label>
                                 </div>
                                 <div class="group">
-                                    <input type="password" id="sup_passw" class="float-input">
+                                    <input type="password" id="sup_pass2" class="float-input">
                                     <span class="bar"></span>
                                     <label class="placejumper">Confirm Password</label>
                                 </div>

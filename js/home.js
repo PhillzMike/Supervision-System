@@ -128,30 +128,35 @@ function handleLogin(phpResponse){
         displayLoginError(phpResponse['value']);
     }
 } 
-
+function getFileExtension(filename) {
+    return filename.split('.').pop();
+}
+var userrole
 //Register/ Sign up
 var signbutton = document.getElementById('signup-button');
 signbutton.onclick = function(e){
     e.preventDefault();
-   let userrole = dropdownlbl.value;
+   userrole = dropdownlbl.value;
+   let params;
     if (userrole == "Student") {
         if(document.querySelector('#stu_pass1').value != document.querySelector('#stu_pass2').value){
         handleRegister({'link':false,'value':'Password mismatch','errors':['#stu_pass1','#stu_pass2']});
         return;
     }
-    
-        const params = {
-            'role':userrole,
+        let imageX = document.getElementById('fileUpload');
+        let xten = getFileExtension(imageX.files[0].name).toLowerCase();
+        
+         params = {
+            'role': userrole.toLowerCase(),
             'id':document.querySelector('#stu_matric').value,
             'fname':document.querySelector('#stu_fname').value,
             'mname':document.querySelector('#stu_mname').value,
             'lname':document.querySelector('#stu_lname').value,
             'institute':document.querySelector('#stu_institute').value,
-            
-            
             'email':document.querySelector('#stu_email').value,
-            'pass':document.querySelector('#stu_pass1').value,
-            'submit' : document.querySelector('#loginbutton').value,
+            'img':document.querySelector('#stu_matric').value+"."+xten,
+            'password':document.querySelector('#stu_pass1').value,
+            'submit' : document.querySelector('#signup-button').value,
        
        
             'dept':document.querySelector('#stu_dept').value,
@@ -162,21 +167,19 @@ signbutton.onclick = function(e){
             handleRegister({'link':false,'value':'Password mismatch','errors':['#sup_pass1','#sup_pass2']});
             return;
         }
-        const params = {
-            'role':userrole,
+         params = {
+            'role':userrole.toLowerCase(),
             'id':document.querySelector('#staff_id').value,
             'fname':document.querySelector('#sup_fname').value,
             'mname':document.querySelector('#sup_mname').value,
             'lname':document.querySelector('#sup_lname').value,
             'institute':document.querySelector('#sup_institute').value,
-            'level':document.querySelector('#stu_level').value,
-            'dept':document.querySelector('#stu_dept').value,
-            'email':document.querySelector('#stu_email').value,
-            'pass':document.querySelector('#stu_pass1').value,
-            'submit' : document.querySelector('#loginbutton').value,
+            'email':document.querySelector('#sup_email').value,
+            'password':document.querySelector('#sup_pass1').value,
+            'submit' : document.querySelector('#signup-button').value,
        
 
-            'pno':document.querySelector('#stu_phonenumber').value,
+            'pno':document.querySelector('#sup_phonenumber').value,
             'title':document.querySelector('#sup_title').value
         }
     }
@@ -185,13 +188,18 @@ signbutton.onclick = function(e){
 }
 function handleRegister(phpResponse){
     if(phpResponse['link']){
-        location.href = phpResponse['value'];
+        if(userrole == 'Student'){
+            let imgbtn = document.getElementById('picturebutton');
+            imgbtn.click();
+        }else{
+            location.href = phpResponse['value'];
+        }
     }else{
         if(phpResponse['errors']){
             
             //TODO
         }
-        displayLoginError(phpResponse['value']);
+        displayRegisterError(phpResponse['value']);
     }
 } 
 //when the user starts typing on a tooltip

@@ -69,6 +69,20 @@ margin-right: 10%;
 	height:8%;
 }
 
+.adjust button{
+  border: none;
+  background-color: rgb(121, 122, 122);
+  color: white;
+  width: 40%;
+  height: 25px;
+  border-radius: 6px;
+  box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.671);
+  cursor: pointer;
+}
+
+.adjust button:hover{
+  transform: translateY(4px);
+}
 .navbar{
 	display: none;
 }

@@ -2,7 +2,7 @@
 require_once('connection.php');
 $conn = connect();
 session_start();
-$query = "Select `studentID`, `Date`, `Start Time`, `End Time` from appointment where `supervisorID` = 3";
+$query = "Select `studentID`, `Date`, `Start Time`, `End Time` from appointment where `supervisorID` = ".$_SESSION["ID"];
 $result = $conn->query($query);
 $allAppointment = $result->fetchAll(PDO::FETCH_ASSOC);
 $query = "Select `firstname`, `lastname`, `img_path` from students where `ID` = :id";

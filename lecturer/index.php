@@ -55,7 +55,7 @@
     <div class="phonebar">
       <span class="close">&times;</span>
     <img src="unilag.png" alt="institution-logo">
-    <h2>Hi, <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lstnm'] ?></h2>
+    <h2>Hi, <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lastname'] ?></h2>
             <div class="dashboard-list">
                  <a href="#" class="here"> Dashboard</a>
             </div>
@@ -171,12 +171,7 @@
         <br>
         <span class="textf">Level:400</span>
         <br>
-        <span class="textf">Message: Sir i have data communications defence</span>
-       
-        
-        
-        
-           
+        <span class="textf">Message: Sir i have data communications defence</span>    
     </div>
   </div>
 

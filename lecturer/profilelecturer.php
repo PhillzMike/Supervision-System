@@ -107,7 +107,10 @@
     var item  = document.getElementById("edit");
     function reditclick() {
     item.style.display = "none";
-    document..getElementById("readonlyfalse").readonly ="false";
+    var reminput = document.getElementsByClassName("remonly");
+    for(var i=0; i<reminput.length; i++){
+        reminput[i].readOnly = false;
+       }
     }
     </script>
     

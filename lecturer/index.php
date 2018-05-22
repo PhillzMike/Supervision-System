@@ -2,9 +2,9 @@
     session_start();
     require_once('../php/functions.php');
     if(isStudent()){
-         //to student dash
+         header('Location: ../student');
     }elseif(!isSuper()){
-       header('Location: ../');
+        header('Location: ../');
     }
 ?>
 <html>
@@ -24,8 +24,8 @@
    </div>
     <div class="sidebar">
         <div class="image-case">
-        <h2><img src="../img/logo/unilag.png" alt="institution-logo"><span>Hi,
-            <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lstnm'] ?></span></h2> 
+        <h2><img src="../img/logo/unilag.png" alt="institution-logo"> <br><span>Hi,
+            <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lastname'] ?></span></h2> 
         </div>
         <hr>
         <br>
@@ -55,7 +55,8 @@
     <div class="phonebar">
       <span class="close">&times;</span>
     <img src="unilag.png" alt="institution-logo">
-    <h2>Hi, <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lstnm'] ?></h2>
+   
+    <h2>Hi, <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lastname'] ?></h2>
             <div class="dashboard-list">
                  <a href="#" class="here"> Dashboard</a>
             </div>
@@ -158,6 +159,24 @@
 
    </div>
 
+   <div class="fullinfo_app" id="fullinfo_app">
+    <div class="fullinfo_content">
+       <span class="close2">&times;</span>
+       <span class="textf">Name:Joda Opemipo</span>
+        <br>
+        <span class="textf">Day:18th April,2018</span>
+        <br>
+        <span class="textf">Time:12pm - 1pm </span>
+        <br>
+        <span class="textf">Department:Course Adviser</span>
+        <br>
+        <span class="textf">Level:400</span>
+        <br>
+        <span class="textf">Message: Sir i have data communications defence</span>    
+    </div>
+  </div>
+
+
    <div class="cancel_app" id="cancel_app">
     <div class="cancel_info">
        <span class="close2">&times;</span>
@@ -168,6 +187,7 @@
            
     </div>
   </div>
+
 
     <script>
       var side = document.getElementById("residebar");

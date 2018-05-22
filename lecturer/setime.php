@@ -2,7 +2,7 @@
     session_start();
     require_once('../php/functions.php');
     if(isStudent()){
-         //to student dash
+        header('Location: ../student');
     }elseif(!isSuper()){
        header('Location: ../');
     }
@@ -23,7 +23,7 @@
   <div class="sidebar">
             <div class="image-case">
             <h2><img src="../img/logo/unilag.png" alt="institution-logo"><span>Hi,
-            <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lstnm'] ?> </span></h2>
+            <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lastname'] ?> </span></h2>
             </div>
       <hr>
       <div class="dashboard-list">
@@ -105,7 +105,7 @@
          
        </section>
        <br>
-       <input type="submit" value="Create" class="cr1" >
+       <input type="submit" value="Create" class="cr1" onclick="addtime();">
      </form>
     </div>
    
@@ -204,5 +204,8 @@ function myFunction() {
     </script>
     <script type="text/javascript" src="../js/ajax.js"></script>
     <script type="text/javascript" src="../js/addtime.js"></script>
+    <script>
+    callajax([],'../php/getLecturerAppointment.php',showTime);
+    </script>
 </body>
 </html>

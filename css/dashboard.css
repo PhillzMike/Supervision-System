@@ -69,6 +69,20 @@ margin-right: 10%;
 	height:8%;
 }
 
+.adjust button{
+  border: none;
+  background-color: rgb(121, 122, 122);
+  color: white;
+  width: 40%;
+  height: 25px;
+  border-radius: 6px;
+  box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.671);
+  cursor: pointer;
+}
+
+.adjust button:hover{
+  transform: translateY(4px);
+}
 .navbar{
 	display: none;
 }
@@ -88,14 +102,19 @@ margin-right: 10%;
 	height:95%;
 	width: 100%;
 	grid-template-columns:35% 65%;
-	display: grid;
+  display: grid;
+
+  cursor:pointer;
 	box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 4px 0px;
     
+}
+.card:hover{
+  transform: translateY(-4px);
 }
 .cancelbutton{
   padding-top:-30px;
 }
-.blurpart, .cancel_app{
+.blurpart, .cancel_app,fullinfo_app{
 	display: none;
 }
 .card img{
@@ -147,7 +166,7 @@ padding-right:2%;
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 
 }
-.infocreate,.cancel_info{
+.infocreate,.cancel_info, .fullinfo_content{
    margin-left: 40%;
    margin-top: 10%;
     width: 40%; /* Full width */
@@ -480,6 +499,9 @@ p:before{
   height: 15px;
   top: 15px;
   left: 5px;
+}
+.remonly{
+  background-color:rgb(255, 255, 255);
 }
   
 /* for responsiveness */

@@ -2,7 +2,7 @@
     session_start();
     require_once('../php/functions.php');
     if(isStudent()){
-         //to student dash
+        header('Location: ../student');
     }elseif(!isSuper()){
        header('Location: ../');
     }
@@ -16,6 +16,12 @@
   <link rel="stylesheet" href="../css/startpage.css">
   <link rel="stylesheet" href="../css/materialtext.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
+   .remonly{
+  background-color:rgb(255, 255, 255);
+    }
+</style>
+
 </head>
 <body>
   <div class="navbar">
@@ -24,8 +30,9 @@
    </div>
      <div class="sidebar">
             <div class="image-case">
-            <h2><img src="../img/logo/unilag.png" alt="institution-logo"><span>Hi,
-            <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lstnm'] ?> </span></h2>
+            <h2><img src="../img/logo/unilag.png" alt="institution-logo">
+            <br><span>Hi,
+            <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lastname'] ?> </span></h2>
             </div>
       <hr>
       <div class="dashboard-list">
@@ -55,59 +62,66 @@
             <span><input class="signIn homebutton" value="Edit"
              style=" background-color:#5264AE;margin-left:23%" id="edit" onclick="reditclick()"><span></h3>
            
-            
+        <form action="../php/changelecturer.php" method ="POST"> 
           <div class="lprofilechange"style="display:block " id="student-form">
             <div class="group " style="width:70%;">
-                <input readonly type="text" name="fname" class="float-input remonly" >
+                <input readonly type="text" name="fname" class="float-input remonly" value="<?php echo $_SESSION['firstname'] ?>" >
                 <span class="bar"></span>
                 <label class="placejumper">First Name</label>
             </div>
             <div class="group " style="width:70%;">
-                <input readonly type="text" name="mname" class="float-input remonly">
+                <input readonly type="text" name="mname" class="float-input remonly"value="<?php echo $_SESSION['middlename'] ?>">
                 <span class="bar"></span>
                 <label class="placejumper">MiddleName</label>
             </div>
             <div class="group " style="width:70%;">
-                <input readonly type="text" name="lname" class="float-input remonly">
+                <input readonly type="text" name="lname" class="float-input remonly" value="<?php echo $_SESSION['lastname'] ?>">
                 <span class="bar"></span>
                 <label class="placejumper">Last Name</label>
             </div>
             <div class="group " style="width:70%;">
-                <input readonly type="text" name="title" class="float-input remonly">
+                <input readonly type="text" name="title" class="float-input remonly" value="<?php echo $_SESSION['title'] ?>">
                 <span class="bar"></span>
                 <label class="placejumper">Title</label>
             </div>
             <div class="group" style="width:70%;">
-                <input readonly type="text" name="institute" class="float-input remonly">
+                <input readonly type="text" name="institute" class="float-input remonly" value="<?php echo $_SESSION['institution'] ?>">
                 <span class="bar"></span>
                 <label class="placejumper">Institution</label>
             </div>
             <div class="group " style="width:70%;">
-                <input readonly type="text" name="username" class="float-input remonly">
+                <input readonly type="text" name="username" class="float-input" 
+                style="background-color:white;" value="<?php echo $_SESSION['ID'] ?>">
                 <span class="bar"></span>
-                <label class="placejumper">Staff id</label>
+                <label class="placejumper">Staff ID</label>
             </div>
             <div class="group" style="width:70%;">
-                <input readonly type="text" name="username" class="float-input remonly">
+                <input readonly type="text" name="email" class="float-input remonly"value="<?php echo $_SESSION['email'] ?>">
                 <span class="bar"></span>
                 <label class="placejumper">Email</label>
             </div>
             <div class="group "style="width:70%;">
-                <input readonly type="text" name="phonenumber" class="float-input remonly">
+                <input  type="text" id="readonlyfalse" name="phonenumber" class="float-input remonly" readonly value="<?php echo $_SESSION['phone_number'] ?>">
                 <span class="bar"></span>
                 <label class="placejumper">Phone Number</label>
             </div>
             <div class="enter">
-               <input class=" signIn homebutton" value="Change" style="margin-top:1%; background-color:#5264AE;" name="submit" type="submit" >
+               <input class=" signIn homebutton" id="change" value="Change" style="margin-top:1%; margin-left:25%; background-color:#5264AE; display:none;" name="submit" type="submit" >
             </div>
         </div>
+</form>
 
 </body>
 <script>
     var item  = document.getElementById("edit");
+    var changeitem  = document.getElementById("change");
     function reditclick() {
     item.style.display = "none";
-    document.getElementsByClassName("remonly") ="false";
+    changeitem.style.display = "block";
+    var reminput = document.getElementsByClassName("remonly");
+    for(var i=0; i<reminput.length; i++){
+        reminput[i].readOnly = false;
+       }
     }
     </script>
     

@@ -1,10 +1,10 @@
 <?php 
     session_start();
     require_once('../php/functions.php');
-    if(isStudent()){
-         //to student dash
-    }elseif(!isSuper()){
-       header('Location: ../');
+    if(isSuper()){
+         header('Location: ../lecturer');
+    }elseif(!isStudent()){
+        header('Location: ../');
     }
 ?>
 <html>
@@ -23,9 +23,9 @@
    </div>
     <div class="sidebar">
         <div class="stdimage-case">
-        <h2><img src="../img/teni.jpg" alt="institution-logo">
+        <img src="<?php echo "../profile/studentImages/".$_SESSION['img_path']?>">
         <br><span>Hi,
-            <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lstnm'] ?></span></h2> 
+            <?php echo ' '.$_SESSION['firstname'].' '.$_SESSION['lastname'] ?></span></h2> 
         </div>
         <hr>
         <br>

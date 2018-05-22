@@ -3,26 +3,31 @@
     session_start();
     if(isset($_POST['submit'])){
         $conn = connect();
-        $stmt = $conn->prepare('SELECT * FROM `login` WHERE username = :username AND password = :password');
+        $stmt = $conn->prepare('SELECT * FROM `login` WHERE ID = :username AND password = :password');
         $data = Array('username' => $_POST['username'],'password' => $_POST['password']);
         if($stmt->execute($data)){
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            $error = "Internal database error, contact an administrator";
             if(!$result){
                 $error = "Invalid username and password";
             }
             $id = $result['ID'];
             $role = $result['role'];
-            $_SESSION['ID'] = $id;
-            $_SESSION['role'] = $role;
+            // $_SESSION['ID'] = $id;
+             $_SESSION['role'] = $role;
             
             if($role=="student"){
-
+                $stmt = $conn->query("SELECT * FROM `students` WHERE ID = $id");
+                $result = $stmt->fetch(PDO::FETCH_ASSOC);
+                $_SESSION = array_merge($_SESSION,$result);
+                $groupres = array('link'=>true, 'value'=>'./student');
             }else if($role == "supervisor"){
                 $stmt = $conn->query("SELECT * FROM `supervisors` WHERE ID = $id");
                 $result = $stmt->fetch(PDO::FETCH_ASSOC);
-                $_SESSION['fstnm'] = $result['firstname'];
-                $_SESSION['lstnm'] = $result['lastname'];
-                $_SESSION['title'] = $result['title'];
+                $_SESSION = array_merge($_SESSION,$result);
+                // $_SESSION['fstnm'] = $result['firstname'];
+                // $_SESSION['lstnm'] = $result['lastname'];
+                // $_SESSION['title'] = $result['title'];
                 
                 $groupres = array('link'=>true, 'value'=>'./lecturer');
                 //header("Location: ../lecturer");
@@ -38,5 +43,7 @@
         }
         echo json_encode($groupres);
        
+    }else{
+        header("location: ../index.html");
     }
 ?>

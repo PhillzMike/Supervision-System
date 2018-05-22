@@ -67,13 +67,33 @@
        <h3 STYLE="text-align:center;">SET FREE SCHEDULE</h3>
        <section class="app">
          <div class="time">
-           <p type="Available Day:"><input type="date"></input></p>
+           <p type="Available Day:">
+               <select type="date" id="day" style="border:none; padding-top:30px 10px 10px 0px;">
+                <option>Choose day:</option>
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+                <option>Sunday</option>
+             </select></p>
          </div>
           
          <div>
             <span id="addtime" onclick="myFunction()"><b>+ Add</b></span>
-            <p type="Available Time:" id="timeslot"><input type="time"></input></p>
+            <p type="Start Time:" id="startslot"><input type="time" id="startTime"></input></p>
          </div>
+         <div>
+    
+            <p type="End Time:" id="endslot"><input type="time" id="endTime"></input></p>
+         </div>
+          <div>
+            <span id="addtime"></span>
+            <p type="Students No:"><input type="number" id="maxStudent"></input></p>
+         </div>
+         
+         
        </section>
        <br>
        <button class="cr1" >Create</button>
@@ -86,12 +106,12 @@
       <div class="wrap-table100">
           <div class="table100 ver2 m-b-110">
               <div class="table100-head">
-                  <table>
+                  <table id="timetable">
                       <thead>
-                          <tr class="row100 head">
+                          <tr class="row100 head" style="border:1px solid grey">
                               <th class="cell100 column1">Day</th>
                               <th class="cell100 column2">Available Time</th>
-                              <th class="cell100 column3">Number of Students</th>
+                              <th class="cell100 column3">No of Students</th>
                               <th class="cell100 column4">Adjustment</th>
                           </tr>
                       </thead>
@@ -102,10 +122,10 @@
 						<table>
 							<tbody>
 								<tr class="row100 body">
-									<td class="cell100 column1">Like a butterfly</td>
-									<td class="cell100 column2">Boxing</td>
-									<td class="cell100 column3">9:00 AM - 11:00 AM</td>
-                                    <td class="cell100 column4"><button>Edit</button> <button>Cancel</button> </td>
+									<td class="cell100 column1">21-May-2018</td>
+									<td class="cell100 column2">9:00:00 AM</td>
+									<td class="cell100 column3">4</td>
+                                    <td class="cell100 column4"><div><button>Edit</button> <button>Cancel</button></div> </td>
                                 
 								</tr>
 
@@ -139,7 +159,14 @@
        side.style.display = "none";
     }
      spann.onclick = function() {
+       var itm = document.getElementById("startslot");
+       var itm2 = document.getElementById("endslot");
+     while(itm.lastChild != itm.firstChild && itm2.lastChild != itm2.firstChild ){
+       itm.removeChild(itm.lastChild);
+       itm2.removeChild(itm2.lastChild);
+     }
        addmodal.style.display = "none";
+       
     }
      function addclick() {
         addmodal.style.display = "block";
@@ -152,9 +179,14 @@
     }
   }
 function myFunction() {
-    var itm = document.getElementById("timeslot").lastChild;
+    var itm = document.getElementById("startslot").lastChild;
+    var itm2 = document.getElementById("endslot").lastChild;
     var cln = itm.cloneNode(true);
-    document.getElementById("timeslot").appendChild(cln);
+    var cln2 = itm2.cloneNode(true);
+    document.getElementById("startslot").appendChild(cln);
+    document.getElementById("endslot").appendChild(cln2);
+    
+    
 }
 
 

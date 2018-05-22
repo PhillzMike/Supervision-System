@@ -89,7 +89,7 @@ margin-right: 10%;
 	box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 4px 0px;
     
 }
-.blurpart{
+.blurpart, .cancel_app{
 	display: none;
 }
 .card img{
@@ -127,7 +127,7 @@ line-height:1.4;
 	height:8%;
 }
 
-.createapp{
+.createapp,.cancel_app{
 	top:0;
     position: absolute;
     z-index:1;
@@ -139,7 +139,7 @@ line-height:1.4;
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 
 }
-.infocreate{
+.infocreate,.cancel_info{
    margin-left: 40%;
    margin-top: 10%;
     width: 40%; /* Full width */
@@ -154,14 +154,15 @@ line-height:1.4;
 .close2 {
     color: black;
     float: right;
-    font-size: 20px;
+    font-size: 45px;
     font-weight: bold;
     padding-right: 1.5%;
 }
 
 .app{
 	display: grid;
-	grid-template-columns:50% 50%;
+  grid-template-columns:22% 22% 22% 22%;
+  grid-column-gap: 3%
 }
 
 
@@ -207,7 +208,13 @@ p:before{
 	margin-left: 30%;
 	padding-top: 3.2%;
 }
-
+.pborder{
+  width:70%;
+}
+.lprofilechange{
+  padding-top:5%;
+  margin-left:35%;
+}
 .limiter {
 	width: 1366px;
 	margin-left:20%;
@@ -268,14 +275,17 @@ p:before{
   
   
   .table100-head th {
-	padding-top: 10px;
-	padding-bottom: 8px;
+	padding-top: 2%;
+	padding-bottom: 1%;
+  padding-left:2%;
+  padding-right:2%
   }
   
   .table100-body td {
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 20px;
+  padding-top:2%;
+  padding-bottom:1%;
+  padding-left: 5%;
+	
   }
   
   /*==================================================================
@@ -415,6 +425,7 @@ p:before{
   -o-transition: border 600ms ease-in-out;
   transition: border 600ms ease-in-out;
 }
+/* for cancel button */
 .button-block button {
   position: absolute;
   left: 50%;
@@ -463,6 +474,7 @@ p:before{
   left: 5px;
 }
   
+/* for responsiveness */
 @media screen and (max-width: 600px) {
 .blurpart , .sidebar{
 	display: none;

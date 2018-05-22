@@ -500,6 +500,9 @@ p:before{
   top: 15px;
   left: 5px;
 }
+.remonly{
+  background-color:rgb(255, 255, 255);
+}
   
 /* for responsiveness */
 @media screen and (max-width: 600px) {

@@ -36,6 +36,7 @@ window.onclick = function (event){
         signupmodal.style.display = "none";
     }
 }
+//Student Supervisor Dropdown in register
 var dropdownlbl = document.getElementById('stu-drop');
 var dropdown = document.getElementById('drop');
 dropdownlbl.onmouseover = function () {
@@ -45,6 +46,7 @@ dropdownlbl.onmouseover = function () {
 dropdown.onmouseleave = function () {
     dropdownlbl.blur();
 }
+//Gets student and supervisor forms
 var studentform = document.getElementById('student-form');
 var supervisorform = document.getElementById('super-form');
 var studentbutton = document.getElementById('stu-a');
@@ -75,13 +77,17 @@ if (dropdownlbl.value == "Student") {
 superbutton.onclick = function () {
     dropdownlbl.blur();
     content.style.display = "none";
-    // document.getElementById('dropdown-content').style.display = "";
 }
 studentbutton.onclick = function () {
 
     dropdownlbl.blur();
     content.style.display = "none";
 }
+
+
+
+
+//Errors
 function displayLoginError(text) {
     document.getElementById('loginerror').innerHTML = text;
     document.getElementById('loginerror').style.display = "block";
@@ -99,6 +105,12 @@ Array.from(materialTexts).forEach(materialText => {
         document.getElementById('loginerror').style.display = "none";
     }
 });
+
+
+
+
+
+//Log in
 var loginbutton = document.getElementById('loginbutton');
 loginbutton.onclick = function(e){
     e.preventDefault();
@@ -116,6 +128,61 @@ function handleLogin(phpResponse){
         displayLoginError(phpResponse['value']);
     }
 } 
+
+//Register/ Sign up
+var signbutton = document.getElementById('signup-button');
+signbutton.onclick = function(e){
+    e.preventDefault();
+   let userrole = dropdownlbl.value;
+    if (userrole == "Student") {
+        if(document.querySelector('#stu_pass1').value != document.querySelector('#stu_pass2').value){
+        handleRegister({'link':false,'value':'Password mismatch','errors':['#stu_pass1','#stu_pass2']});
+        return;
+    }
+    
+        const params = {
+            'role':userrole,
+            'id':document.querySelector('#stu_matric').value,
+            'fname':document.querySelector('#stu_fname').value,
+            'mname':document.querySelector('#stu_mname').value,
+            'lname':document.querySelector('#stu_lname').value,
+            'institute':document.querySelector('#stu_institute').value,
+            
+            
+            'email':document.querySelector('#stu_email').value,
+            'pass':document.querySelector('#stu_pass1').value,
+            'submit' : document.querySelector('#loginbutton').value,
+       
+       
+            'dept':document.querySelector('#stu_dept').value,
+            'level':document.querySelector('#stu_level').value
+        }
+    } else if (userrole == "Supervisor") {
+        if(document.querySelector('#sup_pass1').value != document.querySelector('#sup_pass2').value){
+            handleRegister({'link':false,'value':'Password mismatch','errors':['#sup_pass1','#sup_pass2']});
+            return;
+        }
+        const params = {
+            'role':userrole,
+            'id':document.querySelector('#staff_id').value,
+            'fname':document.querySelector('#sup_fname').value,
+            'mname':document.querySelector('#sup_mname').value,
+            'lname':document.querySelector('#sup_lname').value,
+            'institute':document.querySelector('#sup_institute').value,
+            'level':document.querySelector('#stu_level').value,
+            'dept':document.querySelector('#stu_dept').value,
+            'email':document.querySelector('#stu_email').value,
+            'pass':document.querySelector('#stu_pass1').value,
+            'submit' : document.querySelector('#loginbutton').value,
+       
+
+            'pno':document.querySelector('#stu_phonenumber').value,
+            'title':document.querySelector('#sup_title').value
+        }
+    }
+   
+    callajax(params,'./php/signup.php',handleRegister);
+}
 function handleRegister(phpResponse){
     if(phpResponse['link']){
         location.href = phpResponse['value'];

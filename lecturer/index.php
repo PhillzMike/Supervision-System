@@ -28,7 +28,7 @@
         <hr>
         <br>
         <div class="dashboard-list">
-            <a href="#" class="here"><i class="fa fa-columns icon "></i>Dashboard<i class="fa fa-caret-left arrow" style="font-size:30px;"></i></a>
+            <a href="#" class="here"><i class="fa fa-columns icon "></i>Dashboard</a>
         </div>
         <br>
         <div class="dashboard-list">
@@ -36,18 +36,19 @@
         </div>
         <br>
         <div class="dashboard-list">
-            <a href="#"><i class="fa fa-user icon"></i>Change Profile</a>
+            <a href="profilelecturer.php"><i class="fa fa-user icon"></i>Change Profile</a>
         </div>
         <br>
         <div class="dashboard-list">
-            <a href="#"><i class="fa fa-key icon"></i>Change Password</a>
+            <a href="passwordlect.php"><i class="fa fa-key icon"></i>Change Password</a> 
         </div>
         <br>
         <div class="dashboard-list">
-            <a href="../php/logout.php"><i class="fa fa-sign-out-alt icon"></i>Logout</a>
+            <a href="../php/logout.php"><i class="fa fa-home icon"></i>Logout</a>
         </div>
         
         </div>
+
   <div class="blurpart"  id="residebar">
     <div class="phonebar">
       <span class="close">&times;</span>
@@ -74,30 +75,68 @@
   </div> 
   
   <h3 class="app_tag">Appointment Dashboard</h3>
-	  <div class="appointmentcards">
+	  <div class="appointmentcards" id = "appointmentCards">
         
-        <section class="card"> 
-        <div class="color_placinga">
-           <h3> 1 </h3>
+      <section class="card" id = "card"> 
+        <div class="color_placing">
+           <img src = "../img/unilag.png" class = "image">
            </div>
           
-          <p><span class="textf">Name:Joda Opemipo</span>
+        <div>
+          <div class="button-block">
+           <button type="button">
+            <i class="mark x"></i>
+            <i class="mark xx"></i>
+           </button>
+        </div>
+            <span class="textf">Name:Joda Opemipo</span>
             <br>
             <span class="textf">Day:18th April,2018</span>
+            <br>
             <span class="textf">Time:12pm - 1pm </span>
-          </p>
+         </div>
         </section>
 
         <section class="card">
-        <div class="color_placingb">
-           <h3> 2</h3>
-           </div>
-            <p><span class="textf">Name:Joda Opemipo</b></span>
-            <br>
-            <span class="textf">Day:18th April,2018</span>
-            <span class="textf">Time:12pm - 1pm </span>
-          </p>
+          <div class="color_placing">
+                <img src = "../img/unilag.png" class = "image">
+        </div>
+       
+       <div>
+          <div class="button-block">
+           <button type="button">
+            <i class="mark x"></i>
+            <i class="mark xx"></i>
+           </button>
+         </div>
+         <span class="textf">Name:Joda Opemipo</span>
+         <br>
+         <span class="textf">Day:18th April,2018</span>
+         <br>
+         <span class="textf">Time:12pm - 1pm </span>
+      </div>
         </section>
+      
+        <section class="card">
+        <div class="color_placing">
+             <img src = "../img/unilag.png" class = "image">
+        </div>
+       
+       <div>
+           <div class="button-block">
+                <button type="button">
+                    <i class="mark x"></i>
+                    <i class="mark xx"></i>
+                </button>
+            </div>
+        <span class="textf">Name:Joda Opemipo</span>
+         <br>
+         <span class="textf">Day:18th April,2018</span>
+         <br>
+         <span class="textf">Time:12pm - 1pm </span>
+      </div>
+        </section>
+
 	  </div>
     <script>
       var side = document.getElementById("residebar");
@@ -114,6 +153,11 @@
     } 
   }
 
+    </script>
+    <script type = "text/javascript" src = "../js/ajax.js"></script>
+    <script type = "text/javascript" src = "../js/card.js"></script>
+    <script>
+    callajax([],'../php/cardGuy.php',fillCard);
     </script>
 </body>
 </html>

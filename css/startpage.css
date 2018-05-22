@@ -162,18 +162,41 @@ body{
 }
 
 
-/* .group .tooltiptext{
+.group .tooltiptext{
     visibility: hidden;
     text-align: center;
     z-index: 1;
-    width: 50%;
-    height: 10%;
-    background-color: #f1f1f1;
+    width: 75%;
+    background-color: rgb(211, 211, 211);
+    text-align: center;
+    color: #313131ad;
+    opacity: 0;
+    transition: opacity 1s;
+    border-radius: 6px;
+    height: 40%;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 110%;
+    left: 20%;
+    margin-left: -30px;
+}
+
+.group .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgb(211, 211, 211) transparent ;
 }
 
 .group:hover .tooltiptext{
     visibility:visible;
-} */
+    opacity: 1;
+}
 
 .header{
     background-color: rgb(46, 46, 48);
@@ -276,15 +299,3 @@ h2{
 	border-radius: 10px;
 }
 
-/*Flexer*/
-.flex{
-    position: absolute;
-    top:0px;
-    left:0px;
-    z-index: -3;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}

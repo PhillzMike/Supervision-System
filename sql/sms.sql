@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
-<<<<<<< HEAD:sql/sms(2).sql
--- Generation Time: May 21, 2018 at 02:22 PM
-=======
--- Generation Time: May 17, 2018 at 03:04 PM
->>>>>>> 7e2b85c7fe52efc5e3ebcc927b8b95ff2f277c0a:sql/sms.sql
+-- Generation Time: May 22, 2018 at 04:55 PM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -54,21 +50,36 @@ CREATE TABLE IF NOT EXISTS `appointment` (
 DROP TABLE IF EXISTS `login`;
 CREATE TABLE IF NOT EXISTS `login` (
   `ID` int(20) NOT NULL AUTO_INCREMENT,
-  `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `role` enum('student','supervisor') NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=140805005 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=140805007 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `login`
 --
 
-INSERT INTO `login` (`ID`, `username`, `password`, `role`) VALUES
-(2, 'Opemipo', '1998', 'student'),
-(3, 'Joda', '1999', 'supervisor'),
-(4, 'Gordie', 'terminal', 'supervisor'),
-(140805004, 'Opemipo', '140805004', 'student');
+INSERT INTO `login` (`ID`, `password`, `role`) VALUES
+(1, 'a', 'supervisor'),
+(2, '1998', 'student'),
+(3, '1999', 'supervisor'),
+(4, 'terminal', 'supervisor'),
+(312, '123', 'student'),
+(3232, '1', 'student'),
+(12112, '123', 'student'),
+(12345, 'bod', 'supervisor'),
+(121123, '123', 'student'),
+(123456, 'bod', 'supervisor'),
+(323211, '22', 'student'),
+(419419, 'gbera', 'supervisor'),
+(1010101, 'teni', 'supervisor'),
+(1234567, '11', 'student'),
+(11122233, '080', 'supervisor'),
+(12112344, '123', 'student'),
+(12345678, '121', 'student'),
+(140805004, '140805004', 'student'),
+(140805005, '1998', 'student'),
+(140805006, 'kaka', 'student');
 
 -- --------------------------------------------------------
 
@@ -87,10 +98,24 @@ CREATE TABLE IF NOT EXISTS `students` (
   `institution` varchar(255) NOT NULL,
   `level` varchar(10) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `gender` varchar(10) NOT NULL,
-  `phone_number` varchar(15) NOT NULL,
   KEY `stu_id` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `students`
+--
+
+INSERT INTO `students` (`ID`, `firstname`, `middlename`, `lastname`, `img_path`, `department`, `institution`, `level`, `email`) VALUES
+(12112, 'e', 'e', 'e', '12112.png', 'dg', 'e', 'e', 'k'),
+(121123, 'e', 'e', 'e', '121123.png', 'dg', 'e', 'e', 'k'),
+(12112344, 'e', 'e', 'e', '12112344.png', 'dg', 'e', 'e', 'k'),
+(312, 'e', 'e', 'e', '312.png', 'dg', 'e', 'e', 'k'),
+(3232, 'g', 'hb', 'j', '3232.png', 'n', 'jn', 'j', 'n'),
+(323211, 'g', 'hb', 'j', '323211.png', 'n', 'jn', 'j', 'n'),
+(140805005, 'Opemipo', 'Oreoluwa', 'Joda', '140805005.JPG', 'csc', 'Unilag', '400', 'o@g.c'),
+(140805006, 'Opemipo', 'Oreoluwa', 'Joda', '140805006.JPG', 'csc', 'Unilag', '400', 'o@g.c'),
+(1234567, 'g', 'jh', 'j', '1234567.jpg', 'f', 'vj', 'vj', 'jh'),
+(12345678, 'g', 'jh', 'j', '12345678.png', 'f', 'vj', 'vj', 'jh');
 
 -- --------------------------------------------------------
 
@@ -131,8 +156,14 @@ CREATE TABLE IF NOT EXISTS `supervisors` (
 --
 
 INSERT INTO `supervisors` (`ID`, `title`, `firstname`, `middlename`, `lastname`, `institution`, `email`, `phone_number`) VALUES
+(1, 'jb', 'ghkv', 'jh', 'ghv', 'jhv', 'h', 'hk'),
 (3, 'Mr', 'Opemipo', 'Oreoluwa', 'Joda', '', '', ''),
-(4, 'Master', 'Godwin', 'Udumo', 'Okoi', '', '', '');
+(4, 'Master', 'Godwin', 'Udumo', 'Okoi', '', '', ''),
+(12345, 'Evans', 'James', 'Abacha', 'Laps', 'Csc', 'isac@bod', '08097165334'),
+(123456, 'Evans', 'James', 'Abacha', 'Laps', 'Csc', 'isac@bod', '08097165334'),
+(419419, 'Pastor EP', 'George', 'Olamide', 'Legbegbe', 'University of Chicago', 'legbe@gbe.gbera', '01000098'),
+(1010101, 'Damsel', 'Teni', 'Faith', 'Sulaiman', 'Unilag', 'teni.com', '0000'),
+(11122233, 'Mrs', 'Timi', 'Mich', 'Fash', 'Unilag', 'timi@fisi.na', '080999999419');
 
 --
 -- Constraints for dumped tables

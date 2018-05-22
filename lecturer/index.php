@@ -55,9 +55,10 @@
     <div class="phonebar">
       <span class="close">&times;</span>
     <img src="unilag.png" alt="institution-logo">
+    <br>
     <h2>Hi, <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lastname'] ?></h2>
             <div class="dashboard-list">
-                 <a href="#" class="here"> Dashboard</a>
+                 <a href="#" class="here"> Dashboardp</a>
             </div>
             <div class="dashboard-list">
                 <a href="setime.php">Set Available Period</a>

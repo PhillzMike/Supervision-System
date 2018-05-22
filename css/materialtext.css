@@ -3,17 +3,18 @@
   
   .group            { 
     position:relative; 
-    margin-bottom:45px; 
+    margin-bottom:10%; 
   }
   .float-input               {
     box-sizing: border-box;
-    font-size:18px;
+    font-size:15px;
     padding:10px 10px 10px 5px;
     display:block;
     width:90%;
     margin-left:5%;
     border:none;
     border-bottom:1px solid #757575;
+    background-color:rgb(255, 245, 245);
   }
   .float-input:focus         { outline:none; border-color:#5264AE;}
   .placejumper                {
@@ -31,7 +32,7 @@
   
   /* active state */
   .float-input:focus ~ .placejumper, .float-input:not([value=""]) ~ .placejumper      {
-    top:-20px;
+    top:-10px;
     font-size:14px;
     color:#5264AE;
   }
@@ -60,7 +61,12 @@
     width:50%;
   }
   .texts{
-    padding-top:40px;
+    padding-top:10%;
+      max-height: 70vh;
+      padding-bottom: 5%;
+      overflow: scroll;
+    overflow-x: hidden;
+     /* overflow-y:scroll;*/
   }
   
   

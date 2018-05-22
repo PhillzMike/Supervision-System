@@ -36,16 +36,16 @@
                             <div class="errmsg" id="loginerror">
                                 The f*ck you tryna do huh?
                             </div>
-                            
+
                             <div class="group">
-                                <input type="text" style="background-color:aliceblue" name="username" class="float-input" id="usr" tooltip = "Your username is your Matric No or Staff ID" tooltip-position>
+                                <input type="text" style="background-color:rgb(255, 245, 245)" name="username" class="float-input" id="usr">
                                 <span class="bar"></span>
                                 <label for="usr" class="placejumper">Username</label>
                                 <span class="tooltiptext" id="tooltip">Your username is your Matric No or Staff ID</span>
-                                
+
                             </div>
                             <div class="group">
-                                <input type="password" style="background-color:aliceblue" name="password" class="float-input" id="psd" required>
+                                <input type="password" style="background-color:rgb(255, 245, 245)" name="password" class="float-input" id="psd" required>
                                 <span class="bar"></span>
                                 <label for="psd" class="placejumper">Password</label>
                             </div>
@@ -61,9 +61,6 @@
 
             </div>
 
-
-
-
             <div id="signup" class="logmodal">
                 <form id="modal" method="POST" action="php/login.php">
                     <span class="close" id="regx">&times;</span>
@@ -71,14 +68,14 @@
                         <div class="header">
                             <h2>Register a new account</h2>
                         </div>
-                        <div class="texts">
+                        <div class="texts" >
                             <div class="errmsg" id="signuperror">
-                                The f*ck you tryna do huh?
+                                What are you trying to do?
                             </div>
                             <div class="group">
                                 <div class="dropdown" id="drop">
-                                    <input type="text" style="background-color:aliceblue" name="username" class="float-input drop-lbl" id="stu-drop" readonly
-                                        required>
+                                    <input type="text" style="background-color:rgb(255, 245, 245)" name="username" class="float-input drop-lbl" id="stu-drop"
+                                        readonly required>
                                     <span class="bar"></span>
                                     <label for="usr" class="placejumper">Select what type of user</label>
                                     <div class="dropdown-content" id="dropdown-content">
@@ -90,9 +87,29 @@
                             </div>
                             <div style="display:none" id="student-form">
                                 <div class="group">
-                                    <input type="text" style="background-color:aliceblue" name="username" class="float-input" required>
-                                    <span class="bar"></span>
-                                    <label for="usr" class="placejumper">Matric </label>
+                                    <input type="text" name="fname" class="float-input">
+                                    <span class = "bar"></span>
+                                    <label class = "placejumper">First Name</label>
+                                </div>
+                                <div class="group">
+                                    <input type="text"  name="mname" class="float-input">
+                                    <span class = "bar"></span>
+                                    <label class = "placejumper">Middle Name</label>
+                                </div>
+                                <div class="group">
+                                    <input type="text"  name="lname" class="float-input">
+                                    <span class = "bar"></span>
+                                    <label class = "placejumper">Last Name</label>
+                                </div>
+                                <div class="group">
+                                    <input type="text"  name="institute" class="float-input" placeholder="Institution"
+                                        required>
+                                </div>
+                                <div class="group">
+                                    <input type="text"  name="level" class="float-input" placeholder="Level" required>
+                                </div>
+                                <div class="group">
+                                    <input type="text"  name="matric" class="float-input" placeholder="Matric" required>
                                 </div>
                                 <div id="userActions">
                                     <div id="dropImage">
@@ -101,47 +118,63 @@
                                     <input type="file" id="fileUpload" value="me" />
                                 </div>
                                 <div class="group">
-                                    <input type="text" style="background-color:aliceblue" name="username" class="float-input" required>
-                                    <span class="bar"></span>
-                                    <label for="usr" class="placejumper">Email</label>
+                                    <input type="text"  name="dept" class="float-input" placeholder="Department" required>
                                 </div>
                                 <div class="group">
-                                    <input type="password" style="background-color:aliceblue" name="pass1" class="float-input" required>
-                                    <span class="bar"></span>
-                                    <label for="usr" class="placejumper">Password</label>
+                                    <input type="text"  name="email" class="float-input" placeholder="Email" required>
                                 </div>
                                 <div class="group">
-                                    <input type="password" style="background-color:aliceblue" name="password" class="float-input" required>
-                                    <span class="bar"></span>
-                                    <label for="psd" class="placejumper">Confirm Password</label>
+                                    <input type="password"  name="pass1" class="float-input" placeholder="Password"
+                                        required>
                                 </div>
+                                <div class="group">
+                                    <input type="password"  name="password" class="float-input" placeholder="confirm password"
+                                        required>
+                                </div>
+
                             </div>
                             <div style="display:none" id="super-form">
-
                                 <div class="group">
-                                    <input type="text" style="background-color:aliceblue" name="username" class="float-input" required>
-                                    <span class="bar"></span>
-                                    <label for="usr" class="placejumper">Staff id</label>
+                                    <input type="text"  name="fname" class="float-input" placeholder="First Name"
+                                        required>
                                 </div>
                                 <div class="group">
-                                    <input type="text" style="background-color:aliceblue" name="username" class="float-input" required>
-                                    <span class="bar"></span>
-                                    <label for="usr" class="placejumper">Email</label>
+                                    <input type="text"  name="mname" class="float-input" placeholder="MiddleName"
+                                        required>
                                 </div>
                                 <div class="group">
-                                    <input type="password" style="background-color:aliceblue" name="pass1" class="float-input" required>
-                                    <span class="bar"></span>
-                                    <label for="usr" class="placejumper">Password</label>
+                                    <input type="text"  name="lname" class="float-input" placeholder="Last Name" required>
                                 </div>
                                 <div class="group">
-                                    <input type="password" style="background-color:aliceblue" name="password" class="float-input" required>
-                                    <span class="bar"></span>
-                                    <label for="psd" class="placejumper">Confirm Password</label>
+                                    <input type="text"  name="title" class="float-input" placeholder="Title" required>
+                                </div>
+                                <div class="group">
+                                    <input type="text"  name="institute" class="float-input" placeholder="Institution"
+                                        required>
+                                </div>
+                                <div class="group">
+                                    <input type="text"  name="username" class="float-input" placeholder="Staff id"
+                                        required>
+                                </div>
+                                <div class="group">
+                                    <input type="text"  name="username" class="float-input" placeholder="Email" required>
+                                </div>
+                                <div class="group">
+                                    <input type="text"  name="phonenumber" class="float-input" placeholder="Phone Number"
+                                        required>
+                                </div>
+                                <div class="group">
+                                    <input type="password"  name="pass1" class="float-input" placeholder="password"
+                                        required>
+                                </div>
+                                <div class="group">
+                                    <input type="password"  name="password" class="float-input" placeholder="confirm password"
+                                        required>
                                 </div>
                             </div>
 
                             <div class="enter">
-                                <input class="signIn homebutton" value="Register" name="submit" type="submit">
+                                <input class="signIn homebutton" value="Register" style = "margin-top:15%" name="submit" type="submit">
                             </div>
                         </div>
                     </div>

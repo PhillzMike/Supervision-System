@@ -83,7 +83,7 @@ body{
     align-items: center; */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 10%; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -116,11 +116,11 @@ body{
 }
 
 #modal{
-    background-color: aliceblue;
+    background-color: rgb(255, 246, 246);
     width: 30vw;
     padding-bottom: 20px;
     border-radius: 15px;
-    margin-top:-25%;
+    margin-top:-20%;
 }
 
 
@@ -128,14 +128,14 @@ body{
     visibility: hidden;
     text-align: center;
     z-index: 1;
-    width: 72%;
+    width: 75%;
     background-color: rgb(211, 211, 211);
     text-align: center;
     color: #313131ad;
     opacity: 0;
     transition: opacity 1s;
     border-radius: 6px;
-    height: 30%;
+    height: 40%;
     padding: 5px 0;
     position: absolute;
     z-index: 1;
@@ -252,7 +252,6 @@ h2{
 	vertical-align: middle;
 	text-align: center;
 	color: #37474F;
-    margin-top: -30px;
 	
 }
 #dropImage{
@@ -261,3 +260,4 @@ h2{
     border: solid 2px #333333;
 	border-radius: 10px;
 }
+

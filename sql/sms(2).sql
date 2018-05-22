@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 25, 2018 at 02:50 PM
+-- Generation Time: May 21, 2018 at 02:22 PM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -21,8 +21,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `sms`
 --
-CREATE DATABASE IF NOT EXISTS `sms` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `sms`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `appointment`
+--
+
+DROP TABLE IF EXISTS `appointment`;
+CREATE TABLE IF NOT EXISTS `appointment` (
+  `AppointmentID` int(20) NOT NULL AUTO_INCREMENT,
+  `supervisorID` int(20) NOT NULL,
+  `studentID` int(20) NOT NULL,
+  `Date` date NOT NULL,
+  `Start Time` time NOT NULL,
+  `End Time` time NOT NULL,
+  PRIMARY KEY (`AppointmentID`),
+  KEY `supervisorID` (`supervisorID`),
+  KEY `studentID` (`studentID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -37,20 +54,17 @@ CREATE TABLE IF NOT EXISTS `login` (
   `password` varchar(255) NOT NULL,
   `role` enum('student','supervisor') NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=140805005 DEFAULT CHARSET=latin1;
 
---
--- Truncate table before insert `login`
---
-
-TRUNCATE TABLE `login`;
 --
 -- Dumping data for table `login`
 --
 
 INSERT INTO `login` (`ID`, `username`, `password`, `role`) VALUES
 (2, 'Opemipo', '1998', 'student'),
-(3, 'Joda', '1999', 'supervisor');
+(3, 'Joda', '1999', 'supervisor'),
+(4, 'Gordie', 'terminal', 'supervisor'),
+(140805004, 'Opemipo', '140805004', 'student');
 
 -- --------------------------------------------------------
 
@@ -65,14 +79,30 @@ CREATE TABLE IF NOT EXISTS `students` (
   `middlename` varchar(255) NOT NULL,
   `lastname` varchar(255) NOT NULL,
   `img_path` varchar(255) NOT NULL,
+  `department` varchar(255) NOT NULL,
+  `institution` varchar(255) NOT NULL,
+  `level` varchar(10) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `gender` varchar(10) NOT NULL,
+  `phone_number` varchar(15) NOT NULL,
   KEY `stu_id` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Truncate table before insert `students`
+-- Table structure for table `supervisor available time`
 --
 
-TRUNCATE TABLE `students`;
+DROP TABLE IF EXISTS `supervisor available time`;
+CREATE TABLE IF NOT EXISTS `supervisor available time` (
+  `supervisorID` int(20) NOT NULL,
+  `Day` varchar(10) NOT NULL,
+  `Start Time` time NOT NULL,
+  `End Time` time NOT NULL,
+  KEY `supervisorID` (`supervisorID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
 -- --------------------------------------------------------
 
 --
@@ -86,20 +116,19 @@ CREATE TABLE IF NOT EXISTS `supervisors` (
   `firstname` varchar(255) NOT NULL,
   `middlename` varchar(255) NOT NULL,
   `lastname` varchar(255) NOT NULL,
+  `institution` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `phone_number` varchar(255) NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Truncate table before insert `supervisors`
---
-
-TRUNCATE TABLE `supervisors`;
---
 -- Dumping data for table `supervisors`
 --
 
-INSERT INTO `supervisors` (`ID`, `title`, `firstname`, `middlename`, `lastname`) VALUES
-(3, 'Mr', 'Opemipo', 'Oreoluwa', 'Joda');
+INSERT INTO `supervisors` (`ID`, `title`, `firstname`, `middlename`, `lastname`, `institution`, `email`, `phone_number`) VALUES
+(3, 'Mr', 'Opemipo', 'Oreoluwa', 'Joda', '', '', ''),
+(4, 'Master', 'Godwin', 'Udumo', 'Okoi', '', '', '');
 
 --
 -- Constraints for dumped tables

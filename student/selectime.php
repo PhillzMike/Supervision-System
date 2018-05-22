@@ -49,7 +49,11 @@
     <div style="margin-left:30%">
 
     <div class="dropdown">
-        <input type="text" placeholder="Choose Lecturer" class="float-input">
+        <h3>Choose Lecturer:</h3>
+        <select name="Lecturer" multiple>
+            <option value= "1"><a href = "#"></a></option>
+            <option value= "2"><a href = "#"></a></option>
+            <option value= "3"><a href = "#"></a></option>
         <span class="bar"></span>
         <ul class="drop">
             <li><a href = "#"></a></li>

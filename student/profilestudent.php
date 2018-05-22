@@ -47,36 +47,36 @@
     <h2>Your Profile Information</h2>
     <div class="student" id="student-form">
         <div class="group">
-            <input type="text" id="stu_matric" class="float-input">
+            <input type="text" id="stu_matric" class="float-input" readonly>
             <span class="bar"></span>
             <label class="placejumper">Matric Number</label>
         </div>
         <div class="group">
-            <input type="text" id="stu_fname" class="float-input">
+            <input type="text" id="stu_fname" class="float-input" readonly>
             <span class="bar"></span>
             <label class="placejumper">First Name</label>
         </div>
         <div class="group">
-            <input type="text" id="stu_mname" class="float-input">
+            <input type="text" id="stu_mname" class="float-input" readonly>
             <span class="bar"></span>
             <label class="placejumper">Middle Name</label>
         </div>
         <div class="group">
-            <input type="text" id="stu_lname" class="float-input">
+            <input type="text" id="stu_lname" class="float-input" readonly>
             <span class="bar"></span>
             <label class="placejumper">Last Name</label>
         </div>
         <div class="group">
-            <input type="text" id="stu_institute" class="float-input" >
+            <input type="text" id="stu_institute" class="float-input" readonly>
             <span class="bar"></span>
             <label class="placejumper">Institution</label>
         </div>
         <div class="group">
-            <input type="text" id="stu_level" class="float-input">
+            <input type="text" id="stu_level" class="float-input" readonly>
             <span class="bar"></span>
             <label class="placejumper">Level</label>
         </div>
-        <button>Edit</button>
+        <button id="edit">Edit</button>
 </body>
 
 </html>

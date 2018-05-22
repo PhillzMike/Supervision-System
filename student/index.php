@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
 
@@ -71,15 +72,7 @@
     </div>
 </body>
 
-<?php 
-    session_start();
-    require_once('../php/functions.php');
-    if(isStudent()){
-         //to student dash
-    }elseif(!isSuper()){
-       header('Location: ../');
-    }
-?>
+<!-- 
 <html>
 <head>
 	<title>Student DashBoard</title>
@@ -234,5 +227,5 @@
     <script>
     callajax([],'../php/cardGuy.php',fillCard);
     </script>
-</body>
+</body> -->
 </html>

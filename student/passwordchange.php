@@ -21,7 +21,7 @@
 <body>
     <div class="sidebar">
         <div class="image-case">
-                <img src="img/b2.jpg">
+        <img src="<?php echo "../profile/studentImages/".$_SESSION['img_path']?>">
             <h2>
                 <span class="">Hello,<?php echo ' '.$_SESSION['firstname'].' '.$_SESSION['lastname'] ?></span>
             </h2>

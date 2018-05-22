@@ -23,7 +23,9 @@
         <div class="image-case">
                 <img src="<?php echo "../profile/studentImages/".$_SESSION['img_path']?>">
             <h2>
-                <span class="">Hello,  <?php echo ' '.$_SESSION['firstname'].' '.$_SESSION['lastname'] ?></span>
+            <br>    
+            <br>
+            <span class="">Hello, <?php echo ' '.$_SESSION['firstname'].' '.$_SESSION['lastname'] ?></span>
             </h2>
         </div>
         <br>

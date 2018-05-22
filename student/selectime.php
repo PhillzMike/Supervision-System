@@ -21,7 +21,7 @@
 <body>
     <div class="sidebar">
         <div class="image-case">
-                <img src="img/b2.jpg">
+        <img src="<?php echo "../profile/studentImages/".$_SESSION['img_path']?>">
             <h2>
                 <span class="">Hello, <?php echo ' '.$_SESSION['firstname'].' '.$_SESSION['lastname'] ?></span>
             </h2>
@@ -57,16 +57,11 @@
     <div class="dropdown">
         <h3>Choose Lecturer:</h3>
         <select name="Lecturer" multiple>
-            <option value= "1"><a href = "#"></a></option>
-            <option value= "2"><a href = "#"></a></option>
-            <option value= "3"><a href = "#"></a></option>
+            <option value= "1"><a href = "#">shgeigijhigjng</a></option>
+            <option value= "2"><a href = "#">gbkhbihyiiiekrt</a></option>
+            <option value= "3"><a href = "#">dfjnrtuhrtbujngtrjj</a></option>
         <span class="bar"></span>
-        <ul class="drop">
-            <li><a href = "#"></a></li>
-            <li><a href = "#"></a></li>
-            <li><a href = "#"></a></li>
-            <li><a href = "#"></a></li>
-        </ul>
+        
     </div>
         <div class="myCard" style="display:none">
 

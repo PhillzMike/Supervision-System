@@ -24,7 +24,7 @@
    </div>
     <div class="sidebar">
         <div class="image-case">
-        <h2><img src="../img/logo/unilag.png" alt="institution-logo"><span>Hi,
+        <h2><img src="../img/logo/unilag.png" alt="institution-logo"> <br><span>Hi,
             <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lastname'] ?></span></h2> 
         </div>
         <hr>
@@ -55,10 +55,10 @@
     <div class="phonebar">
       <span class="close">&times;</span>
     <img src="unilag.png" alt="institution-logo">
-    <br>
+   
     <h2>Hi, <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lastname'] ?></h2>
             <div class="dashboard-list">
-                 <a href="#" class="here"> Dashboardp</a>
+                 <a href="#" class="here"> Dashboard</a>
             </div>
             <div class="dashboard-list">
                 <a href="setime.php">Set Available Period</a>

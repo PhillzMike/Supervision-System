@@ -122,8 +122,6 @@ body{
     padding-bottom: 20px;
     border-radius: 15px;
     margin-top:-20%;
-<<<<<<< HEAD
-=======
 }
 
 
@@ -161,7 +159,6 @@ body{
 .group:hover .tooltiptext{
     visibility:visible;
     opacity: 1;
->>>>>>> 7e2b85c7fe52efc5e3ebcc927b8b95ff2f277c0a
 }
 
 
@@ -302,18 +299,3 @@ h2{
 	border-radius: 10px;
 }
 
-<<<<<<< HEAD
-=======
-/*Flexer*/
-.flex{
-    position: absolute;
-    top:0px;
-    left:0px;
-    z-index: -3;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
->>>>>>> 7e2b85c7fe52efc5e3ebcc927b8b95ff2f277c0a

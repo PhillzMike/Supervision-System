@@ -12,6 +12,8 @@
 	<title>Lecturer DashBoard</title>
     <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/startpage.css">
+    <link rel="stylesheet" href="../css/materialtext.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -61,7 +63,7 @@
                 <a href="setime.php">Set Available Period</a>
             </div>
             <div class="dashboard-list">
-                 <a href="#">Change Profile</a>
+                 <a href="#">View Profile</a>
             </div>
             <div class="dashboard-list" >
                 <a href="#">Change Password</a>
@@ -135,15 +137,35 @@
             <span class="textf">Time:12pm - 1pm </span>
            </div>
       </section>
+      <section class="card" id = "card"> 
+            <div class="color_placing">
+                         <img src = "../img/unilag.png" class = "image">
+            </div>
+            <div>
+                <div class="button-block" onclick ="removeclick()">
+                    <button type="button" >
+                        <i class="mark x"></i>
+                        <i class="mark xx"></i>
+                    </button>
+                </div>
+                <span class="textf">Name:Joda Opemipo</span>
+                <br>
+                <span class="textf">Day:18th April,2018</span>
+                <br>
+                <span class="textf">Time:12pm - 1pm </span>
+            </div>
+        </section>
+
    </div>
 
    <div class="cancel_app" id="cancel_app">
     <div class="cancel_info">
        <span class="close2">&times;</span>
-       <h6 style="font-size:16px">Are you sure you want to delete this Appointment?</h6>
-       <br>
-       <button class="yesbutton" >Yes</button>
-       <button class="nobutton" >No</button>
+      <h6 style="font-size:16px">Are you sure you want to delete this Appointment?</h6>
+    
+     <input class=" signIn homebutton" value="Yes" style="margin-top:1%; background-color:#5264AE;" type="submit">
+     <input class=" signIn homebutton" value="No" style="margin-top:1%; background-color:#5264AE;" type="submit">
+           
     </div>
   </div>
 

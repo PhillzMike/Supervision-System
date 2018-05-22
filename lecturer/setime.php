@@ -1,3 +1,12 @@
+<?php 
+    session_start();
+    require_once('../php/functions.php');
+    if(isStudent()){
+         //to student dash
+    }elseif(!isSuper()){
+       header('Location: ../');
+    }
+?>
 <html>
 <head>
 	<title>Lecturer DashBoard</title>
@@ -14,7 +23,7 @@
   <div class="sidebar">
             <div class="image-case">
             <h2><img src="../img/logo/unilag.png" alt="institution-logo"><span>Hi,
-               <!-- putname  --> </span></h2>
+            <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lstnm'] ?> </span></h2>
             </div>
       <hr>
       <div class="dashboard-list">
@@ -26,7 +35,7 @@
       </div>
       <br>
       <div class="dashboard-list">
-          <a href="profilelecturer.php"><i class="fa fa-user icon"></i>Change Profile</a>
+          <a href="profilelecturer.php"><i class="fa fa-user icon"></i>View Profile</a>
       </div>
       <br>
       <div class="dashboard-list">
@@ -65,11 +74,11 @@
     <div class="infocreate">
        <span class="close2">&times;</span>
        <h3 STYLE="text-align:center;">SET FREE SCHEDULE</h3>
+       <form>
        <section class="app">
          <div class="time">
            <p type="Available Day:">
-               <select type="date" id="day" style="border:none; padding-top:30px 10px 10px 0px;">
-                <option>Choose day:</option>
+               <select type="date" id="day" style="border:none; padding-top:30px 10px 10px 0px;" required>
                 <option>Monday</option>
                 <option>Tuesday</option>
                 <option>Wednesday</option>
@@ -82,22 +91,24 @@
           
          <div>
             <span id="addtime" onclick="myFunction()"><b>+ Add</b></span>
-            <p type="Start Time:" id="startslot"><input type="time" id="startTime"></input></p>
+            <p type="Start Time:" id="startslot"><input type="time" class="startTime" required></input></p>
          </div>
          <div>
     
-            <p type="End Time:" id="endslot"><input type="time" id="endTime"></input></p>
+            <p type="End Time:" id="endslot"><input type="time" class="endTime" required></input></p>
          </div>
           <div>
             <span id="addtime"></span>
-            <p type="Students No:"><input type="number" id="maxStudent"></input></p>
+            <p type="Students No:"><input  type="number" id="maxStudent" required></input></p>
          </div>
          
          
        </section>
        <br>
-       <button class="cr1" >Create</button>
+       <input type="submit" value="Create" class="cr1" >
+     </form>
     </div>
+   
   </div>
 
 
@@ -125,7 +136,7 @@
 									<td class="cell100 column1">21-May-2018</td>
 									<td class="cell100 column2">9:00:00 AM</td>
 									<td class="cell100 column3">4</td>
-                                    <td class="cell100 column4"><div><button>Edit</button> <button>Cancel</button></div> </td>
+                                    <td class="cell100 column4"><div class="adjust"><button>Edit</button> <button>Cancel</button></div> </td>
                                 
 								</tr>
 
@@ -133,7 +144,7 @@
 									<td class="cell100 column1">Mind & Body</td>
 									<td class="cell100 column2">Yoga</td>
 									<td class="cell100 column3">8:00 AM - 9:00 AM</td>
-                                    <td class="cell100 column4"><button>Edit</button> <button>Cancel</button> </td>
+                                    <td class="cell100 column4"><div class="adjust"><button>Edit</button> <button>Cancel</button> </td>
 									
                                 </tr>
                                 </tbody>
@@ -191,5 +202,7 @@ function myFunction() {
 
 
     </script>
+    <script type="text/javascript" src="../js/ajax.js"></script>
+    <script type="text/javascript" src="../js/addtime.js"></script>
 </body>
 </html>

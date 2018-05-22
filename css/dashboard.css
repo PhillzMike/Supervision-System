@@ -76,25 +76,31 @@ margin-right: 10%;
 	display: grid;
 	padding-left: 22%;
 	grid-template-columns:30% 30% 30%;
-	grid-column-gap:2.5%;
+  grid-column-gap:2.5%;
+  
+  grid-row-gap: 1.2em;
 	padding-top: 2%;
 }
 .card{
 	position:relative;
-	padding: 1%;
-	height:100%;
+  padding: 1%;
+  padding-top:5%;
+	height:95%;
 	width: 100%;
 	grid-template-columns:50% 50%;
 	display: grid;
 	box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 4px 0px;
     
 }
+.cancelbutton{
+  padding-top:-30px;
+}
 .blurpart, .cancel_app{
 	display: none;
 }
 .card img{
 	border-radius: 50%;
-	height:120px;
+	height:100px;
 	width:120px;
 }
 .card p{
@@ -161,8 +167,8 @@ line-height:1.4;
 
 .app{
 	display: grid;
-  grid-template-columns:22% 22% 22% 22%;
-  grid-column-gap: 3%
+  grid-template-columns:24% 24% 24% 24%;
+  grid-column-gap: 1%
 }
 
 
@@ -182,7 +188,7 @@ line-height:1.4;
 }
 
 input{
-	width:90%;
+	width:100%;
 	padding:10px;
 	box-sizing:border-box;
 	background:none;
@@ -212,7 +218,7 @@ p:before{
   width:70%;
 }
 .lprofilechange{
-  padding-top:5%;
+  padding-top:2%;
   margin-left:35%;
 }
 .limiter {
@@ -409,7 +415,7 @@ p:before{
   width: 1%;
   height: 1%;
   border-radius: 100%; /* TODO: prefix */
-  margin: -8% 0 0 90%;
+  margin: -14% 0 0 90%;
   position: relative;
   display: block;
   position: relative;

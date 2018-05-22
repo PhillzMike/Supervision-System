@@ -20,17 +20,21 @@
       <div class="dashboard-list">
           <a href="index.php"><i class="fa fa-columns icon"></i>Dashboard</a>
       </div>
+      <br>
       <div class="dashboard-list">
           <a href="#" class="here" ><i class="fa fa-calendar icon"></i>Set Available Period </i></a>
       </div>
+      <br>
       <div class="dashboard-list">
-          <a href="#"><i class="fa fa-user icon"></i>Change Profile</a>
+          <a href="profilelecturer.php"><i class="fa fa-user icon"></i>Change Profile</a>
       </div>
+      <br>
       <div class="dashboard-list">
-          <a href="#"><i class="fa fa-key icon"></i>Change Password</a>
+          <a href="passwordlect.php"><i class="fa fa-key icon"></i>Change Password</a>
       </div>
+      <br>
       <div class="dashboard-list">
-          <a href="#"><i class="fa fa-home icon"></i>Logout</a>     
+          <a href="../php/logout.php"><i class="fa fa-home icon"></i>Logout</a>     
       </div>
     
     
@@ -77,16 +81,52 @@
   </div>
 
 
-         <div class="timedisplay">
-           <table border=1.0>
-               <tr>
-                   <th>Day </th>
-                   <th>Time </th>
-                   <th>Adjustment </th>
-             </tr>
+  <div class="limiter">
+  <div class="container-table100">
+      <div class="wrap-table100">
+          <div class="table100 ver2 m-b-110">
+              <div class="table100-head">
+                  <table>
+                      <thead>
+                          <tr class="row100 head">
+                              <th class="cell100 column1">Day</th>
+                              <th class="cell100 column2">Available Time</th>
+                              <th class="cell100 column3">Number of Students</th>
+                              <th class="cell100 column4">Adjustment</th>
+                          </tr>
+                      </thead>
+                  </table>
+              </div>
 
-         </table>
-            </div>
+             <div class="table100-body js-pscroll">
+						<table>
+							<tbody>
+								<tr class="row100 body">
+									<td class="cell100 column1">Like a butterfly</td>
+									<td class="cell100 column2">Boxing</td>
+									<td class="cell100 column3">9:00 AM - 11:00 AM</td>
+                                    <td class="cell100 column4"><button>Edit</button> <button>Cancel</button> </td>
+                                
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">Mind & Body</td>
+									<td class="cell100 column2">Yoga</td>
+									<td class="cell100 column3">8:00 AM - 9:00 AM</td>
+                                    <td class="cell100 column4"><button>Edit</button> <button>Cancel</button> </td>
+									
+                                </tr>
+                                </tbody>
+						</table>
+					</div>
+                </div>
+            </div>  
+        </div>
+	</div>
+
+
+
+              
    <script>
       var side = document.getElementById("residebar");
       var span = document.getElementsByClassName("close")[0];

@@ -54,6 +54,7 @@
     
     <div style="margin-left:30%">
     <h2>Your Profile Information</h2>
+    <form action="../php/changestudent.php" method ="POST">
     <div class="student" id="student-form">
         <div class="group">
             <input type="text" id="stu_matric" class="float-input" readonly>
@@ -85,6 +86,17 @@
             <span class="bar"></span>
             <label class="placejumper">Level</label>
         </div>
+        <div class="group">
+            <input type="text" id="stu_dept" class="float-input">
+            <span class="bar"></span>
+            <label class="placejumper">Department</label>
+        </div>
+        <div class="group">
+            <input type="text" id="stu_email" class="float-input">
+            <span class="bar"></span>
+            <label class="placejumper">Email</label>
+        </div>
+</form>
         <button id="edit">Edit</button>
 </body>
 

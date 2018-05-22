@@ -105,7 +105,7 @@
          
        </section>
        <br>
-       <input type="submit" value="Create" class="cr1" >
+       <input type="submit" value="Create" class="cr1" onclick="addtime();">
      </form>
     </div>
    
@@ -204,5 +204,8 @@ function myFunction() {
     </script>
     <script type="text/javascript" src="../js/ajax.js"></script>
     <script type="text/javascript" src="../js/addtime.js"></script>
+    <script>
+    callajax([],'../php/getLecturerAppointment.php',showTime);
+    </script>
 </body>
 </html>

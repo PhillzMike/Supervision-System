@@ -117,7 +117,7 @@
       <div class="wrap-table100">
           <div class="table100 ver2 m-b-110">
               <div class="table100-head">
-                  <table id="timetable">
+                  <table >
                       <thead>
                           <tr class="row100 head" style="border:1px solid grey">
                               <th class="cell100 column1">Day</th>
@@ -130,7 +130,7 @@
               </div>
 
              <div class="table100-body js-pscroll">
-						<table>
+						<table id="timetable">
 							<tbody>
 								<tr class="row100 body">
 									<td class="cell100 column1">21-May-2018</td>

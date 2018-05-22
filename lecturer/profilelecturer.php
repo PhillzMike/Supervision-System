@@ -93,7 +93,7 @@
                 <label class="placejumper">Email</label>
             </div>
             <div class="group "style="width:70%;">
-                <input readonly type="text" name="phonenumber" class="float-input remonly">
+                <input  type="text" id="readonlyfalse" name="phonenumber" class="float-input remonly" readonly>
                 <span class="bar"></span>
                 <label class="placejumper">Phone Number</label>
             </div>
@@ -107,7 +107,7 @@
     var item  = document.getElementById("edit");
     function reditclick() {
     item.style.display = "none";
-    document.getElementsByClassName("remonly") ="false";
+    document..getElementById("readonlyfalse").readonly ="false";
     }
     </script>
     

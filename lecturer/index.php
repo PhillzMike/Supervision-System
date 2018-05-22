@@ -158,6 +158,29 @@
 
    </div>
 
+   <div class="fullinfo_app" id="fullinfo_app">
+    <div class="fullinfo_content">
+       <span class="close2">&times;</span>
+       <span class="textf">Name:Joda Opemipo</span>
+        <br>
+        <span class="textf">Day:18th April,2018</span>
+        <br>
+        <span class="textf">Time:12pm - 1pm </span>
+        <br>
+        <span class="textf">Department:Course Adviser</span>
+        <br>
+        <span class="textf">Level:400</span>
+        <br>
+        <span class="textf">Message: Sir i have data communications defence</span>
+       
+        
+        
+        
+           
+    </div>
+  </div>
+
+
    <div class="cancel_app" id="cancel_app">
     <div class="cancel_info">
        <span class="close2">&times;</span>
@@ -168,6 +191,7 @@
            
     </div>
   </div>
+
 
     <script>
       var side = document.getElementById("residebar");

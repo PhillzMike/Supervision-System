@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 22, 2018 at 04:55 PM
+-- Generation Time: May 22, 2018 at 07:50 PM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -36,6 +36,7 @@ CREATE TABLE IF NOT EXISTS `appointment` (
   `Date` date NOT NULL,
   `Start Time` time NOT NULL,
   `End Time` time NOT NULL,
+  `message` varchar(255) NOT NULL,
   PRIMARY KEY (`AppointmentID`),
   KEY `supervisorID` (`supervisorID`),
   KEY `studentID` (`studentID`)
@@ -53,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `login` (
   `password` varchar(255) NOT NULL,
   `role` enum('student','supervisor') NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=140805007 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=140805055 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `login`
@@ -64,7 +65,9 @@ INSERT INTO `login` (`ID`, `password`, `role`) VALUES
 (2, '1998', 'student'),
 (3, '1999', 'supervisor'),
 (4, 'terminal', 'supervisor'),
+(111, '', 'student'),
 (312, '123', 'student'),
+(1111, '', 'student'),
 (3232, '1', 'student'),
 (12112, '123', 'student'),
 (12345, 'bod', 'supervisor'),
@@ -73,13 +76,16 @@ INSERT INTO `login` (`ID`, `password`, `role`) VALUES
 (323211, '22', 'student'),
 (419419, 'gbera', 'supervisor'),
 (1010101, 'teni', 'supervisor'),
+(1234321, '', 'student'),
 (1234567, '11', 'student'),
 (11122233, '080', 'supervisor'),
 (12112344, '123', 'student'),
 (12345678, '121', 'student'),
+(123432221, '', 'student'),
 (140805004, '140805004', 'student'),
 (140805005, '1998', 'student'),
-(140805006, 'kaka', 'student');
+(140805006, 'kaka', 'student'),
+(140805054, '1234', 'student');
 
 -- --------------------------------------------------------
 
@@ -115,7 +121,12 @@ INSERT INTO `students` (`ID`, `firstname`, `middlename`, `lastname`, `img_path`,
 (140805005, 'Opemipo', 'Oreoluwa', 'Joda', '140805005.JPG', 'csc', 'Unilag', '400', 'o@g.c'),
 (140805006, 'Opemipo', 'Oreoluwa', 'Joda', '140805006.JPG', 'csc', 'Unilag', '400', 'o@g.c'),
 (1234567, 'g', 'jh', 'j', '1234567.jpg', 'f', 'vj', 'vj', 'jh'),
-(12345678, 'g', 'jh', 'j', '12345678.png', 'f', 'vj', 'vj', 'jh');
+(12345678, 'g', 'jh', 'j', '12345678.png', 'f', 'vj', 'vj', 'jh'),
+(140805054, 'Teniola', 'Faith', 'Sulaiman', '140805054.jpg', 'csc', 'Unilag', '400', 'sulaiman@gmail.com'),
+(111, '', '', '', '111.', 's', '', '', ''),
+(1111, '', '', '', '1111.', 's', '', '', ''),
+(1234321, '', '', '', '1234321.', 's', '', '', ''),
+(123432221, '', '', '', '123432221.', 's', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -129,6 +140,7 @@ CREATE TABLE IF NOT EXISTS `supervisor available time` (
   `Day` varchar(10) NOT NULL,
   `Start Time` time NOT NULL,
   `End Time` time NOT NULL,
+  `maxStudent` int(11) NOT NULL,
   KEY `supervisorID` (`supervisorID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 

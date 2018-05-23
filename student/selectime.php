@@ -57,28 +57,44 @@
     <div class="dropdown">
         <h3>Choose Lecturer:</h3>
         <select name="Lecturer" multiple>
-            <option value= "1"><a href = "#">shgeigijhigjng</a></option>
-            <option value= "2"><a href = "#">gbkhbihyiiiekrt</a></option>
-            <option value= "3"><a href = "#">dfjnrtuhrtbujngtrjj</a></option>
+            <?php 
+            require_once('php/getSupervisors.php');
+            $supes = getSupers($_SESSION['institution']);
+            $inc = 1;
+            // print_r($supes);
+            foreach($supes as $sup){
+                echo "<option value= '".$inc++."'><a href = '#'>".$sup[1]."</a></option>";
+            }?>
         <span class="bar"></span>
-        
+</select>
     </div>
-        <div class="myCard" style="display:none">
+        <div class="myCard" style="">
+            <?php 
+                require_once('php/getTimeSlots.php');
+                //echo $supes[0][0];
+                $slots = getTimeSlots($supes[0][0],$supes[0][1]);
+                foreach($slots as$slot){
+                    echo '<section class="card">
+                    <h3>Time Slot</h3>
+                    <p>
+                    <span class="textf">Name:'.$slot[4].'</span>
+                     <br>
+                     <span class="textf">Day:'.$slot[0].'</span>
+                     <span class="textf">Time: Between'.$slot[1]." and ".$slot[2].'</span>
+                     
+                     </p>
+                     <p>
+                         <button class="accept">Accept</button>
+                     </p>
+                     </section>';
+                }
+                 
+                
+            
+            ?>
+           
 
-            <section class="card">
-                <h3>Time Slot</h3>
-                <p>
-                    <span class="textf">Name:Joda Opemipo</span>
-                    <br>
-                    <span class="textf">Day:18th April,2018</span>
-                    <span class="textf">Time:12pm - 1pm </span>
-                </p>
-                <p>
-                    <button class="accept">Accept</button>
-                </p>
-            </section>
-
-            <section class="card">
+            <!-- <section class="card">
                 <h3>Time Slot</h3>
                 <p>
                     <span class="textf">Name:Joda Opemipo</b>
@@ -90,14 +106,11 @@
                 <p>
                     <button class="accept">Accept</button>
                 </p>
-            </section>
+            </section> -->
 
         </div>
     </div>
-</body>
-
-</html>
-<style>
+    <!-- <style>
     .drop{
         width:55%;
         padding: 5px 0px;
@@ -119,3 +132,7 @@
     .bar{
         width:55%;
     }
+    </style> -->
+</body>
+
+</html>

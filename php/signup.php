@@ -1,5 +1,6 @@
 <?php
     require_once('connection.php');
+    require_once('hash.php');
     session_start();
     if(isset($_POST['submit'])){
         $conn = connect();
@@ -12,7 +13,8 @@
             echo json_encode(array('link'=>false, 'value'=>'Selected Id already exists', 'errors'=>array('id')));
         }else{
             $stmt = $conn->prepare('INSERT INTO `login`(`ID`, `password`, `role`) VALUES (:id,:password,:role)');
-            $data = Array('id' => $_POST['id'],'password' => $_POST['password'],'role' => $_POST['role']);
+            $hashed = hashThis($_POST['password']);
+            $data = Array('id' => $_POST['id'],'password' => $hashed,'role' => $_POST['role']);
             if($stmt->execute($data)){
                 if($_POST['role']=="student"){
                     $stmt2 = $conn->prepare('INSERT INTO `students`(`ID`, `firstname`, `middlename`, `lastname`, `img_path`, `department`, `institution`, `level`, `email`) VALUES 

@@ -10,7 +10,7 @@
     if($result){
 
         if($result[0] > 1){
-            $query = "UPDATE `supervisor available time` SET `maxStudent` = ".($result[0] - 1)."WHERE `supervisorID` = :supervisorID AND `Day` = :day AND `Start Time` = :startTime";
+            $query = "UPDATE `supervisor available time` SET `maxStudent` = ".($result[0] - 1)." WHERE `supervisorID` = :supervisorID AND `Day` = :day AND `Start Time` = :startTime";
             $stmt =$conn->prepare($query);
             $stmt->execute($details);
         }else if($result[0] == 1){
@@ -32,7 +32,9 @@
         }catch(PDOException $ex){
             echo json_encode($ex->getMessage());
         }
-
+        $msg = "You have an appointment with ".$_POST["studentID"]." by ".$_POST["startTime"];
+        $query = "INSERT INTO `notifications` (`userID` , `Notice`) VALUES(".$_POST["supervisor"].",'".$msg."'";
+        $conn->query($query);
     }else{
         echo json_encode("Lecturer cannot take anymore appointment");
     }

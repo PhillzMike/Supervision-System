@@ -101,7 +101,7 @@
                 <br>
                 <span class="textf">Time:12pm - 1pm </span>
             </div>
-        </section>      -->
+        </section>
 
    </div>
 
@@ -123,15 +123,15 @@
        <span class="close3">&times;</span>
        <br>
        <div class="modal_text">
-           <img src="../img/teni.jpg" alt="student img">
-            <p>FirstName:Joda</p>
-            <p>LastName:Opemipo</p>
-            <p>MiddleName:Tobi</p>
-            <p>Matric No:140805004</p>
-            <p>Department:csc </p>
-            <p>Level:400 </p>
-            <p>Email:opejoda@gmail.com</p>
-            <p>Message:ueehfhbfhududhfeheueue</p>
+           <img src="../img/teni.jpg" class = "modalInput" alt="student img">
+            <p class = "modalInput">FirstName:Joda</p>
+            <p class = "modalInput">LastName:Opemipo</p>
+            <p class = "modalInput">Matric No:140805004</p>
+            <p class = "modalInput">Department: csc </p>
+            <p class = "modalInput">Day: Monday</p>
+            <p class = "modalInput">Time: 00:00:00</p>
+            <p class = "modalInput">Level:400 </p>
+            <p class = "modalInput">Message:ueehfhbfhududhfeheueue</p>
        </div>
     </div>
   </div>
@@ -154,6 +154,9 @@
         remove.style.display = "none";
     }
     span2.onclick = removeConfirmation;
+    span3.onclick = function() {
+        full.style.display = "none";
+    }
      window.onclick = function(event) {
     if (event.target == side) {
         side.style.display = "none";

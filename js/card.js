@@ -32,12 +32,15 @@ function fillCard(phpresponse){
 function showCard(){
     info = document.getElementById('fullinfo_app');
     let id = this.id
-    info.querySelectorAll('.textf')[0].innerHTML = "Name: " + allAppointmentDetails[id]['lastname'] + " " + allAppointmentDetails[id]['firstname'];
-    info.querySelectorAll('.textf')[1].innerHTML = "Day: " + allAppointmentDetails[id]['Date'];
-    info.querySelectorAll('.textf')[2].innerHTML = "Time: " + allAppointmentDetails[id]['Start Time'] + " - " + allAppointmentDetails[id]['End Time'] ;
-    info.querySelectorAll('.textf')[3].innerHTML = "Department: " + allAppointmentDetails[id]['department'];
-    info.querySelectorAll('.textf')[4].innerHTML = "Level: " + allAppointmentDetails[id]['level'];
-    info.querySelectorAll('.textf')[5].innerHTML = "Message: " + allAppointmentDetails[id]['message'];
+    info.querySelectorAll('.modalInput')[0].src = '../profile/studentImages/' + allAppointmentDetails[id]['img_path'];
+    info.querySelectorAll('.modalInput')[1].innerHTML = "First Name: " + allAppointmentDetails[id]['firstname'];
+    info.querySelectorAll('.modalInput')[2].innerHTML = "Last Name: " + allAppointmentDetails[id]['lastname'];
+    info.querySelectorAll('.modalInput')[3].innerHTML = "Matric No: " + allAppointmentDetails[id]['studentID'];
+    info.querySelectorAll('.modalInput')[4].innerHTML = "Department: " + allAppointmentDetails[id]['department'];
+    info.querySelectorAll('.modalInput')[5].innerHTML = "Day: " + allAppointmentDetails[id]['Date'];
+    info.querySelectorAll('.modalInput')[6].innerHTML = "Time: " + allAppointmentDetails[id]['Start Time'] + " - " + allAppointmentDetails[id]['End Time'] ;
+    info.querySelectorAll('.modalInput')[7].innerHTML = "Level: " + allAppointmentDetails[id]['level'];
+    info.querySelectorAll('.modalInput')[8].innerHTML = "Message: " + allAppointmentDetails[id]['message'];
     info.style.display = "block";
 }
 function removeclick() {

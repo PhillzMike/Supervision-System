@@ -15,7 +15,7 @@ foreach($allAppointment as $appointment){
     $result = $stmt->execute();
     $student = $stmt->fetch(PDO::FETCH_ASSOC);
     $appointmentID = $appointment['AppointmentID'];
-    unset($appointment['studentID']);
+    //unset($appointment['studentID']);
     unset($appointment['AppointmentID']);
     $appointment = array_merge($appointment,$student);
     $final[$appointmentID] = $appointment;

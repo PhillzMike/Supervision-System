@@ -1,10 +1,12 @@
 <?php
     require_once('connection.php');
+    require_once('hash.php');
     session_start();
     if(isset($_POST['submit'])){
         $conn = connect();
         $stmt = $conn->prepare('SELECT * FROM `login` WHERE ID = :username AND password = :password');
-        $data = Array('username' => $_POST['username'],'password' => $_POST['password']);
+        $hashed = hashThis($_POST['password']);
+        $data = Array('username' => $_POST['username'],'password' => $hashed);
         if($stmt->execute($data)){
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
             $error = "Internal database error, contact an administrator";

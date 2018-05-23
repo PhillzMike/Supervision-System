@@ -193,11 +193,8 @@
 
         var hourDiff = diff_result.getHours()-1;
         
-            var startTime=moment(slot[1], "HH:mm:ss");
-            var endTime=moment(slot[2], "HH:mm:ss");
-            var duration = moment.duration(endTime.diff(startTime));
-            var hours = parseInt(duration.asHours());
-            $date;
+            var d = new Date();
+d.setDate(d.getDate() + (7-d.getDay())%7+1);
         
             $message = "I created an Apointment sir";
             const params = { "day": slot[0], "startTime": slot[1],"endTime": slot[2],"supervisor" : slot[5],"studentID": slot[6]

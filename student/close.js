@@ -16,7 +16,7 @@ function Remove(id){
     table.removeChild(row);
     let badge = document.getElementsByClassName('badge')[0];
     badge.innerHTML = table.rows.length;
-    localStorage.setItem("count",table.rows.length);
+    localStorage.setItem("count",table.rows.length); 
 }
 function GetNotifyNo(){
     return count;

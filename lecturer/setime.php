@@ -105,7 +105,7 @@
          
        </section>
        <br>
-       <input type="submit" value="Create" class="cr1" onclick="addtime();">
+       <input type="submit" value="Create" class="cr1" onclick="addTime();">
      </form>
     </div>
    

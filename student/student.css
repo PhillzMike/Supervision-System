@@ -22,13 +22,13 @@ html, body{
     float: left;
     width: 55%;
     padding-right: 10%;
-    border-radius: 50%;
+    border-radius: 10%;
 }
 .sidebar a {
     display: block;
     text-decoration: none;
     margin-left: 10%;
-    font-size: 80%;
+    font-size: 90%;
     padding: 8% 8% 12% 10%;
     color: white;
     padding-right: 5%;
@@ -48,7 +48,7 @@ html, body{
     display: grid;
     grid-template-columns: 40% 40%;
     grid-column-gap: 10%;
-    padding-top: 2%;
+    padding-top: 10%;
 }
 
 .card {
@@ -60,7 +60,7 @@ html, body{
     grid-template-columns: 50% 50%;
     border: 2px solid grey;
     border-radius: 5px;
-    background-color: rgb(110, 203, 247);
+    background-color: white;
 }
 
 .accept{
@@ -78,3 +78,117 @@ html, body{
 .accept:hover{
     transform: translateY(-4px);
 }
+
+.fa{
+    position: relative;
+}
+
+.badge{
+    font-size: 80%;
+    display: block;
+    position: absolute;
+    top: -1.5em;
+    right: -1em;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+}
+
+.myContent{
+    padding-top: 10%;
+}
+
+.myContent .close{
+    margin-top: -7%;
+}
+
+.myContent h4{
+    font-style: italic;
+}
+
+.myTable{
+    width: 80%;
+    align-content: center;
+}
+.myTable td{
+    padding: 2%;
+    border: 1px solid rgb(204, 204, 204);
+    box-shadow: 2px 1px 1px 0px rgba(78, 78, 78, 0.671);
+}
+
+.myTable tr:hover{
+    transform: translateX(-4px);
+}
+
+.myTable .cancel{
+    background-color: gray;
+}
+
+.myTable .time{
+    background-color: rgb(202, 202, 202);
+}
+
+.myTable .hour{
+    background-color: gray;
+}
+
+.myTable .day{
+    background-color: rgb(202, 202, 202);
+}
+
+.myTable .schedule{
+    background-color: gray;
+}
+
+.dropdown{
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15%; 
+}
+
+.select-selected{
+    background-color: gray;
+}
+
+.select-selected::after{
+    position: absolute;
+    content: "";
+    top: 7%;
+    right: 4%;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: white transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after{
+    border-color: transparent transparent white transparent;
+    top: 3%;
+}
+
+.select-items div,.select-selected{
+    color: #ffffff;
+    padding: 4% 8%;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0,0,0,0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+}
+
+.select-items{
+    position: absolute;
+    background-color: gray;
+    top:100%;
+    left:0;
+    right:0;
+    z-index:99;
+}
+
+
+.select-items div:hover, .same-as-selected{
+    background-color: rgba(0,0,0,0.1);
+}
+

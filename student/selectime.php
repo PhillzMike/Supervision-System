@@ -22,6 +22,8 @@
     <div class="sidebar">
         <div class="image-case">
         <img src="<?php echo "../profile/studentImages/".$_SESSION['img_path']?>">
+        <br>
+        <br>
             <h2>
                 <span class="">Hello, <?php echo ' '.$_SESSION['firstname'].' '.$_SESSION['lastname'] ?></span>
             </h2>
@@ -37,8 +39,8 @@
             <a href="selectime.php" class="here">
                 <i class="fa fa-calendar icon"></i>&nbsp;&nbsp;Choose Supervisor </a>
             <br>
-            <a href="">
-                <i class="fa fa-bell-o"></i>&nbsp;&nbsp;Notifications
+            <a href="notice.php">
+                <i class="fa fa-bell-o"><span class="badge" style="background-color: #03A9F4">5</span></i>&nbsp;&nbsp;Notifications
             </a>
             <a href="profilestudent.php">
                 <i class="fa fa-user icon"></i>&nbsp;&nbsp;View Profile</a>
@@ -56,7 +58,7 @@
 
     <div class="dropdown">
         <h3>Choose Lecturer:</h3>
-        <select name="Lecturer" multiple>
+        <select id="lecture" style="width:50%">
             <?php 
             require_once('php/getSupervisors.php');
             $supes = getSupers($_SESSION['institution']);
@@ -93,6 +95,10 @@
             
             ?>
            
+      
+        
+    </div>
+        <div class="myCard" >
 
             <!-- <section class="card">
                 <h3>Time Slot</h3>

@@ -53,26 +53,27 @@
         
          <div class="lprofilechange"style="display:block " id="student-form">
             <div class="group"style="width:70%;">
-                    <input type="password" name="pass1" class="float-input">
+                    <input type="password" name="pass1" class="float-input" id = "oldpass">
                     <span class="bar"></span>
                     <label class="placejumper">Old Password</label>
                 </div>
                 <div class="group" style="width:70%;">
-                    <input type="password" name="pass1" class="float-input">
+                    <input type="password" name="pass1" class="float-input" id = "newpass">
                     <span class="bar"></span>
                     <label class="placejumper">New Password</label>
                 </div>
                 <div class="group"style="width:70%;">
-                    <input type="password" name="password" class="float-input">
+                    <input type="password" name="password" class="float-input" id = "compass">
                     <span class="bar"></span>
                     <label class="placejumper">Confirm Password</label>
                 </div>
             </div>
 
             <div class="enter">
-               <input class="signIn homebutton" value="Change" style="margin-top:1%; margin-left:20%; background-color:#5264AE;" name="submit" type="submit">
+               <input class="signIn homebutton" onclick = "changeP();" value="Change" style="margin-top:1%; margin-left:20%; background-color:#5264AE;" name="submit" type="submit">
             </div>
 </div>  
-
+<script src="../js/ajax.js"></script>
+        <script src="./js/changePass"></script>
 </body>
 </html>

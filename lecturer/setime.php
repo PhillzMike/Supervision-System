@@ -11,6 +11,7 @@
 <head>
 	<title>Lecturer DashBoard</title>
     <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -35,11 +36,11 @@
       </div>
       <br>
       <div class="dashboard-list">
-            <a href="lectnotification.php"><i class="fa fa-user icon"></i>Notifications</a>
+            <a href="lectnotification.php"><i class="fa fa-user icon"><span class="badge" style="background-color: #03A9F4;">5</span></i>Notifications</a>
         </div>
         <br>
       <div class="dashboard-list">
-          <a href="profilelecturer.php"><i class="fa fa-user icon"></i>View Profile</a>
+          <a href="profilelecturer.php"><i class="fa fa-user icon"> </i>View Profile</a>
       </div>
       <br>
       <div class="dashboard-list">
@@ -207,6 +208,7 @@ function myFunction() {
     </script>
     <script type="text/javascript" src="../js/ajax.js"></script>
     <script type="text/javascript" src="../js/addtime.js"></script>
+    <script src="../student/close.js"></script>
     <script>
     callajax([],'../php/getLecturerAppointment.php',showTime);
     </script>

@@ -37,7 +37,7 @@
       </div>
       <br>
       <div class="dashboard-list">
-            <a href="lectnotification.php"><i class="fa fa-user icon"></i>Notifications</a>
+            <a href="lectnotification.php"><i class="fa fa-user icon"><span class="badge" style="background-color: #03A9F4;"></span></i>Notifications</a>
         </div>
         <br>
       <div class="dashboard-list">
@@ -78,6 +78,7 @@
                <input class="signIn homebutton" onclick = "changeP();" value="Change" style="margin-top:1%; margin-left:20%; background-color:#5264AE;" name="submit" type="submit">
             </div>
 </div>  
+<script src="../student/close.js"></script>
 <script src="../js/ajax.js"></script>
         <script src="./js/changePass"></script>
 </body>

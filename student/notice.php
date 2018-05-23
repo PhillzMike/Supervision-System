@@ -27,8 +27,10 @@
             <h2>
                 <span class="">Hello,<?php echo ' '.$_SESSION['firstname'].' '.$_SESSION['lastname'] ?></span>
             </h2>
-        </div>
-        <br>        <nav class="side" style="height: 100vh;">
+        </div>  
+        <br>
+        <hr> 
+             <nav class="side" style="height: 100vh;">
             <br>
             <a href="index.php" >
                 <i class="fa fa-columns icon"></i>&nbsp;&nbsp;Dashboard

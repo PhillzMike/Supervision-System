@@ -93,10 +93,6 @@
     .bar{
         width:55%;
     }
-    h2{
-        padding-top: 2%;
-        text-align: center;
-    }
     button{
         float:right;
         border: none;

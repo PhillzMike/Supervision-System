@@ -44,7 +44,7 @@
       </div>
       <br>
       <div class="dashboard-list">
-            <a href="lectnotification.php"><i class="fa fa-user icon"></i>Notifications</a>
+            <a href="lectnotification.php"><i class="fa fa-user icon"><span class="badge" style="background-color: #03A9F4;"></span></i>Notifications</a>
         </div>
         <br>
       <div class="dashboard-list">
@@ -129,6 +129,6 @@
        }
     }
     </script>
-    
+      <script src="../student/close.js"></script>
     
 </html>

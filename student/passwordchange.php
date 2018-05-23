@@ -57,25 +57,27 @@
     <div style="margin-left:30%">
     <div class="student" id="student-form">
         <div class="group">
-            <input type="text" id="stu_oldpass" name="stu_oldpass" class="float-input">
+            <input type="password" id="stu_oldpass" name="stu_oldpass" class="float-input">
             <span class="bar"></span>
             <label class="placejumper">Old Password</label>
         </div>
         <div class="group">
-            <input type="text" id="stu_newpass" name="stu_newpass" class="float-input">
+            <input type="password" id="stu_newpass" name="stu_newpass" class="float-input">
             <span class="bar"></span>
             <label class="placejumper">New Password</label>
         </div>
         <div class="group">
-            <input type="text" id="stu_conpass" name="stu_conpass" class="float-input">
+            <input type="password" id="stu_conpass" name="stu_conpass" class="float-input">
             <span class="bar"></span>
             <label class="placejumper">Confirm Password</label>
         </div>
 
     </div>
-        <button>Change</button>
         <script type = "text/javascript" src = "close.js"></script>
         <script type = "text/javascript" src = "changeCount.js"></script>
+        <button onclick = "changeP()">Change</button>
+        <script src="../js/ajax.js"></script>
+        <script src="./js/changePass"></script>
 </body>
 
 </html>

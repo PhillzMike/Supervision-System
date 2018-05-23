@@ -16,6 +16,7 @@
     <link rel = "stylesheet" href="../css/startpage.css">
     <link rel = "stylesheet" href="../css/materialtext.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 
 <body>
@@ -58,15 +59,33 @@
 
     <div class="dropdown">
         <h3>Choose Lecturer:</h3>
-        <select id="lecture" style="width:50%">
+        <select id="lecture" style="width:50%" >
             <?php 
             require_once('php/getSupervisors.php');
             $supes = getSupers($_SESSION['institution']);
             $inc = 1;
+            $dropInd = 1;
+           // print_r($getValue); 
+            // if(isset($getValue[$_SESSION['SuperId']])){
+            //     $dropInd = $getValue[$_SESSION['SuperId']];
+            // }
+           // $getValue = array();
             // print_r($supes);
+            echo "<option value= '".$inc++."' onclick = 'clickSuper(-1);' ><a > Choose Supervisor</a></option>";
+           
+
+            
             foreach($supes as $sup){
-                echo "<option value= '".$inc++."'><a href = '#'>".$sup[1]."</a></option>";
-            }?>
+                if($sup[0]==$_SESSION['SuperId']){
+                    echo '<option value= "'.$inc.'"  onclick = "clickSuper('.$sup[0].');" selected><a>'.$sup[1].'</a></option>';
+                }else{
+                    echo '<option value= "'.$inc.'"  onclick = "clickSuper('.$sup[0].');"><a>'.$sup[1].'</a></option>';
+                }
+                
+                $inc++;
+            }
+            
+            ?>
         <span class="bar"></span>
 </select>
     </div>
@@ -74,8 +93,18 @@
             <?php 
                 require_once('php/getTimeSlots.php');
                 //echo $supes[0][0];
-                $slots = getTimeSlots($supes[0][0],$supes[0][1]);
-                foreach($slots as$slot){
+                
+                if(!isset($_SESSION['SuperId'])){
+                    $_SESSION['SuperId']='-1';
+                }
+                if($_SESSION['SuperId']=='-1'){
+                    echo "Select a supervisor";
+                }else{
+                $slots = getTimeSlots($supes[$_SESSION['SuperId']][0],$supes[$_SESSION['SuperId']][1]);
+                if(count($slots)==0){
+                    echo "No available times";
+                }else{
+                foreach($slots as $slot){
                     echo '<section class="card">
                     <h3>Time Slot</h3>
                     <p>
@@ -90,7 +119,8 @@
                      </p>
                      </section>';
                 }
-                 
+            }
+            }
                 
             
             ?>
@@ -139,6 +169,15 @@
         width:55%;
     }
     </style> -->
+    <script src="../js/ajax.js"></script>
+    <script>
+        function clickSuper(supId){
+            callajax({'id':supId},'php/changeSupId.php',handleOut);
+        }
+        function handleOut(parans){
+            location.href = './selectime.php';
+        }
+    </script>
 </body>
 
 <script type = "text/javascript" src = "close.js"></script>

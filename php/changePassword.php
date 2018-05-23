@@ -1,5 +1,6 @@
 <?php
     require_once('connection.php');
+    session_start();
     if(isset($_POST['submit'])){
         $conn = connect();
         $stmt2 = $conn->query("SELECT * FROM `login` WHERE `ID` = ".$_SESSION['ID']);

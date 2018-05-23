@@ -19,7 +19,7 @@
              $_SESSION['role'] = $role;
             
              $stamt = $conn->query("SELECT * FROM `notifications` WHERE userID = $id");
-            $resulta = $stamt->fetch(PDO::FETCH_ASSOC);
+            $resulta = $stamt->fetchAll(PDO::FETCH_ASSOC);
             if($resulta){
                 $count = count($resulta);
             }else{

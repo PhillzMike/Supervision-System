@@ -15,7 +15,7 @@ function checkValidity(){
     let start = document.getElementsByClassName('startTime');
     let end = document.getElementsByClassName('endTime');
     for(let i = 0; i<start.length;i++){
-        if(end[i].value - start[i].value <= 0){
+        if(end[i].value < start[i].value){
             console.log(end[i].value);
             console.log(start[i].value);
             return false;
@@ -82,6 +82,8 @@ function addTime(){
         const params = {"day": day, "startTime":JSON.stringify(startArray),"endTime":JSON.stringify(endArray),"maxStudent":JSON.stringify(maxStudentArray)};
         callajax(params,'../php/addTime.php',doNothing);
         addToTable();
+    }else{
+        alert("Input values are false");
     }
 }
 function doNothing(phpresponse){

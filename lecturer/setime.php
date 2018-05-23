@@ -137,7 +137,7 @@
              <div class="table100-body js-pscroll">
 						<table id="timetable">
 							<tbody>
-								<tr class="row100 body">
+								<tr class="row100 body" style="display:none;">
 									<td class="cell100 column1">21-May-2018</td>
 									<td class="cell100 column2">9:00:00 AM</td>
 									<td class="cell100 column3">4</td>
@@ -145,13 +145,6 @@
                                 
 								</tr>
 
-								<tr class="row100 body">
-									<td class="cell100 column1">Mind & Body</td>
-									<td class="cell100 column2">Yoga</td>
-									<td class="cell100 column3">8:00 AM - 9:00 AM</td>
-                                    <td class="cell100 column4"><div class="adjust"><button>Edit</button> <button>Cancel</button> </td>
-									
-                                </tr>
                                 </tbody>
 						</table>
 					</div>

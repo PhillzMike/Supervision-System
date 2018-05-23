@@ -33,6 +33,12 @@ var hourDiff = diff_result.getHours()-1;
     if(hold<today){
         hold += 7;
     }
+    if(hold==today){
+        
+        if(Date.parse('01/01/2011 '+slot[1]) <= Date.parse('01/01/2011 '+todayDate.getHours()+10+':00:00')){
+            hold+=7;
+        }
+    }
     date = addDays(todayDate, (hold - today));
     if(tenHours>=date){
         alert("You can't set an appointment within 10 hours, you will be moved to next week");

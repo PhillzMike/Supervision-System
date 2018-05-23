@@ -123,23 +123,23 @@ html, body{
     transform: translateX(-4px);
 }
 
-.myTable .cancel{
+.myTable .color1{
     background-color: gray;
 }
 
-.myTable .time{
+.myTable .color2{
     background-color: rgb(202, 202, 202);
 }
 
-.myTable .hour{
+.myTable .color3{
     background-color: gray;
 }
 
-.myTable .day{
+.myTable .color4{
     background-color: rgb(202, 202, 202);
 }
 
-.myTable .schedule{
+.myTable .color5{
     background-color: gray;
 }
 

@@ -27,11 +27,18 @@ var hourDiff = diff_result.getHours()-1;
     let date;
     let hold = returndays(slot[0]);
     let todayDate = new Date();
+    let tenHours = addHours(todayDate,10);
+    
     let today = todayDate.getDay();
     if(hold<today){
         hold += 7;
     }
     date = addDays(todayDate, (hold - today));
+    if(tenHours>=date){
+        alert("You can't set an appointment within 10 hours, you will be moved to next week");
+        date = addDays(date,7);
+    }
+    
     date = date.toISOString().slice(0,19).replace('T',' ');
     let message = "I created an Apointment sir";
     const params = { "day": slot[0], "startTime": slot[1],"endTime": slot[2],"supervisor" : slot[5],"studentID": slot[6]
@@ -47,7 +54,7 @@ function addHours(date, hours){
     return new Date(date.getTime() + (hours*60*60*1000));
 }
 function addDays(date,days){
-    return new Date(date.getTime()+(days*24*60*60*1000);
+    return new Date(date.getTime()+(days*24*60*60*1000));
 }
 function returndays(day){
     day = day.toLowerCase();

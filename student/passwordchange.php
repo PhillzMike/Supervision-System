@@ -22,6 +22,8 @@
     <div class="sidebar">
         <div class="image-case">
         <img src="<?php echo "../profile/studentImages/".$_SESSION['img_path']?>">
+        <br>
+        <br>
             <h2>
                 <span class="">Hello,<?php echo ' '.$_SESSION['firstname'].' '.$_SESSION['lastname'] ?></span>
             </h2>
@@ -37,8 +39,8 @@
             <a href="selectime.php">
                 <i class="fa fa-calendar icon"></i>&nbsp;&nbsp;Choose Supervisor </a>
             <br>
-            <a href="">
-                <i class="fa fa-bell-o"></i>&nbsp;&nbsp;Notifications
+            <a href="notice.php">
+                <i class="fa fa-bell-o"><span class="badge" style="background-color: #03A9F4">5</span></i>&nbsp;&nbsp;Notifications
             </a>
             <a href="profilestudent.php">
                 <i class="fa fa-user icon"></i>&nbsp;&nbsp;View Profile</a>
@@ -55,17 +57,17 @@
     <div style="margin-left:30%">
     <div class="student" id="student-form">
         <div class="group">
-            <input type="text" id="stu_oldpass" class="float-input">
+            <input type="text" id="stu_oldpass" name="stu_oldpass" class="float-input">
             <span class="bar"></span>
             <label class="placejumper">Old Password</label>
         </div>
         <div class="group">
-            <input type="text" id="stu_newpass" class="float-input">
+            <input type="text" id="stu_newpass" name="stu_newpass" class="float-input">
             <span class="bar"></span>
             <label class="placejumper">New Password</label>
         </div>
         <div class="group">
-            <input type="text" id="stu_conpass" class="float-input">
+            <input type="text" id="stu_conpass" name="stu_conpass" class="float-input">
             <span class="bar"></span>
             <label class="placejumper">Confirm Password</label>
         </div>

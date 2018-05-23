@@ -22,6 +22,8 @@
     <div class="sidebar">
         <div class="image-case">
         <img src="<?php echo "../profile/studentImages/".$_SESSION['img_path']?>">
+        <br>
+        <br>
             <h2>
                 <span class="">Hello, <?php echo ' '.$_SESSION['firstname'].' '.$_SESSION['lastname'] ?></span>
             </h2>
@@ -37,8 +39,8 @@
             <a href="selectime.php" class="here">
                 <i class="fa fa-calendar icon"></i>&nbsp;&nbsp;Choose Supervisor </a>
             <br>
-            <a href="">
-                <i class="fa fa-bell-o"></i>&nbsp;&nbsp;Notifications
+            <a href="notice.php">
+                <i class="fa fa-bell-o"><span class="badge" style="background-color: #03A9F4">5</span></i>&nbsp;&nbsp;Notifications
             </a>
             <a href="profilestudent.php">
                 <i class="fa fa-user icon"></i>&nbsp;&nbsp;View Profile</a>
@@ -56,29 +58,49 @@
 
     <div class="dropdown">
         <h3>Choose Lecturer:</h3>
-        <select name="Lecturer" multiple>
-            <option value= "1"><a href = "#">shgeigijhigjng</a></option>
-            <option value= "2"><a href = "#">gbkhbihyiiiekrt</a></option>
-            <option value= "3"><a href = "#">dfjnrtuhrtbujngtrjj</a></option>
+        <select id="lecture" style="width:50%">
+            <?php 
+            require_once('php/getSupervisors.php');
+            $supes = getSupers($_SESSION['institution']);
+            $inc = 1;
+            // print_r($supes);
+            foreach($supes as $sup){
+                echo "<option value= '".$inc++."'><a href = '#'>".$sup[1]."</a></option>";
+            }?>
         <span class="bar"></span>
+</select>
+    </div>
+        <div class="myCard" style="">
+            <?php 
+                require_once('php/getTimeSlots.php');
+                //echo $supes[0][0];
+                $slots = getTimeSlots($supes[0][0],$supes[0][1]);
+                foreach($slots as$slot){
+                    echo '<section class="card">
+                    <h3>Time Slot</h3>
+                    <p>
+                    <span class="textf">Name:'.$slot[4].'</span>
+                     <br>
+                     <span class="textf">Day:'.$slot[0].'</span>
+                     <span class="textf">Time: Between'.$slot[1]." and ".$slot[2].'</span>
+                     
+                     </p>
+                     <p>
+                         <button class="accept">Accept</button>
+                     </p>
+                     </section>';
+                }
+                 
+                
+            
+            ?>
+           
+      
         
     </div>
-        <div class="myCard" style="display:none">
+        <div class="myCard" >
 
-            <section class="card">
-                <h3>Time Slot</h3>
-                <p>
-                    <span class="textf">Name:Joda Opemipo</span>
-                    <br>
-                    <span class="textf">Day:18th April,2018</span>
-                    <span class="textf">Time:12pm - 1pm </span>
-                </p>
-                <p>
-                    <button class="accept">Accept</button>
-                </p>
-            </section>
-
-            <section class="card">
+            <!-- <section class="card">
                 <h3>Time Slot</h3>
                 <p>
                     <span class="textf">Name:Joda Opemipo</b>
@@ -90,14 +112,11 @@
                 <p>
                     <button class="accept">Accept</button>
                 </p>
-            </section>
+            </section> -->
 
         </div>
     </div>
-</body>
-
-</html>
-<style>
+    <!-- <style>
     .drop{
         width:55%;
         padding: 5px 0px;
@@ -119,3 +138,7 @@
     .bar{
         width:55%;
     }
+    </style> -->
+</body>
+
+</html>

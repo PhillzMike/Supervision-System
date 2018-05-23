@@ -81,7 +81,7 @@
        <form>
        <section class="app">
          <div class="time">
-           <p type="Available Day:" id="bdrop">
+           <p type="Available Day:" >
                <select type="date" id="day" style="border:none;" required>
                 <option>Monday</option>
                 <option>Tuesday</option>
@@ -108,7 +108,7 @@
          
        </section>
        <br>
-       <input type="submit" value="Create" class="cr1" onclick="addTime();">
+       <input type="submit" value="Create" class="cr1" onclick="addtime();">
      </form>
     </div>
    

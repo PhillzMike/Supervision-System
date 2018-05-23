@@ -55,27 +55,38 @@
 <div style="margin-left: 30%">
     <div class = "myContent">
        <table class="myTable">
-            <tr class="cancel">
-                <td><h4>Doctor. V. Odumuyiwa cancelled your appointment today</h4>
-                    <span class="close" onclick = "this.parentElement.style.display='none';">&times;</span>
+           <?php
+           
+           require_once('../php/notification.php');
+           $counter = 1;
+           $notification = notify();
+           foreach($notification as $note){
+                echo '<tr class="color'.$counter++.'">
+                <td><h4>'.$note['notice'].'</h4>
+                    <span class="close" onclick = "Del('.$note['MessageID'].');">&times;</span>
                 </td>
-            </tr>
-            <tr class="time">
+            </tr>'; 
+        if($counter > 5){
+            $counter = 1;
+        }}
+           ?>
+            
+             <tr class="color2">
                 <td><h4>It is time to meet with your supervisor</h4>
-                    <span class="close" onclick = "this.parentElement.style.display='none';">&times;</span>
+                    <span class="close" onclick = "Del(1);">&times;</span>
                 </td>
             </tr>
-            <tr class="hour">
+            <tr class="color3">
                 <td><h4>You have one hour left to your meeting time</h4>
                     <span class="close" onclick = "this.parentElement.style.display='none';">&times;</span>
                 </td>
             </tr>
-            <tr class="day">
+            <tr class="color4">
                 <td><h4>One day to your meeting date</h4>
                     <span class="close" onclick = "this.parentElement.style.display='none';">&times;</span>
                 </td>
             </tr>
-            <tr class="schedule">
+            <tr class="color5">
                 <td><h4>Your appointment scheduling was successful</h4>
                     <span class="close" onclick = "this.parentElement.style.display='none';">&times;</span>
                 </td>
@@ -83,5 +94,7 @@
         </table>
     </div>
 </div>
+<script src = "../js/ajax.js"></script>
+<script src="close.js"></script>
 </body>
 </html>

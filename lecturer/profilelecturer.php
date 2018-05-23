@@ -44,6 +44,10 @@
       </div>
       <br>
       <div class="dashboard-list">
+            <a href="lectnotification.php"><i class="fa fa-user icon"></i>Notifications</a>
+        </div>
+        <br>
+      <div class="dashboard-list">
           <a href="#" class="here"><i class="fa fa-user icon"></i>View Profile</a>
       </div>
       <br>
@@ -96,7 +100,8 @@
                 <label class="placejumper">Staff ID</label>
             </div>
             <div class="group" style="width:70%;">
-                <input readonly type="text" name="email" class="float-input remonly"value="<?php echo $_SESSION['email'] ?>">
+                <input readonly type="text" name="email" class="float-input remonly"
+                value="<?php echo $_SESSION['email'] ?>">
                 <span class="bar"></span>
                 <label class="placejumper">Email</label>
             </div>

@@ -12,19 +12,19 @@
 	<title>Lecturer DashBoard</title>
     <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
     <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-   <div class="navbar">
-     <span class="toggle"><i class="fa fa-bars bar" onclick="editclick()"></i></span>
-     <p class="welcometxt"> Welcome to your dashboard</p>
-   </div>
-  <div class="sidebar">
-            <div class="image-case">
-            <h2><img src="../img/logo/unilag.png" alt="institution-logo"><span>Hi,
-            <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lastname'] ?> </span></h2>
-            </div>
+    <div class="navbar">
+        <span class="toggle"><i class="fa fa-bars bar" onclick="editclick()"></i></span>
+        <p class="welcometxt"> Welcome to your dashboard</p>
+    </div>
+      <div class="sidebar">
+        <div class="image-case">
+        <h2><img src="../img/logo/unilag.png" alt="institution-logo"><br><span>Hi,
+        <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lastname'] ?> </span></h2>
+      </div>
       <hr>
       <div class="dashboard-list">
           <a href="index.php"><i class="fa fa-columns icon"></i>Dashboard</a>
@@ -34,6 +34,10 @@
           <a href="#" class="here" ><i class="fa fa-calendar icon"></i>Set Available Period </i></a>
       </div>
       <br>
+      <div class="dashboard-list">
+            <a href="lectnotification.php"><i class="fa fa-user icon"></i>Notifications</a>
+        </div>
+        <br>
       <div class="dashboard-list">
           <a href="profilelecturer.php"><i class="fa fa-user icon"></i>View Profile</a>
       </div>
@@ -46,7 +50,7 @@
           <a href="../php/logout.php"><i class="fa fa-home icon"></i>Logout</a>     
       </div>
     
-    
+</div>
     
      
     
@@ -60,7 +64,7 @@
     <h2>Hi, Dr Odumuyiwa</h2>
      <a href="./"> Dashboard</a>
      <a href="#"  class="here">Set Available Period</a>
-     <a href="#">Change Profile</a>
+     <a href="#">View Profile</a>
      <a href="#">Change Password</a>
      <a href="#">Logout</a>
      </div>
@@ -77,8 +81,8 @@
        <form>
        <section class="app">
          <div class="time">
-           <p type="Available Day:">
-               <select type="date" id="day" style="border:none; padding-top:30px 10px 10px 0px;" required>
+           <p type="Available Day:" >
+               <select type="date" id="day" style="border:none;" required>
                 <option>Monday</option>
                 <option>Tuesday</option>
                 <option>Wednesday</option>
@@ -89,23 +93,22 @@
              </select></p>
          </div>
           
-         <div>
+         <div class="setish">
             <span id="addtime" onclick="myFunction()"><b>+ Add</b></span>
             <p type="Start Time:" id="startslot"><input type="time" class="startTime" required></input></p>
          </div>
-         <div>
+         <div  class="setish">
     
             <p type="End Time:" id="endslot"><input type="time" class="endTime" required></input></p>
          </div>
-          <div>
-            <span id="addtime"></span>
+          <div  class="setish">
             <p type="Students No:"><input  type="number" id="maxStudent" required></input></p>
          </div>
          
          
        </section>
        <br>
-       <input type="submit" value="Create" class="cr1" onclick="addTime();">
+       <input type="submit" value="Create" class="cr1" onclick="addtime();">
      </form>
     </div>
    

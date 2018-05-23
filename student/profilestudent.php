@@ -40,7 +40,7 @@
                 <i class="fa fa-calendar icon"></i>&nbsp;&nbsp;Choose Supervisor </a>
             <br>
             <a href="notice.php">
-                <i class="fa fa-bell-o"><span class="badge" style="background-color: #03A9F4;">5</span></i>&nbsp;&nbsp;Notifications
+                <i class="fa fa-bell-o"><span class="badge" style="background-color: #03A9F4;">new</span></i>&nbsp;&nbsp;Notifications
             </a>
             <a href="#" class="here">
                 <i class="fa fa-user icon"></i>&nbsp;&nbsp;View Profile</a>
@@ -141,10 +141,6 @@
     }
     .bar{
         width:55%;
-    }
-    h2{
-        padding-top: 2%;
-        text-align: center;
     }
     button{
         float:right;

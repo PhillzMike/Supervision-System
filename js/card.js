@@ -49,7 +49,10 @@ function removeclick() {
 }
 function deleteCard(){
     console.log(cardToBeDeleted);
-    const params = {"id" : cardToBeDeleted.id};
+    let date = allAppointmentDetails[cardToBeDeleted.id]["Date"];
+    console.log(date);
+    const params = {"id" : cardToBeDeleted.id, "studentID" : allAppointmentDetails[cardToBeDeleted.id]['studentID'], 
+    "date" : date, "time" : allAppointmentDetails[cardToBeDeleted.id]['Start Time']};
     callajax(params,'../php/deleteCard.php',removeCard)
 }
 function removeCard(phpresponse){

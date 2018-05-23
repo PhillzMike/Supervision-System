@@ -22,7 +22,6 @@
         $query = "INSERT INTO `appointment` (`supervisorID`,`studentID`,`Date`,`Start Time`, `End Time`, `message`)
         VALUES(:supervisorID,:studentID,:date,:start,:end,:message)";
         $stmt = $conn->prepare($query);
-
         $details = array(":supervisorID"=>$_POST["supervisor"], ":studentID" => $_SESSION["ID"], ":date" => $_POST["date"], ":start" => $_POST["startTime"], 
         ":end" => $_POST["endTime"], ":message" => $_POST["message"]);
         
@@ -33,7 +32,7 @@
             echo json_encode($ex->getMessage());
         }
         $msg = "You have an appointment with ".$_POST["studentID"]." by ".$_POST["startTime"];
-        $query = "INSERT INTO `notifications` (`userID` , `Notice`) VALUES(".$_POST["supervisor"].",'".$msg."'";
+        $query = "INSERT INTO `notifications` (`userID` , `Notice`) VALUES(".$_POST["supervisor"].",'".$msg."')";
         $conn->query($query);
     }else{
         echo json_encode("Lecturer cannot take anymore appointment");

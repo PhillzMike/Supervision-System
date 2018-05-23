@@ -22,12 +22,10 @@
     <div class="sidebar">
         <div class="image-case">
                 <img src="<?php echo "../profile/studentImages/".$_SESSION['img_path']?>">
-            <br>    
-            <br>
-            <h2>
-            <span class="">Hello, <?php echo ' '.$_SESSION['firstname'].' '.$_SESSION['lastname'] ?></span>
-            </h2>
+            
         </div>
+        <h2>Hello, <?php echo ' '.$_SESSION['firstname'].' '.$_SESSION['lastname'] ?>
+            </h2>
         <br>
         <hr>
         <nav class="side" style="height: 100vh;">

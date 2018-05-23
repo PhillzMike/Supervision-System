@@ -105,6 +105,7 @@
                     echo "No available times";
                 }else{
                 foreach($slots as $slot){
+                    $jsonable = json_encode($slot);
                     echo '<section class="card">
                     <h3>Time Slot</h3>
                     <p>
@@ -115,7 +116,7 @@
                      
                      </p>
                      <p>
-                         <button class="accept">Accept</button>
+                         <button class="accept" onclick = "HandleSet('.$jsonable.');">Accept</button>
                      </p>
                      </section>';
                 }
@@ -176,6 +177,9 @@
         }
         function handleOut(parans){
             location.href = './selectime.php';
+        }
+        function HandleSet(slt){
+            let slot = JSON.parse(slt);
         }
     </script>
 </body>

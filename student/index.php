@@ -57,28 +57,23 @@
     <div style="margin-left:30%">
         <div class="myCard">
             <?php 
-               
+                 require_once('php/getAppointments.php');
+                 $allAppoint = getAppoints();
+                 foreach($allAppoint as $appoint){
+               echo '<section class="card">
+               <h3>Time Slot</h3>
+               <p>
+                   <span class="textf">Name:'.$appoint[1].'</span>
+                   <br>
+                   <span class="textf">Day:'.$appoint[2].'</span>
+                   <span class="textf">Time:'.$appoint[3].' - '.$appoint[4].'</span>
+               </p>
+           </section>';
+                 }
             ?>
-            <section class="card">
-                <h3>Time Slot</h3>
-                <p>
-                    <span class="textf">Name:Mr.Joda</span>
-                    <br>
-                    <span class="textf">Day:18th April,2018</span>
-                    <span class="textf">Time:12pm - 1pm </span>
-                </p>
-            </section>
+            
 
-            <section class="card">
-                <h3>Time Slot</h3>
-                <p>
-                    <span class="textf">Name:Mr.Joda</b>
-                    </span>
-                    <br>
-                    <span class="textf">Day:18th April,2018</span>
-                    <span class="textf">Time:12pm - 1pm </span>
-                </p>
-            </section>
+            
 
         </div>
     </div>

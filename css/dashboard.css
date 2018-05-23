@@ -40,7 +40,8 @@ margin-right: 10%;
 	margin-left: 10%;
 	padding:5% 10% 15% 2%;
 	color: white;
-	padding-right: 0;
+  padding-right: 0;
+  height: 10%
 }
 .color_placing{
 	width:100%;
@@ -66,7 +67,7 @@ margin-right: 10%;
 	margin-right: 10%;
 	border-radius: 5px;
 	padding-top: 2%;
-	height:inherit;
+	height:10%;
 }
 
 .adjust button{
@@ -166,6 +167,7 @@ padding-right:2%;
     display:none;
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    cursor: pointer;
 
 }
 .infocreate {
@@ -178,8 +180,10 @@ padding-right:2%;
    padding-left: 3%;
     padding-right: 3%;
    background-color: white;
+   cursor: pointer;
 }
 .fullinfo_content{
+  cursor: pointer;
   margin-left: 35%;
   margin-top: 5%;
    width: 43%; /* Full width */
@@ -204,6 +208,7 @@ padding-right:2%;
     padding-left: 5%;
     padding-right: 3%;
     background-color: white;
+    cursor: pointer;
 }
 .close2, .close3 {
     color: black;
@@ -217,6 +222,7 @@ padding-right:2%;
   padding-left:20%;
   padding-right:20%;
   margin-bottom:5%;
+  cursor: pointer;
   text-align: center;
 }
 .modal_text img{
@@ -557,8 +563,69 @@ p:before{
   top: 15px;
   left: 5px;
 }
+.fa{
+  position: relative;
+}
+.badge{
+  font-size: 80%;
+  display: block;
+  position: absolute;
+  top: -1.5em;
+  right: -1em;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+}
+.myContent{
+  padding-top: 10%;
+}
 
-  
+.myContent .close{
+  margin-top: -7%;
+}
+
+.myContent h4{
+  font-style: italic;
+}
+
+.myTable{
+  width: 80%;
+  align-content: center;
+}
+.myTable td{
+  padding: 2%;
+  border: 1px solid rgb(204, 204, 204);
+  box-shadow: 2px 1px 1px 0px rgba(78, 78, 78, 0.671);
+}
+
+.myTable tr:hover{
+  transform: translateX(-4px);
+}
+
+.myTable .color1{
+  background-color: gray;
+}
+
+.myTable .color2{
+  background-color: rgb(202, 202, 202);
+}
+
+.myTable .color3{
+  background-color: gray;
+}
+
+.myTable .color4{
+  background-color: rgb(202, 202, 202);
+}
+
+.myTable .color5{
+  background-color: gray;
+}
+
+
 /* for responsiveness */
 @media screen and (max-width: 600px) {
 .blurpart , .sidebar{

@@ -18,11 +18,19 @@
             // $_SESSION['ID'] = $id;
              $_SESSION['role'] = $role;
             
+             $stamt = $conn->query("SELECT * FROM `notifications` WHERE userID = $id");
+            $resulta = $stamt->fetch(PDO::FETCH_ASSOC);
+            if($resulta){
+                $count = count($resulta);
+            }else{
+                $count = 0;
+            }
             if($role=="student"){
                 $stmt = $conn->query("SELECT * FROM `students` WHERE ID = $id");
                 $result = $stmt->fetch(PDO::FETCH_ASSOC);
                 $_SESSION = array_merge($_SESSION,$result);
-                $groupres = array('link'=>true, 'value'=>'./student');
+                
+                $groupres = array('link'=>true, 'value'=>'./student', 'count'=>$count);
             }else if($role == "supervisor"){
                 $stmt = $conn->query("SELECT * FROM `supervisors` WHERE ID = $id");
                 $result = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -31,7 +39,7 @@
                 // $_SESSION['lstnm'] = $result['lastname'];
                 // $_SESSION['title'] = $result['title'];
                 
-                $groupres = array('link'=>true, 'value'=>'./lecturer');
+                $groupres = array('link'=>true, 'value'=>'./lecturer', 'count'=>$count);
                 //header("Location: ../lecturer");
             }else{
             //var_dump($result);

@@ -111,7 +111,8 @@
     <div class="cancel_info">
        <span class="close2">&times;</span>
       <h6 style="font-size:16px">Are you sure you want to delete this Appointment?</h6>
-    
+      <textarea placeholder="Explain why, please" maxlength="50" style="width:60%" ></textarea>
+      <br>
      <input class=" signIn homebutton" id = "yesConfirmation" value="Yes" style="margin-top:1%; background-color:#5264AE;" type="submit">
      <input class=" signIn homebutton" value="No" style="margin-top:1%; background-color:#5264AE;" type="submit" onclick = "removeConfirmation();">
            

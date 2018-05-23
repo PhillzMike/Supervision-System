@@ -173,7 +173,7 @@
     }
     </style> -->
     <script src="../js/ajax.js"></script>
-   <script src = "./js/work.js"></script>
+    <script src = "./js/work.js"></script>
 </body>
 
 <script type = "text/javascript" src = "close.js"></script>

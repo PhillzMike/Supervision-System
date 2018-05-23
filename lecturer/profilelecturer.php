@@ -96,7 +96,8 @@
                 <label class="placejumper">Staff ID</label>
             </div>
             <div class="group" style="width:70%;">
-                <input readonly type="text" name="email" class="float-input remonly"value="<?php echo $_SESSION['email'] ?>">
+                <input readonly type="text" name="email" class="float-input remonly"
+                value="<?php echo $_SESSION['email'] ?>">
                 <span class="bar"></span>
                 <label class="placejumper">Email</label>
             </div>

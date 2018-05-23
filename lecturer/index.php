@@ -38,7 +38,7 @@
         </div>
         <br>
         <div class="dashboard-list">
-            <a href="profilelecturer.php"><i class="fa fa-user icon"></i>Change Profile</a>
+            <a href="profilelecturer.php"><i class="fa fa-user icon"></i>View Profile</a>
         </div>
         <br>
         <div class="dashboard-list">
@@ -80,7 +80,7 @@
   <h3 class="app_tag">Appointment Dashboard</h3>
 	  <div class="appointmentcards" id = "appointmentCards">
         
-      <section class="card" id = "card"> 
+      <section class="card" id = "card" onclick="infoclick();"> 
             <div class="color_placing">
                          <img src = "../img/unilag.png" class = "image">
             </div>
@@ -99,7 +99,7 @@
             </div>
         </section>
 
-        <section class="card">
+        <section class="card"  onclick="infoclick();">
           <div class="color_placing">
                 <img src = "../img/unilag.png" class = "image">
         </div>
@@ -138,7 +138,7 @@
             <span class="textf">Time:12pm - 1pm </span>
            </div>
       </section>
-      <section class="card" id = "card"> 
+      <section class="card" id = "card" onclick="infoclick()"> 
             <div class="color_placing">
                          <img src = "../img/unilag.png" class = "image">
             </div>
@@ -179,7 +179,7 @@
 
    <div class="cancel_app" id="cancel_app">
     <div class="cancel_info">
-       <span class="close2">&times;</span>
+       <span class="close3">&times;</span>
       <h6 style="font-size:16px">Are you sure you want to delete this Appointment?</h6>
     
      <input class=" signIn homebutton" value="Yes" style="margin-top:1%; background-color:#5264AE;" type="submit">
@@ -193,12 +193,17 @@
       var side = document.getElementById("residebar");
       var span = document.getElementsByClassName("close")[0];
       var span2 = document.getElementsByClassName("close2")[0];
+      var span3 = document.getElementsByClassName("close3")[0];
       var remove = document.getElementById("cancel_app");
+      var full = document.getElementById("fullinfo_app");
      function editclick() {
         side.style.display = "block";
     }
     function removeclick() {
         remove.style.display = "block";
+    }
+    function infoclick() {
+        full.style.display = "block";
     }
     span.onclick = function() {
        side.style.display = "none";
@@ -206,6 +211,10 @@
     span2.onclick = function() {
        remove.style.display = "none";
     }
+    span3.onclick = function() {
+       full.style.display = "none";
+    }
+
      window.onclick = function(event) {
     if (event.target == side) {
         side.style.display = "none";

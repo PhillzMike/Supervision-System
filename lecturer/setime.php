@@ -22,7 +22,7 @@
    </div>
   <div class="sidebar">
             <div class="image-case">
-            <h2><img src="../img/logo/unilag.png" alt="institution-logo"><span>Hi,
+            <h2><img src="../img/logo/unilag.png" alt="institution-logo"><br><span>Hi,
             <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lastname'] ?> </span></h2>
             </div>
       <hr>
@@ -60,7 +60,7 @@
     <h2>Hi, Dr Odumuyiwa</h2>
      <a href="./"> Dashboard</a>
      <a href="#"  class="here">Set Available Period</a>
-     <a href="#">Change Profile</a>
+     <a href="#">View Profile</a>
      <a href="#">Change Password</a>
      <a href="#">Logout</a>
      </div>

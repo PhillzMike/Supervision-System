@@ -23,7 +23,8 @@
    </div>
      <div class="sidebar">
             <div class="image-case">
-            <h2><img src="../img/logo/unilag.png" alt="institution-logo"><span>Hi,
+            <h2><img src="../img/logo/unilag.png" alt="institution-logo">
+            <br><span>Hi,
             <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lastname'] ?> </span></h2>
             </div>
       <hr>

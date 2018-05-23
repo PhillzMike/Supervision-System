@@ -40,7 +40,8 @@ margin-right: 10%;
 	margin-left: 10%;
 	padding:5% 10% 15% 2%;
 	color: white;
-	padding-right: 0;
+  padding-right: 0;
+  height: 10%
 }
 .color_placing{
 	width:100%;
@@ -66,7 +67,7 @@ margin-right: 10%;
 	margin-right: 10%;
 	border-radius: 5px;
 	padding-top: 2%;
-	height:inherit;
+	height:10%;
 }
 
 .adjust button{

@@ -47,7 +47,6 @@ function showTime(phpresponse){
             cell1.innerHTML = key;
             time = "<li>" + seen[key][1] + "</li>";
             for(let i = 2;i<seen[key].length;i++){
-                //TODO how to break line;
                 time += "<li>" + seen[key][i] + "</li>";
             }
             cell2.innerHTML = time;

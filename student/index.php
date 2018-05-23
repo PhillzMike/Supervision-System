@@ -82,6 +82,10 @@
     </div>
 </body>
 
+
+
+<script type = "text/javascript" src = "close.js"></script>
+        <script type = "text/javascript" src = "changeCount.js"></script>
 <!-- 
 <html>
 <head>

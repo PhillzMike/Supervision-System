@@ -40,7 +40,7 @@
                 <i class="fa fa-calendar icon"></i>&nbsp;&nbsp;Choose Supervisor </a>
             <br>
             <a href="notice.php">
-                <i class="fa fa-bell-o"><span class="badge" style="background-color: #03A9F4">5</span></i>&nbsp;&nbsp;Notifications
+                <i class="fa fa-bell-o"><span class="badge" style="background-color: #03A9F4"></span></i>&nbsp;&nbsp;Notifications
             </a>
             <a href="profilestudent.php">
                 <i class="fa fa-user icon"></i>&nbsp;&nbsp;View Profile</a>
@@ -74,7 +74,8 @@
 
     </div>
         <button>Change</button>
-
+        <script type = "text/javascript" src = "close.js"></script>
+        <script type = "text/javascript" src = "changeCount.js"></script>
 </body>
 
 </html>

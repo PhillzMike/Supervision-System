@@ -122,7 +122,8 @@ loginbutton.onclick = function(e){
     callajax(params,'./php/login.php',handleLogin);
 }
 function handleLogin(phpResponse){
-    if(phpResponse['link']){
+    if(phpResponse['link'] ){
+   localStorage.setItem("count", phpResponse["count"]);
         location.href = phpResponse['value'];
     }else{
         displayLoginError(phpResponse['value']);

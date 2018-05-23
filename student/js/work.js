@@ -2,6 +2,9 @@
 function clickSuper(supId){
     callajax({'id':supId},'php/changeSupId.php',handleOut);
 }
+var Dic = {
+    
+}
 function handleOut(parans){
     location.href = './selectime.php';
 }

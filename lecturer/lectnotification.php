@@ -11,6 +11,7 @@
 <head>
 	<title>Lecturer DashBoard</title>
     <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="../css/startpage.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,11 +23,10 @@
    </div>
     <div class="sidebar">
         <div class="image-case">
-        <h2><img src="../img/logo/unilag.png" alt="institution-logo"> <br><span>Hi,
-            <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lastname'] ?></span></h2> 
+            <h2><img src="../img/logo/unilag.png" alt="institution-logo"><br><span>Hi,
+            <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lastname'] ?> </span></h2>
         </div>
         <hr>
-        <br>
         <div class="dashboard-list">
             <a href="index.php" ><i class="fa fa-columns icon "></i>Dashboard</a>
         </div>
@@ -36,7 +36,7 @@
         </div>
         <br>
         <div class="dashboard-list">
-            <a href="#" class="here"><i class="fa fa-user icon"></i>Notification</a>
+            <a href="#" class="here"><i class="fa fa-bell-o icon"></i>Notification</a>
         </div>
         <br>
         <div class="dashboard-list">
@@ -81,5 +81,30 @@
         
         </div>
   </div> 
+  <div style="margin-left: 30%">
+    <div class = "myContent">
+       <table class="myTable">
+           <tbody id = "tableBody">
+           <?php
+           
+           require_once('../php/notification.php');
+           $counter = 1;
+           $notification = notify();
+           foreach($notification as $note){
+                echo'<tr class="color'.$counter++.'">
+                <td><h4>'.$note['notice'].'</h4>
+                    <span class="close" id = '.$note["MessageID"].' onclick = "Del('.$note['MessageID'].');">&times;</span>
+                </td>
+            </tr>'; 
+        if($counter > 5){
+            $counter = 1;
+        }}
+           ?>
+    </tbody>
+        </table>
+    </div>
+</div>
+<script src = "../js/ajax.js"></script>
+<script src="../student/close.js"></script>
   </body>
   </html>

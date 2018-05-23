@@ -38,7 +38,7 @@
         </div>
         <br>
         <div class="dashboard-list">
-            <a href="lectnotification.php"><i class="fa fa-user icon"></i>Notifications</a>
+            <a href="lectnotification.php"><i class="fa fa-user icon"><span class="badge notcon" style="background-color: #03A9F4;"></span></i>Notifications</a>
         </div>
         <br>
         <div class="dashboard-list">
@@ -231,6 +231,7 @@
    </script>
     <script type = "text/javascript" src = "../js/ajax.js"></script>
     <script type = "text/javascript" src = "../js/card.js"></script>
+    <script src="../student/close.js"></script>
     <script>
     callajax([],'../php/cardGuy.php',fillCard);
     </script>

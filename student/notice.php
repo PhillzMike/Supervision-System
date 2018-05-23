@@ -38,7 +38,7 @@
                 <i class="fa fa-calendar icon"></i>&nbsp;&nbsp;Choose Supervisor </a>
             <br>
             <a href="#" class="here">
-                <i class="fa fa-bell-o"><span class="badge"></span></i>&nbsp;&nbsp;Notifications
+                <i class="fa fa-bell-o"><span class="badge" style="display:none"></span></i>&nbsp;&nbsp;Notifications
             </a>
             <br>
             <a href="profilestudent.php">
@@ -55,15 +55,16 @@
 <div style="margin-left: 30%">
     <div class = "myContent">
        <table class="myTable">
+           <tbody id = "tableBody">
            <?php
            
            require_once('../php/notification.php');
            $counter = 1;
            $notification = notify();
            foreach($notification as $note){
-                echo '<tr class="color'.$counter++.'">
+                echo'<tr class="color'.$counter++.'">
                 <td><h4>'.$note['notice'].'</h4>
-                    <span class="close" onclick = "Del('.$note['MessageID'].');">&times;</span>
+                    <span class="close" id = '.$note["MessageID"].' onclick = "Del('.$note['MessageID'].');">&times;</span>
                 </td>
             </tr>'; 
         if($counter > 5){
@@ -71,7 +72,7 @@
         }}
            ?>
             
-             <tr class="color2">
+             <!-- <tr class="color2">
                 <td><h4>It is time to meet with your supervisor</h4>
                     <span class="close" onclick = "Del(1);">&times;</span>
                 </td>
@@ -90,7 +91,8 @@
                 <td><h4>Your appointment scheduling was successful</h4>
                     <span class="close" onclick = "this.parentElement.style.display='none';">&times;</span>
                 </td>
-            </tr>
+            </tr> -->
+    </tbody>
         </table>
     </div>
 </div>

@@ -1,9 +1,13 @@
 <?php
 $TimeSlots =  array();
 function getTimeSlots($id,$name){
-    if($id==-1){
+    if(isset($_SESSION['SuperId'])){
+    if($_SESSION['SuperId']=='-1'){
         return array();
     }
+}else{
+    return array();
+}
     require_once('../php/connection.php');
         $conn = connect();
         $stmt2 = $conn->query("SELECT `Day`, `Start Time`, `End Time`, `maxStudent` FROM `supervisor available time` WHERE `supervisorID` = '".$id."'");

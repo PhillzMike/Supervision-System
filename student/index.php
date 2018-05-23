@@ -56,7 +56,9 @@
 
     <div style="margin-left:30%">
         <div class="myCard">
-
+            <?php 
+               
+            ?>
             <section class="card">
                 <h3>Time Slot</h3>
                 <p>
@@ -82,6 +84,10 @@
     </div>
 </body>
 
+
+
+<script type = "text/javascript" src = "close.js"></script>
+        <script type = "text/javascript" src = "changeCount.js"></script>
 <!-- 
 <html>
 <head>

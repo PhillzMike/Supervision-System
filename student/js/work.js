@@ -33,3 +33,27 @@ var hourDiff = diff_result.getHours()-1;
 function displayResult(params){
     alert(params);
 }
+
+function returndays(day){
+    day = day.toLower();
+    if(day=="monday"){
+        return 1;
+    }else if(day=="tuesday"){
+        return 2;
+    }
+    else if(day=="wednesday"){
+        return 3;
+    }
+    else if(day=="thursday"){
+        return 4;
+    }
+    else if(day=="friday"){
+        return 5;
+    }
+    else if(day=="saturday"){
+        return 6;
+    }
+    else if(day=="sunday"){
+        return 7;
+    }
+}

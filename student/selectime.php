@@ -22,6 +22,8 @@
     <div class="sidebar">
         <div class="image-case">
         <img src="<?php echo "../profile/studentImages/".$_SESSION['img_path']?>">
+        <br>
+        <br>
             <h2>
                 <span class="">Hello, <?php echo ' '.$_SESSION['firstname'].' '.$_SESSION['lastname'] ?></span>
             </h2>
@@ -37,8 +39,8 @@
             <a href="selectime.php" class="here">
                 <i class="fa fa-calendar icon"></i>&nbsp;&nbsp;Choose Supervisor </a>
             <br>
-            <a href="">
-                <i class="fa fa-bell-o"></i>&nbsp;&nbsp;Notifications
+            <a href="notice.php">
+                <i class="fa fa-bell-o"><span class="badge" style="background-color: #03A9F4">5</span></i>&nbsp;&nbsp;Notifications
             </a>
             <a href="profilestudent.php">
                 <i class="fa fa-user icon"></i>&nbsp;&nbsp;View Profile</a>
@@ -55,15 +57,17 @@
     <div style="margin-left:30%">
 
     <div class="dropdown">
-        <h3>Choose Lecturer:</h3>
-        <select name="Lecturer" multiple>
-            <option value= "1"><a href = "#">shgeigijhigjng</a></option>
-            <option value= "2"><a href = "#">gbkhbihyiiiekrt</a></option>
-            <option value= "3"><a href = "#">dfjnrtuhrtbujngtrjj</a></option>
-        <span class="bar"></span>
+        <h3>Choose Your Supervisor:</h3>
+        <select id="lecture" style="width:50%">
+            <option value="0">Select Lecturer:</option>
+            <option value ="1">Doctor. V.Odumuyiwa</option>
+            <option value ="2">Doctor. Sawyerr</option>
+            <option value ="3">Doctor. E.P. Fasina</option>
+            <option value ="4">Doctor. Akinlade</option>
+        </select>
         
     </div>
-        <div class="myCard" style="display:none">
+        <div class="myCard" >
 
             <section class="card">
                 <h3>Time Slot</h3>
@@ -98,20 +102,6 @@
 
 </html>
 <style>
-    .drop{
-        width:55%;
-        padding: 5px 0px;
-        position: absolute;
-        top: 100%:
-        left: 0;
-        z-index: -1;
-        opacity: 0;
-    }
-
-    .drop li{
-        display: block;
-        font-size: 16px;
-    }
     .float-input{
         margin-top: 25%;
         width: 55%;
@@ -119,3 +109,4 @@
     .bar{
         width:55%;
     }
+</style>

@@ -56,6 +56,75 @@ html, body{
     padding-top: 10%;
 }
 
+.button-block {
+    width: 1%;
+    height: 1%;
+    border-radius: 100%; /* TODO: prefix */
+    margin: -14% 0 0 90%;
+    position: relative;
+    display: block;
+    position: relative;
+    border: 15px solid #F0544E;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    box-sizing: border-box;
+    -webkit-transition: border 600ms ease-in-out;
+    -moz-transition: border 600ms ease-in-out;
+    -ms-transition: border 600ms ease-in-out;
+    -o-transition: border 600ms ease-in-out;
+    transition: border 600ms ease-in-out;
+  }
+  /* for cancel button */
+  .button-block button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: 0;
+    margin: -7px 0 0 -13px;
+    cursor: pointer;
+  }
+  .mark {
+    background-color: #fff;
+    position: absolute;
+    height: 15px;
+    width: 4px;
+    display: block;
+    top: 0;
+    -webkit-transition: all 600ms ease-in-out;
+    -moz-transition: all 600ms ease-in-out;
+    -ms-transition: all 600ms ease-in-out;
+    -o-transition: all 600ms ease-in-out;
+    transition: all 600ms ease-in-out;
+  }
+  .mark.x  { 
+    right: 14px; 
+    transform:rotate(45deg); /* TODO: prefix */
+  }
+  .mark.xx { 
+    left: 12px; 
+    transform:rotate(-45deg); /* TODO: prefix */
+  }
+  .button-block.canceled  {
+    border-width: 4px;
+    border-color: #1ABC9C;
+  }
+  .button-block.canceled .mark { background-color: #1ABC9C; }
+  .button-block.canceled .mark.x {
+    right: 5px;
+    top: -3px;
+    height: 35px;
+  }
+  .button-block.canceled .mark.xx {
+    height: 15px;
+    top: 15px;
+    left: 5px;
+  }
+
 .card {
     padding: 1%;
     height: auto;

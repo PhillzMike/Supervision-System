@@ -44,6 +44,10 @@
       </div>
       <br>
       <div class="dashboard-list">
+            <a href="lectnotification.php"><i class="fa fa-user icon"></i>Notifications</a>
+        </div>
+        <br>
+      <div class="dashboard-list">
           <a href="#" class="here"><i class="fa fa-user icon"></i>View Profile</a>
       </div>
       <br>

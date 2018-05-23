@@ -57,32 +57,50 @@
     <div style="margin-left:30%">
 
     <div class="dropdown">
-        <h3>Choose Your Supervisor:</h3>
+        <h3>Choose Lecturer:</h3>
         <select id="lecture" style="width:50%">
-            <option value="0">Select Lecturer:</option>
-            <option value ="1">Doctor. V.Odumuyiwa</option>
-            <option value ="2">Doctor. Sawyerr</option>
-            <option value ="3">Doctor. E.P. Fasina</option>
-            <option value ="4">Doctor. Akinlade</option>
-        </select>
+            <?php 
+            require_once('php/getSupervisors.php');
+            $supes = getSupers($_SESSION['institution']);
+            $inc = 1;
+            // print_r($supes);
+            foreach($supes as $sup){
+                echo "<option value= '".$inc++."'><a href = '#'>".$sup[1]."</a></option>";
+            }?>
+        <span class="bar"></span>
+</select>
+    </div>
+        <div class="myCard" style="">
+            <?php 
+                require_once('php/getTimeSlots.php');
+                //echo $supes[0][0];
+                $slots = getTimeSlots($supes[0][0],$supes[0][1]);
+                foreach($slots as$slot){
+                    echo '<section class="card">
+                    <h3>Time Slot</h3>
+                    <p>
+                    <span class="textf">Name:'.$slot[4].'</span>
+                     <br>
+                     <span class="textf">Day:'.$slot[0].'</span>
+                     <span class="textf">Time: Between'.$slot[1]." and ".$slot[2].'</span>
+                     
+                     </p>
+                     <p>
+                         <button class="accept">Accept</button>
+                     </p>
+                     </section>';
+                }
+                 
+                
+            
+            ?>
+           
+      
         
     </div>
         <div class="myCard" >
 
-            <section class="card">
-                <h3>Time Slot</h3>
-                <p>
-                    <span class="textf">Name:Joda Opemipo</span>
-                    <br>
-                    <span class="textf">Day:18th April,2018</span>
-                    <span class="textf">Time:12pm - 1pm </span>
-                </p>
-                <p>
-                    <button class="accept">Accept</button>
-                </p>
-            </section>
-
-            <section class="card">
+            <!-- <section class="card">
                 <h3>Time Slot</h3>
                 <p>
                     <span class="textf">Name:Joda Opemipo</b>
@@ -94,14 +112,25 @@
                 <p>
                     <button class="accept">Accept</button>
                 </p>
-            </section>
+            </section> -->
 
         </div>
     </div>
-</body>
+    <!-- <style>
+    .drop{
+        width:55%;
+        padding: 5px 0px;
+        position: absolute;
+        top: 100%:
+        left: 0;
+        z-index: -1;
+        opacity: 0;
+    }
 
-</html>
-<style>
+    .drop li{
+        display: block;
+        font-size: 16px;
+    }
     .float-input{
         margin-top: 25%;
         width: 55%;
@@ -109,4 +138,7 @@
     .bar{
         width:55%;
     }
-</style>
+    </style> -->
+</body>
+
+</html>

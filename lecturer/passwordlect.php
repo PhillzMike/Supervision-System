@@ -11,10 +11,10 @@
 	<title>Lecturer DashBoard</title>
     <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/startpage.css">
-  <link rel="stylesheet" href="../css/materialtext.css">
+    <link rel="stylesheet" href="../css/materialtext.css">
     <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <div class="navbar">
@@ -23,7 +23,8 @@
    </div>
      <div class="sidebar">
             <div class="image-case">
-            <h2><img src="../img/logo/unilag.png" alt="institution-logo"><span>Hi,
+            <h2><img src="../img/logo/unilag.png" alt="institution-logo">
+            <br><span>Hi,
             <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lastname'] ?> </span></h2>
             </div>
       <hr>
@@ -35,6 +36,10 @@
           <a href="setime.php"  ><i class="fa fa-calendar icon"></i>Set Available Period </i></a>
       </div>
       <br>
+      <div class="dashboard-list">
+            <a href="lectnotification.php"><i class="fa fa-user icon"></i>Notifications</a>
+        </div>
+        <br>
       <div class="dashboard-list">
           <a href="profilelecturer.php"><i class="fa fa-user icon"></i>View Profile</a>
       </div>
@@ -70,10 +75,10 @@
             </div>
 
             <div class="enter">
-               <input class="signIn homebutton" value="Change" style="margin-top:1%; margin-left:20%; background-color:#5264AE;" name="submit" type="submit">
+               <input class="signIn homebutton" onclick = "changeP();" value="Change" style="margin-top:1%; margin-left:20%; background-color:#5264AE;" name="submit" type="submit">
             </div>
-        </div>
-        </form>
-
+</div>  
+<script src="../js/ajax.js"></script>
+        <script src="./js/changePass"></script>
 </body>
 </html>

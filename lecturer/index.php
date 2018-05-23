@@ -14,19 +14,19 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/startpage.css">
     <link rel="stylesheet" href="../css/materialtext.css">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
    <div class="navbar">
      <span class="toggle"><i class="fa fa-bars bar" onclick="editclick()"></i></span>
      <span class="welcometxt"><h4>Welcome to your dashboard</h4></span>
    </div>
-    <div class="sidebar">
+      <div class="sidebar">
         <div class="image-case">
         <h2><img src="../img/logo/unilag.png" alt="institution-logo"> <br><span>Hi,
             <?php echo ' '.$_SESSION['title'].' '.$_SESSION['lastname'] ?></span></h2> 
-        </div>
+      </div>
         <hr>
         <br>
         <div class="dashboard-list">
@@ -38,7 +38,11 @@
         </div>
         <br>
         <div class="dashboard-list">
-            <a href="profilelecturer.php"><i class="fa fa-user icon"></i>Change Profile</a>
+            <a href="lectnotification.php"><i class="fa fa-user icon"></i>Notifications</a>
+        </div>
+        <br>
+        <div class="dashboard-list">
+            <a href="profilelecturer.php"><i class="fa fa-user icon"></i>View Profile</a>
         </div>
         <br>
         <div class="dashboard-list">
@@ -97,27 +101,11 @@
                 <br>
                 <span class="textf">Time:12pm - 1pm </span>
             </div>
-        </section>
+        </section>      -->
 
    </div>
 
-   <div class="fullinfo_app" id="fullinfo_app">
-    <div class="fullinfo_content">
-       <span class="close2">&times;</span>
-       <span class="textf">Name:Joda Opemipo</span>
-        <br>
-        <span class="textf">Day:18th April,2018</span>
-        <br>
-        <span class="textf">Time:12pm - 1pm </span>
-        <br>
-        <span class="textf">Department:Course Adviser</span>
-        <br>
-        <span class="textf">Level:400</span>
-        <br>
-        <span class="textf">Message: Sir i have data communications defence</span>    
-    </div>
-  </div>
-
+   
 
    <div class="cancel_app" id="cancel_app">
     <div class="cancel_info">
@@ -130,12 +118,32 @@
     </div>
   </div>
 
+  <div class="fullinfo_app" id="fullinfo_app">
+    <div class="fullinfo_content" style>
+       <span class="close3">&times;</span>
+       <br>
+       <div class="modal_text">
+           <img src="../img/teni.jpg" alt="student img">
+            <p>FirstName:Joda</p>
+            <p>LastName:Opemipo</p>
+            <p>MiddleName:Tobi</p>
+            <p>Matric No:140805004</p>
+            <p>Department:csc </p>
+            <p>Level:400 </p>
+            <p>Email:opejoda@gmail.com</p>
+            <p>Message:ueehfhbfhududhfeheueue</p>
+       </div>
+    </div>
+  </div>
+
 
     <script>
       var side = document.getElementById("residebar");
       var span = document.getElementsByClassName("close")[0];
       var span2 = document.getElementsByClassName("close2")[0];
+      var span3 = document.getElementsByClassName("close3")[0];
       var remove = document.getElementById("cancel_app");
+      var full = document.getElementById("fullinfo_app");
      function editclick() {
         side.style.display = "block";
     }
@@ -151,6 +159,8 @@
         side.style.display = "none";
     } else if(event.target == remove){
         remove.style.display = "none";
+    } else if(event.target == full){
+        full.style.display = "none";
     }
      }
 

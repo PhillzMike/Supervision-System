@@ -36,18 +36,18 @@ margin-right: 10%;
 .sidebar a{
 	display: block;
 	text-decoration: none;
-	font-size: 17px;
+	font-size: 95%;
 	margin-left: 10%;
 	padding:5% 10% 15% 2%;
 	color: white;
 	padding-right: 0;
 }
 .color_placing{
-	width:90%;
+	width:100%;
 	height:100%;
-	margin-left: 4%;
-	margin-bottom:10%;
-	margin-top: -30px;  
+	margin-left: 3%;
+	margin-bottom:5%;
+	margin-top: -28px;  
 	border-radius:5px;
 	text-align: center;
 }
@@ -66,7 +66,7 @@ margin-right: 10%;
 	margin-right: 10%;
 	border-radius: 5px;
 	padding-top: 2%;
-	height:8%;
+	height:inherit;
 }
 
 .adjust button{
@@ -99,8 +99,8 @@ margin-right: 10%;
 	position:relative;
   padding: 1%;
   padding-top:5%;
-	height:95%;
-	width: 100%;
+	height:100%;
+	width: 85%;
 	grid-template-columns:35% 65%;
   display: grid;
 
@@ -114,8 +114,9 @@ margin-right: 10%;
 .cancelbutton{
   padding-top:-30px;
 }
-.blurpart, .cancel_app,fullinfo_app{
-	display: none;
+.blurpart, .cancel_app, .fullinfo_app{
+  display: none;
+  height:auto;
 }
 .card img{
 	border-radius: 50%;
@@ -132,7 +133,7 @@ margin-right: 10%;
  font-size: 85%;
 text-align: right;
 line-height:1.4;
-padding-left:2%;
+padding-left:5%;
 padding-right:2%;
 }
 .icon{
@@ -151,14 +152,15 @@ padding-right:2%;
     font-size: 25px;
 }
 .dashboard-list{
-	height:8%;
+  height:8%;
+  
 }
 
-.createapp,.cancel_app{
-	top:0;
+.createapp,.cancel_app, .fullinfo_app{
+	  top:0;
     position: absolute;
     z-index:1;
-	width: 100%; /* Full width */
+	  width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     display:none;
@@ -166,33 +168,88 @@ padding-right:2%;
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 
 }
-.infocreate,.cancel_info, .fullinfo_content{
-   margin-left: 40%;
+.infocreate {
+   margin-left: 25%;
    margin-top: 10%;
-    width: 40%; /* Full width */
+    width: 70%; /* Full width */
     height: auto; /* Full height */
     overflow: auto; /* Enable scroll if needed */
    padding-top: 1%;
    padding-left: 3%;
     padding-right: 3%;
    background-color: white;
-
 }
-.close2 {
+.fullinfo_content{
+  margin-left: 35%;
+  margin-top: 5%;
+   width: 43%; /* Full width */
+   height: auto; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+  padding-top: 1%;
+  padding-left: 3%;
+   padding-right: 3%;
+   color:white;
+   padding-bottom:3%;
+   margin-bottom:5%;
+   font-size:100%;
+  background-color: #03A9F4;
+}
+.cancel_info{
+  margin-left: 40%;
+    margin-top: 15%;
+    width: 40%;
+    height: auto;
+    overflow: auto;
+    padding-top: 1%;
+    padding-left: 5%;
+    padding-right: 3%;
+    background-color: white;
+}
+.close2, .close3 {
     color: black;
     float: right;
     font-size: 45px;
     font-weight: bold;
     padding-right: 1.5%;
 }
-
+.modal_text{
+  padding-top:2%;
+  padding-left:20%;
+  padding-right:20%;
+  margin-bottom:5%;
+  text-align: center;
+}
+.modal_text img{
+  width:70%;
+  height:25%;
+  border-radius:50%;
+}
+.close3{
+    margin-top: -4%;
+    margin-bottom: 2%;
+    color:white;
+}
+#text{
+  padding-top:-8%;
+}
 .app{
 	display: grid;
   grid-template-columns:24% 24% 24% 24%;
   grid-column-gap: 1%
 }
 
-
+.setish{
+  padding-left:10%;
+}
+.startsTime, .endTime, #maxStudent{
+   min-width: 30%;
+}
+#maxStudent{
+  padding-top:8%;
+}
+#day{
+  padding-top:12%;
+}
 #addtime{
 	float:right;
 	padding-right: 2%
@@ -209,7 +266,7 @@ padding-right:2%;
 }
 
 input{
-	width:100%;
+	width:70%;
 	padding:10px;
 	box-sizing:border-box;
 	background:none;
@@ -243,13 +300,13 @@ p:before{
   margin-left:35%;
 }
 .limiter {
-	width: 1366px;
-	margin-left:20%;
-	padding-top:3%;
+  width: 80%;
+  margin-left: 17%;
+  padding-top: 3%;
   }
   
   .container-table100 {
-	width: 70%;
+	width: 100%;
 	
 	background: #fff;
   
@@ -265,7 +322,7 @@ p:before{
   }
   
   .wrap-table100 {
-	width: 80%;
+	width: 90%;
   }
   
   /*//////////////////////////////////////////////////////////////////
@@ -500,9 +557,7 @@ p:before{
   top: 15px;
   left: 5px;
 }
-.remonly{
-  background-color:rgb(255, 255, 255);
-}
+
   
 /* for responsiveness */
 @media screen and (max-width: 600px) {

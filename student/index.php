@@ -22,9 +22,9 @@
     <div class="sidebar">
         <div class="image-case">
                 <img src="<?php echo "../profile/studentImages/".$_SESSION['img_path']?>">
-            <h2>
             <br>    
             <br>
+            <h2>
             <span class="">Hello, <?php echo ' '.$_SESSION['firstname'].' '.$_SESSION['lastname'] ?></span>
             </h2>
         </div>
@@ -39,8 +39,8 @@
             <a href="selectime.php">
                 <i class="fa fa-calendar icon"></i>&nbsp;&nbsp;Choose Supervisor </a>
             <br>
-            <a href="">
-                <i class="fa fa-bell-o"></i>&nbsp;&nbsp;Notifications
+            <a href="notice.php">
+                <i class="fa fa-bell-o"><span class="badge" style="background-color: #03A9F4">5</span></i>&nbsp;&nbsp;Notifications
             </a>
             <a href="profilestudent.php">
                 <i class="fa fa-user icon"></i>&nbsp;&nbsp;View Profile</a>
@@ -56,7 +56,9 @@
 
     <div style="margin-left:30%">
         <div class="myCard">
-
+            <?php 
+               
+            ?>
             <section class="card">
                 <h3>Time Slot</h3>
                 <p>
@@ -82,6 +84,10 @@
     </div>
 </body>
 
+
+
+<script type = "text/javascript" src = "close.js"></script>
+        <script type = "text/javascript" src = "changeCount.js"></script>
 <!-- 
 <html>
 <head>

@@ -50,20 +50,20 @@
 </div>
    <br>
          <h3 style="margin-left:37%"> Profile Information</h3>
-        
+        <form>
          <div class="lprofilechange"style="display:block " id="student-form">
             <div class="group"style="width:70%;">
-                    <input type="password" name="pass1" class="float-input">
+                    <input type="password" name="pass1" class="float-input" id = "oldPass" required>
                     <span class="bar"></span>
                     <label class="placejumper">Old Password</label>
                 </div>
                 <div class="group" style="width:70%;">
-                    <input type="password" name="pass1" class="float-input">
+                    <input type="password" name="pass1" class="float-input" id = "newPass" required>
                     <span class="bar"></span>
                     <label class="placejumper">New Password</label>
                 </div>
                 <div class="group"style="width:70%;">
-                    <input type="password" name="password" class="float-input">
+                    <input type="password" name="password" class="float-input" id = "confirmPass" required>
                     <span class="bar"></span>
                     <label class="placejumper">Confirm Password</label>
                 </div>
@@ -72,7 +72,8 @@
             <div class="enter">
                <input class="signIn homebutton" value="Change" style="margin-top:1%; margin-left:20%; background-color:#5264AE;" name="submit" type="submit">
             </div>
-</div>  
+        </div>
+        </form>
 
 </body>
 </html>

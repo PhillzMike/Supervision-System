@@ -99,13 +99,13 @@
          </div>
           <div>
             <span id="addtime"></span>
-            <p type="Students No:"><input  type="number" id="maxStudent" required></input></p>
+            <p type="Students No:" id ="maxStudent"><input  type="number" class="maxStudent" required></input></p>
          </div>
          
          
        </section>
        <br>
-       <input type="submit" value="Create" class="cr1" onclick="addTime();">
+       <input type="submit" value="Create" class="cr1" id = "cr1">
      </form>
     </div>
    
@@ -192,11 +192,13 @@
 function myFunction() {
     var itm = document.getElementById("startslot").lastChild;
     var itm2 = document.getElementById("endslot").lastChild;
+    var itm3 = document.getElementById("maxStudent").lastChild;
     var cln = itm.cloneNode(true);
     var cln2 = itm2.cloneNode(true);
+    var cln3 = itm3.cloneNode(true);
     document.getElementById("startslot").appendChild(cln);
     document.getElementById("endslot").appendChild(cln2);
-    
+    document.getElementById("maxStudent").appendChild(cln3);
     
 }
 

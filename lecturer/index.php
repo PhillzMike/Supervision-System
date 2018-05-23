@@ -85,65 +85,7 @@
                          <img src = "../img/unilag.png" class = "image">
             </div>
             <div>
-                <div class="button-block" onclick ="removeclick()">
-                    <button type="button" >
-                        <i class="mark x"></i>
-                        <i class="mark xx"></i>
-                    </button>
-                </div>
-                <span class="textf">Name:Joda Opemipo</span>
-                <br>
-                <span class="textf">Day:18th April,2018</span>
-                <br>
-                <span class="textf">Time:12pm - 1pm </span>
-            </div>
-        </section>
-
-        <section class="card">
-          <div class="color_placing">
-                <img src = "../img/unilag.png" class = "image">
-        </div>
-       
-       <div>
-          <div class="button-block">
-           <button type="button">
-            <i class="mark x"></i>
-            <i class="mark xx"></i>
-           </button>
-         </div>
-         <span class="textf">Name:Joda Opemipo</span>
-         <br>
-         <span class="textf">Day:18th April,2018</span>
-         <br>
-         <span class="textf">Time:12pm - 1pm </span>
-      </div>
-        </section>
-      
-     <section class="card">
-            <div class="color_placing">
-                <img src = "../img/unilag.png" class = "image">
-            </div>
-        
-           <div>
-             <div class="button-block">
-                    <button type="button">
-                        <i class="mark x"></i>
-                        <i class="mark xx"></i>
-                    </button>
-              </div>
-            <span class="textf">Name:Joda Opemipo</span>
-            <br>
-            <span class="textf">Day:18th April,2018</span>
-            <br>
-            <span class="textf">Time:12pm - 1pm </span>
-           </div>
-      </section>
-      <section class="card" id = "card"> 
-            <div class="color_placing">
-                         <img src = "../img/unilag.png" class = "image">
-            </div>
-            <div>
-                <div class="button-block" onclick ="removeclick()">
+                <div class="button-block">
                     <button type="button" >
                         <i class="mark x"></i>
                         <i class="mark xx"></i>
@@ -182,8 +124,8 @@
        <span class="close2">&times;</span>
       <h6 style="font-size:16px">Are you sure you want to delete this Appointment?</h6>
     
-     <input class=" signIn homebutton" value="Yes" style="margin-top:1%; background-color:#5264AE;" type="submit">
-     <input class=" signIn homebutton" value="No" style="margin-top:1%; background-color:#5264AE;" type="submit">
+     <input class=" signIn homebutton" id = "yesConfirmation" value="Yes" style="margin-top:1%; background-color:#5264AE;" type="submit">
+     <input class=" signIn homebutton" value="No" style="margin-top:1%; background-color:#5264AE;" type="submit" onclick = "removeConfirmation();">
            
     </div>
   </div>
@@ -197,15 +139,13 @@
      function editclick() {
         side.style.display = "block";
     }
-    function removeclick() {
-        remove.style.display = "block";
-    }
     span.onclick = function() {
        side.style.display = "none";
     }
-    span2.onclick = function() {
-       remove.style.display = "none";
+    function removeConfirmation(){
+        remove.style.display = "none";
     }
+    span2.onclick = removeConfirmation;
      window.onclick = function(event) {
     if (event.target == side) {
         side.style.display = "none";

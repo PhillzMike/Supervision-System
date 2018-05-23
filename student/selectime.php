@@ -105,20 +105,22 @@
                     echo "No available times";
                 }else{
                 foreach($slots as $slot){
+                    $slot[5] = ($_SESSION['SuperId']);
+                    $slot[6]= ($_SESSION['ID']);
                     $jsonable = json_encode($slot);
-                    echo '<section class="card">
+                    echo "<section class='card'>
                     <h3>Time Slot</h3>
                     <p>
-                    <span class="textf">Name:'.$slot[4].'</span>
+                    <span class='textf'>Name:".$slot[4]."</span>
                      <br>
-                     <span class="textf">Day:'.$slot[0].'</span>
-                     <span class="textf">Time: Between'.$slot[1]." and ".$slot[2].'</span>
+                     <span class='textf'>Day:".$slot[0]."</span>
+                     <span class='textf'>Time: Between".$slot[1]." and ".$slot[2]."</span>
                      
                      </p>
                      <p>
-                         <button class="accept" onclick = "HandleSet('.$jsonable.');">Accept</button>
+                         <button class='accept' onclick = 'HandleSet(".$jsonable.");'>Accept</button>
                      </p>
-                     </section>';
+                     </section>";
                 }
             }
             }
@@ -178,8 +180,34 @@
         function handleOut(parans){
             location.href = './selectime.php';
         }
-        function HandleSet(slt){
-            let slot = JSON.parse(slt);
+        function HandleSet(slot){
+            var valuestart = slot[1];
+        var valuestop = slot[2];
+
+             //create date format       
+        var timeStart = new Date("01/01/2007 " + valuestart);
+        var timeEnd = new Date("01/01/2007 " + valuestop);
+
+        var difference = timeEnd - timeStart;            
+        var diff_result = new Date(difference);    
+
+        var hourDiff = diff_result.getHours()-1;
+        
+            var startTime=moment(slot[1], "HH:mm:ss");
+            var endTime=moment(slot[2], "HH:mm:ss");
+            var duration = moment.duration(endTime.diff(startTime));
+            var hours = parseInt(duration.asHours());
+            $date;
+        
+            $message = "I created an Apointment sir";
+            const params = { "day": slot[0], "startTime": slot[1],"endTime": slot[2],"supervisor" : slot[5],"studentID": slot[6]
+            , "date":$date , "message": $message};
+
+            callajax(params,'../php/addAppointment.php',diplayResult);
+            
+        }
+        function displayResult(params){
+            alert(params);
         }
     </script>
 </body>

@@ -23,7 +23,7 @@
         VALUES(:supervisorID,:studentID,:date,:start,:end,:message)";
         $stmt = $conn->prepare($query);
 
-        $details = array(":supervisorID"=>$_POST["supervisor"], ":studentID" => $_SESSION["studentID"], ":date" => $_POST["date"], ":start" => $_POST["startTime"], 
+        $details = array(":supervisorID"=>$_POST["supervisor"], ":studentID" => $_SESSION["ID"], ":date" => $_POST["date"], ":start" => $_POST["startTime"], 
         ":end" => $_POST["endTime"], ":message" => $_POST["message"]);
         
         try{

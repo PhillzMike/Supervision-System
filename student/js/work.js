@@ -1,4 +1,8 @@
 
+c = document.getElementById('lecture');
+c.children[0].onclick = function() {
+    console.log("65");
+}
 function clickSuper(supId){
     callajax({'id':supId},'php/changeSupId.php',handleOut);
 }
@@ -17,18 +21,13 @@ var difference = timeEnd - timeStart;
 var diff_result = new Date(difference);    
 
 var hourDiff = diff_result.getHours()-1;
+    let date;
 
-    var startTime=moment(slot[1], "HH:mm:ss");
-    var endTime=moment(slot[2], "HH:mm:ss");
-    var duration = moment.duration(endTime.diff(startTime));
-    var hours = parseInt(duration.asHours());
-    $date;
-
-    $message = "I created an Apointment sir";
+    let message = "I created an Apointment sir";
     const params = { "day": slot[0], "startTime": slot[1],"endTime": slot[2],"supervisor" : slot[5],"studentID": slot[6]
-    , "date":$date , "message": $message};
+    , "date":date , "message": message};
 
-    callajax(params,'../php/addAppointment.php',diplayResult);
+    callajax(params,'../php/addAppointment.php',displayResult);
     
 }
 function displayResult(params){

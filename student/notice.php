@@ -69,7 +69,7 @@
                     <span class="close" id = '.$note["MessageID"].' onclick = "Del('.$note['MessageID'].');">&times;</span>
                 </td>
             </tr>'; 
-        if($counter > 5){
+        if($counter > 2){
             $counter = 1;
         }}
            ?>

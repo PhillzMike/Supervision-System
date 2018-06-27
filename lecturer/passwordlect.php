@@ -37,7 +37,7 @@
       </div>
       <br>
       <div class="dashboard-list">
-            <a href="lectnotification.php"><i class="fa fa-user icon"><span class="badge" style="background-color: #03A9F4;"></span></i>Notifications</a>
+            <a href="lectnotification.php"><i  class="fa fa-bell-o icon"><span class="badge" style="background-color: #03A9F4;"></span></i>Notifications</a>
         </div>
         <br>
       <div class="dashboard-list">
@@ -58,17 +58,17 @@
         <form>
          <div class="lprofilechange"style="display:block " id="student-form">
             <div class="group"style="width:70%;">
-                    <input type="password" name="pass1" class="float-input" id = "oldPass" required>
+                    <input type="password" name="pass1" class="float-input" style = "background-color:white" id = "oldPass" required>
                     <span class="bar"></span>
                     <label class="placejumper">Old Password</label>
                 </div>
                 <div class="group" style="width:70%;">
-                    <input type="password" name="pass1" class="float-input" id = "newPass" required>
+                    <input type="password" name="pass1" class="float-input" style = "background-color:white" id = "newPass" required>
                     <span class="bar"></span>
                     <label class="placejumper">New Password</label>
                 </div>
                 <div class="group"style="width:70%;">
-                    <input type="password" name="password" class="float-input" id = "confirmPass" required>
+                    <input type="password" name="password" class="float-input" style = "background-color:white" id = "confirmPass" required>
                     <span class="bar"></span>
                     <label class="placejumper">Confirm Password</label>
                 </div>

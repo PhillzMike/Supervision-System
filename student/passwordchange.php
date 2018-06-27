@@ -57,17 +57,17 @@
     <div style="margin-left:30%">
     <div class="student" id="student-form">
         <div class="group">
-            <input type="password" id="stu_oldpass" name="stu_oldpass" class="float-input">
+            <input type="password" id="stu_oldpass" name="stu_oldpass" style = "backgroud-color:white" class="float-input">
             <span class="bar"></span>
             <label class="placejumper">Old Password</label>
         </div>
         <div class="group">
-            <input type="password" id="stu_newpass" name="stu_newpass" class="float-input">
+            <input type="password" id="stu_newpass" name="stu_newpass" style = "backgroud-color:white" class="float-input">
             <span class="bar"></span>
             <label class="placejumper">New Password</label>
         </div>
         <div class="group">
-            <input type="password" id="stu_conpass" name="stu_conpass" class="float-input">
+            <input type="password" id="stu_conpass" name="stu_conpass" style = "backgroud-color:white" class="float-input">
             <span class="bar"></span>
             <label class="placejumper">Confirm Password</label>
         </div>

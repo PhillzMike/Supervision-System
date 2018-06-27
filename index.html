@@ -38,7 +38,7 @@
                             </div>
 
                             <div class="group">
-                                <input type="text" style="background-color:rgb(255, 245, 245)" name="username" class="float-input" id="usr">
+                                <input type="text" style="background-color:rgb(255, 245, 245)" name="username" class="float-input" id="usr" >
                                 <span class="bar"></span>
                                 <label for="usr" class="placejumper">User ID</label>
                                 <span class="tooltiptext" id="tooltip">Your user ID is your Matric No or Staff ID</span>
@@ -92,58 +92,58 @@
                                             <label class="placejumper">Matric Number</label>
                                         </div>
                                 <div class="group">
-                                    <input type="text" id="stu_fname" class="float-input">
+                                    <input type="text" id="stu_fname" class="float-input" required>
                                     <span class="bar"></span>
                                     <label class="placejumper">First Name</label>
                                 </div>
                                 <div class="group">
-                                    <input type="text" id="stu_mname" class="float-input">
+                                    <input type="text" id="stu_mname" class="float-input" required>
                                     <span class="bar"></span>
                                     <label class="placejumper">Middle Name</label>
                                 </div>
                                 <div class="group">
-                                    <input type="text" id="stu_lname" class="float-input">
+                                    <input type="text" id="stu_lname" class="float-input" required>
                                     <span class="bar"></span>
                                     <label class="placejumper">Last Name</label>
                                 </div>
                               
                                 <div class="group">
-                                    <input type="text" id="stu_institute" class="float-input" >
+                                    <input type="text" id="stu_institute" class="float-input"  required>
                                     <span class="bar"></span>
                                     <label class="placejumper">Institution</label>
                                 </div>
                                 <div class="group">
-                                    <input type="text" id="stu_level" class="float-input">
+                                    <input type="text" id="stu_level" class="float-input" required>
                                     <span class="bar"></span>
                                     <label class="placejumper">Level</label>
                                 </div>
                                 <form action="php/upload.php" method="post" enctype="multipart/form-data">
                                 <div id="userActions">
-                                    <div id="dropImage">
+                                    <!-- <div id="dropImage">
                                         <p>Drag &amp; Drop Image</p>
-                                    </div>
+                                    </div> -->
                                     <input type="file" id="fileUpload"name="fileToUpload" value="me" />
-                                    <input type="submit" id="picturebutton" style="display:none" value="Upload Image" name="submit">
+                                    <input type="submit" id="picturebutton" style="display:none" value="Upload Image" name="submit" >
                                 </div>
                                
                             </form>
                                 <div class="group">
-                                    <input type="text" id="stu_dept" class="float-input">
+                                    <input type="text" id="stu_dept" class="float-input" required>
                                     <span class="bar"></span>
                                     <label class="placejumper">Department</label>
                                 </div>
                                 <div class="group">
-                                    <input type="text" id="stu_email" class="float-input">
+                                    <input type="text" id="stu_email" class="float-input" required>
                                     <span class="bar"></span>
                                     <label class="placejumper">Email</label>
                                 </div>
                                 <div class="group">
-                                    <input type="password" id="stu_pass1" class="float-input">
+                                    <input type="password" id="stu_pass1" class="float-input" required>
                                     <span class="bar"></span>
                                     <label class="placejumper">Password</label>
                                 </div>
                                 <div class="group">
-                                    <input type="password" id="stu_pass2" class="float-input">
+                                    <input type="password" id="stu_pass2" class="float-input" required>
                                     <span class="bar"></span>
                                     <label class="placejumper">Confirm Password</label>
                                 </div>
@@ -151,53 +151,53 @@
                             </div>
                             <div style="display:none" id="super-form">
                                     <div class="group">
-                                            <input type="text" id="staff_id" class="float-input">
+                                            <input type="text" id="staff_id" class="float-input" required>
                                             <span class="bar"></span>
                                             <label class="placejumper">Staff id</label>
                                         </div>
                                 <div class="group">
-                                    <input type="text" id="sup_fname" class="float-input">
+                                    <input type="text" id="sup_fname" class="float-input" required>
                                     <span class="bar"></span>
                                     <label class="placejumper">First Name</label>
                                 </div>
                                 <div class="group">
-                                    <input type="text" id="sup_mname" class="float-input">
+                                    <input type="text" id="sup_mname" class="float-input" required>
                                     <span class="bar"></span>
                                     <label class="placejumper">MiddleName</label>
                                 </div>
                                 <div class="group">
-                                    <input type="text" id="sup_lname" class="float-input">
+                                    <input type="text" id="sup_lname" class="float-input" required>
                                     <span class="bar"></span>
                                     <label class="placejumper">Last Name</label>
                                 </div>
                                 <div class="group">
-                                    <input type="text" id="sup_title" class="float-input">
+                                    <input type="text" id="sup_title" class="float-input" required>
                                     <span class="bar"></span>
                                     <label class="placejumper">Title</label>
                                 </div>
                                 <div class="group">
-                                    <input type="text" id="sup_institute" class="float-input">
+                                    <input type="text" id="sup_institute" class="float-input" required>
                                     <span class="bar"></span>
                                     <label class="placejumper">Institution</label>
                                 </div>
                                
                                 <div class="group">
-                                    <input type="text" id="sup_email" class="float-input">
+                                    <input type="text" id="sup_email" class="float-input" required>
                                     <span class="bar"></span>
                                     <label class="placejumper">Email</label>
                                 </div>
                                 <div class="group">
-                                    <input type="text" id="sup_phonenumber" class="float-input">
+                                    <input type="text" id="sup_phonenumber" class="float-input" required>
                                     <span class="bar"></span>
                                     <label class="placejumper">Phone Number</label>
                                 </div>
                                 <div class="group">
-                                    <input type="password" id="sup_pass1" class="float-input">
+                                    <input type="password" id="sup_pass1" class="float-input"  required>
                                     <span class="bar"></span>
                                     <label class="placejumper">Password</label>
                                 </div>
                                 <div class="group">
-                                    <input type="password" id="sup_pass2" class="float-input">
+                                    <input type="password" id="sup_pass2" class="float-input" required>
                                     <span class="bar"></span>
                                     <label class="placejumper">Confirm Password</label>
                                 </div>

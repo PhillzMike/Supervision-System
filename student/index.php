@@ -54,17 +54,18 @@
 
     <div style="margin-left:30%">
         <div class="myCard">
-            <div class="button-block">
-                <button type="button" >
-                    <i class="mark x"></i>
-                    <i class="mark xx"></i>
-                </button>
-            </div>
+        <!--  <div class="button-block">
+                    <button type="button" >
+                        <i class="mark x"></i>
+                        <i class="mark xx"></i>
+                    </button>--> -->
             <?php 
                  require_once('php/getAppointments.php');
                  $allAppoint = getAppoints();
                  foreach($allAppoint as $appoint){
                echo '<section class="card">
+               
+                </div>
                <h3>Time Slot</h3>
                <p>
                    <span class="textf">Name:'.$appoint[1].'</span>
